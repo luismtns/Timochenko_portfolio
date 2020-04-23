@@ -22,7 +22,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
       this.show = state.show;
     });
     
-    if(!environment.production){
+    if(environment.production){
       const subscrive_timer = timer(1000, 1000).subscribe((val) =>{
         if(val > this.time_seconds){
           this.loaderService.hide();
