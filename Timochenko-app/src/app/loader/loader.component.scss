@@ -6,12 +6,13 @@
     position: fixed;
     left: -100%;
     z-index: 9999;
-    transition: 0.8s ease-in;
     &.fade-in{
       left: 0;
+      transition: 0.8s ease-in;
     }
     &.fade-out{
       left: 100%;
+      transition: 0.8s ease-in;
     }
 }
 .loader{

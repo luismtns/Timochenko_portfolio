@@ -29,7 +29,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
       this.show = state.show;
     });
     
-    if(!environment.production){
+    if(environment.production){
       const subscrive_timer = timer(1000, 1000).subscribe((val) =>{
         if(val > this.time_seconds){
           this.pinkTransition()
@@ -58,6 +58,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
     setTimeout(()=>{
       this.pink_transition['fade-in'] = false;
       this.pink_transition['fade-out'] = true;
+      setTimeout(()=>{this.pink_transition = null}, 800)
     }, 1000)
   }
   updateProgress (progressRatio) {
