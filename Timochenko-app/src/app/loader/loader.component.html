@@ -1,4 +1,11 @@
 
   <div *ngIf="show" class="loader">
     <img class="loader__img" rel=”preload” src="./assets/videos/loader.gif" alt="Loader" >
+    <div class="progress">
+      <div class="progress__bar" id="progress_bar" [style.width.%]="progress_percent">
+        <p class="progress__value">
+          {{progress_percent}}%
+        </p>
+      </div>
+    </div>
   </div>
