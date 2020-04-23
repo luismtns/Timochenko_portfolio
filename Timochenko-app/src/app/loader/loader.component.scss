@@ -1,5 +1,19 @@
 @import "../../sass/variables";
-
+.pink-transition{
+    height: 100vh;
+    width: 100vw;
+    background-color: $pink;
+    position: fixed;
+    left: -100%;
+    z-index: 9999;
+    transition: 0.8s ease-in;
+    &.fade-in{
+      left: 0;
+    }
+    &.fade-out{
+      left: 100%;
+    }
+}
 .loader{
   display: flex;
   position: fixed;

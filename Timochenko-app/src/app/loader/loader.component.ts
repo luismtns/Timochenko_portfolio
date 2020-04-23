@@ -14,6 +14,13 @@ export class LoaderComponent implements OnInit, OnDestroy {
   time_seconds:number = 13; //13
   progress_percent:number = 0;
   show = true;
+
+  pink_transition: object = {
+    'pink-transition': true,
+    'fade-in': false,
+    'fade-out': false
+  };
+
   private subscription: Subscription;
   constructor(private loaderService: LoaderService) { }
   ngOnInit() {
@@ -22,10 +29,11 @@ export class LoaderComponent implements OnInit, OnDestroy {
       this.show = state.show;
     });
     
-    if(environment.production){
+    if(!environment.production){
       const subscrive_timer = timer(1000, 1000).subscribe((val) =>{
         if(val > this.time_seconds){
-          this.loaderService.hide();
+          this.pinkTransition()
+          setTimeout(()=>{this.loaderService.hide();}, 800)
           subscrive_timer.unsubscribe()
         }else{
           var progress_value = (val / this.time_seconds);
@@ -45,7 +53,13 @@ export class LoaderComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-  
+  pinkTransition(){
+    this.pink_transition['fade-in'] = true;
+    setTimeout(()=>{
+      this.pink_transition['fade-in'] = false;
+      this.pink_transition['fade-out'] = true;
+    }, 1000)
+  }
   updateProgress (progressRatio) {
     this.progress_percent = Math.floor(progressRatio*100);
     console.log('progress_percent', this.progress_percent);
