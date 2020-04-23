@@ -1,0 +1,1 @@
+ng deploy --base-href=/Timochenko_portfolio/

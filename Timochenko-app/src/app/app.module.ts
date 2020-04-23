@@ -9,6 +9,7 @@ import localePt from '@angular/common/locales/pt';
 import { LoaderComponent } from './loader/loader.component';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(localePt);
 
@@ -21,7 +22,8 @@ registerLocaleData(localePt);
     BrowserModule,    
     HttpClientModule,
     AppRoutingModule,
-    MainModule 
+    MainModule,
+    NgbModule 
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "pt-br"}

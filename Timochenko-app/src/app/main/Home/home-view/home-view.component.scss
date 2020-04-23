@@ -1,0 +1,23 @@
+@import "../../../../sass/variables";
+
+.coming{
+  display: flex;
+  width: 100%;
+  height: 50vw;
+  align-items: center;
+  justify-content: space-around;
+  &__text{
+    font-size: 2em;
+    width: 60%;
+    text-align: right;
+    &.pink{
+      color: $pink;
+    }
+  }
+  &__points{
+    font-size: 2em;
+    width: 40%;
+    text-align: left;
+
+  }
+}

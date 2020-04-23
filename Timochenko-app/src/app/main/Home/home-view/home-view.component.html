@@ -1,1 +1,17 @@
-<p>home-view works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-6"></div>
+    <div class="col-6"></div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="coming">
+        <p [ngClass]="{'pink': pink_text }" class="coming__text">coming soon 
+        </p> 
+        <span class="coming__points">
+          <span *ngFor="let point of point_list">{{point}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

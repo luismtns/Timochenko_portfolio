@@ -1,1 +1,9 @@
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap-grid';
 /* You can add global styles to this file, and also import other style files */
+@import "sass/global";
+
+body{
+  font-family: $font1;
+}

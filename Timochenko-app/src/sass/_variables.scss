@@ -1,0 +1,42 @@
+//Fonts
+$font1: 'Montserrat', Sans-serif;
+
+// Primary
+$background: #131313;
+$black: #1b1b1b;
+$white: #FFFFFF;
+$pink: #F83BAD;
+//Secondary
+
+//Mobile
+$little: 320px;
+$small: 480px;
+$medium: 768px;
+$large: 1025px;
+$extralarge: 1450px;
+
+@mixin respond-to($media) {
+  @if $media == $small {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == $medium {
+    @media only screen and (max-width: $medium) { @content; }
+  }
+  @else if $media == $large {
+    @media only screen and (max-width: $large) { @content; }
+  }
+  @else if $media == $extralarge {
+    @media only screen and (max-width: $extralarge) { @content; }
+  }
+  @else if $media == $little {
+    @media only screen and (max-width: $little) { @content; }
+  }
+  @else if $media == $tablet-portrait {
+    @media only screen and (min-width: 768) and (max-width: 769) { @content; }
+  }
+}
+// Exemplo responde-to
+// @include respond-to($medium){
+//   margin-bottom: 10px;
+  
+// }
