@@ -10,13 +10,15 @@ import { LoaderComponent } from './loader/loader.component';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ImageLoaderComponent } from './components/image-loader/image-loader.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoaderComponent
+    LoaderComponent,
+    ImageLoaderComponent
   ],
   imports: [
     BrowserModule,    

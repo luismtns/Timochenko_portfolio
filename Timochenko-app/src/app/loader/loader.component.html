@@ -1,6 +1,6 @@
 
   <div *ngIf="show" class="loader">
-    <img class="loader__img" rel=”preload” src="./assets/videos/loader.gif" alt="Loader" >
+    <app-image-loader imgSrc="./assets/videos/loader.gif" loaderSrc="./assets/videos/__loader.jpg"></app-image-loader>
     <div class="progress">
       <div class="progress__bar" id="progress_bar" [style.width.%]="progress_percent">
         <p class="progress__value">

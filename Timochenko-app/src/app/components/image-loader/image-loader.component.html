@@ -1,0 +1,4 @@
+<div [class]="imgContainerClass" class="img">
+  <img *ngIf="loading" src="{{spinnerSrc}}" alt="loading"/>
+  <img [hidden]="loading" (load)="onLoad()" src="{{imgSrc}}" alt="{{spinnerSrc.split('/').pop()}}"/>
+</div>
