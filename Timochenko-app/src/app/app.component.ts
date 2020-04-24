@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { ScreenHoverService } from './services/screen-hover.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  state = 'center';
+  constructor(private ScreenService:ScreenHoverService){}
+  @HostListener('mousemove', ['$event'])
+  mouseMove($event: MouseEvent) {
+    this.ScreenService.update($event.clientX,$event.clientY)
+
+  }
 }

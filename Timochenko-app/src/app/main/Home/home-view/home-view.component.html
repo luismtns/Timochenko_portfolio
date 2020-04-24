@@ -1,15 +1,24 @@
-<div class="container">
-  <div class="row">
-    <div class="col-6"></div>
-    <div class="col-6"></div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="coming">
-        <p [ngClass]="{'pink': pink_text }" class="coming__text">
-          coming soon<span class="coming__points"><span *ngFor="let point of point_list">{{point}}</span></span>
-        </p> 
+
+<div class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 text-left">
+        <h1 class="header__title">Timochenko1</h1>
+        <h2 class="header__date">X <hr> {{year}}</h2>
+      </div>
+      <div class="col-6 text-right">
+        <h3 class="header__about">About</h3>
       </div>
     </div>
   </div>
+</div>
+<div class="backgroundLines__overlay">
+  <span class="backgroundLines__image--mouse" [style.top.px]="mouse_Y_position"  [style.left.px]="mouse_X_position" ></span>
+  <div class="backgroundLines__image">
+  </div>
+</div>
+
+<div  [@routeAnimations]="o && o.activatedRouteData 
+&& o.activatedRouteData['animation']" class="project_container">
+  <router-outlet #o="outlet"></router-outlet>
 </div>

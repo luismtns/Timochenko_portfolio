@@ -21,9 +21,13 @@
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "@ssv/ngx.tilt": "^0.1.2",
+    "@types/vanilla-tilt": "^1.6.2",
     "bootstrap": "^4.4.0",
+    "moment": "^2.24.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "vanilla-tilt": "^1.7.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

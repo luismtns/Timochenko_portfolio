@@ -21,9 +21,24 @@ export class LoaderComponent implements OnInit, OnDestroy {
     'fade-out': false
   };
 
+  imgs = new Array();
+
   private subscription: Subscription;
   constructor(private loaderService: LoaderService) { }
   ngOnInit() {
+    this.pload(
+      "./assets/images/pre_loader.jpg",
+    "./assets/images/loader.gif");
+    
+  }
+  pload(...args: any[]):void {
+    for (var i = 0; i < args.length; i++) {
+      this.imgs[i] = new Image();
+      this.imgs[i].src = args[i];
+      // console.log('loaded: ' + args[i]);
+    }
+  }
+  runLoader(){    
     this.subscription = this.loaderService.loaderState
     .subscribe((state: LoaderState) => {
       this.show = state.show;
@@ -48,10 +63,10 @@ export class LoaderComponent implements OnInit, OnDestroy {
     }else{
       this.loaderService.hide();
     }
-    
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
+    this.loaderService.hide();
   }
   pinkTransition(){
     this.pink_transition['fade-in'] = true;
@@ -63,12 +78,5 @@ export class LoaderComponent implements OnInit, OnDestroy {
   }
   updateProgress (progressRatio) {
     this.progress_percent = Math.floor(progressRatio*100);
-    console.log('progress_percent', this.progress_percent);
-    // }
-    if(progressRatio === 1){
-      console.log("Progress Ratio: ", 'finished');
-    }else{
-      console.log("Progress Ratio: ", 'not finished');
-    }
   };
 }

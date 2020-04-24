@@ -1,0 +1,25 @@
+
+.project{
+  margin-top: 220px;  
+  display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
+  &__titlebox{
+    position: absolute;
+    transform: translateZ(80px);
+    &__title{
+      font-size: 90px;
+      font-weight: bold;
+    }
+    &__subtitle{
+      font-size: 18px;
+      font-weight: 600;
+      margin-left: 15px;
+    }
+  }
+  &__image{
+    position: relative;
+    top: 0;
+    z-index: -100;
+  }
+}

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID  } from '@angular/core';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module'; 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -10,6 +11,8 @@ import { LoaderComponent } from './loader/loader.component';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TiltModule } from "@ssv/ngx.tilt";
+
 import { ImageLoaderComponent } from './components/image-loader/image-loader.component';
 
 registerLocaleData(localePt);
@@ -18,18 +21,20 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     LoaderComponent,
-    ImageLoaderComponent
+    ImageLoaderComponent,
   ],
   imports: [
-    BrowserModule,    
+    BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     MainModule,
-    NgbModule 
+    NgbModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "pt-br"}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],  
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

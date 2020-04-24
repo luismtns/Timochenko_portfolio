@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-image-loader',
@@ -23,6 +23,5 @@ export class ImageLoaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
-
 
 }
