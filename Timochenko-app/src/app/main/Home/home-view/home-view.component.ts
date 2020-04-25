@@ -33,8 +33,22 @@ export class HomeViewComponent implements OnInit  {
   @HostListener('document:mousewheel', ['$event'])
   @debounce(300)
   onWheelScroll(evento: WheelEvent) {
-    // Scroll down
-    this.routeControl(evento)
+    
+    if (evento.deltaY > 0) {// Scroll down
+      this.routeControl(true)
+    }else{// Scroll up  
+      this.routeControl(false)
+    }
+  }
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    // ArrowDown code = 40
+    // ArrowUp code = 38
+    if(event.keyCode == 40){
+      this.routeControl(true)
+    }else if(event.keyCode == 38){
+      this.routeControl(false)
+    }
   }
 
   ngOnInit (): void {
@@ -53,9 +67,8 @@ export class HomeViewComponent implements OnInit  {
     this.subscriptions.unsubscribe();
   }
 
-  routeControl(evento){    
-    console.log(evento.deltaY)
-    if (evento.deltaY > 0) {
+  routeControl(scrolldown){    
+    if (scrolldown) {
       switch (this.router.url) {
         case '/': {
           this.router.navigate(['/lit'])
