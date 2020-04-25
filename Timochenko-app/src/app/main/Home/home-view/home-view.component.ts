@@ -15,16 +15,13 @@ import { slideInAnimation } from '../../route-animation';
 })
 export class HomeViewComponent implements OnInit  {
 
-  point_list: any;
-  point_interval:any;
   pink_text:boolean = false;
-
   year:string;
   mouse_X_position: number = 0;
   mouse_Y_position: number = 0;
+
   subscriptions: Subscription;
 
-  project = 1;
   constructor(
     private loaderService: LoaderService,
     private ScreenService: ScreenHoverService,
@@ -79,12 +76,9 @@ export class HomeViewComponent implements OnInit  {
   }
 
   ngOnInit (): void {
-    this.year = moment().format("YYYY")
-    this.runPoints();
-    this.point_interval = setInterval(() => {
-      this.runPoints(); 
-    }, 800);
+    this.year = moment().format("YYYY");
     
+    // Take Mouse Screen Position Real Time
     this.subscriptions = this.ScreenService.screenStatus.subscribe((status:ScreenState)=>{
       this.mouse_X_position = status.x
       this.mouse_Y_position = status.y
@@ -93,21 +87,8 @@ export class HomeViewComponent implements OnInit  {
   }
 
   ngOnDestroy():void{
-    clearInterval( this.point_interval)
     this.loaderService.hide();
     this.subscriptions.unsubscribe();
   }
 
-  runPoints() {
-    if(!this.point_list){
-      this.point_list = ['.']
-    }
-    if(this.point_list.length < 3){
-      this.point_list.push('.')
-      this.pink_text = false;
-    }else{
-      this.point_list = []
-      this.pink_text = true;
-    }
-  }
 }
