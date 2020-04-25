@@ -1,11 +1,13 @@
 import { Component, OnInit , ElementRef, ViewChild, HostListener } from '@angular/core';
 import { LoaderService } from 'src/app/services/loader.service';
 import { timer, Subscription } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import * as moment from 'moment';
 import { ScreenHoverService } from 'src/app/services/screen-hover.service';
 import { ScreenState } from 'src/app/services/screenHover.model';
 import { Router } from '@angular/router';
 import { slideInAnimation } from '../../route-animation';
+import { debounce } from 'src/app/decorators/debounce.decorator';
 
 @Component({
   selector: 'app-home-view',
@@ -29,8 +31,30 @@ export class HomeViewComponent implements OnInit  {
     ) { 
   }
   @HostListener('document:mousewheel', ['$event'])
+  @debounce(300)
   onWheelScroll(evento: WheelEvent) {
     // Scroll down
+    this.routeControl(evento)
+  }
+
+  ngOnInit (): void {
+    this.year = moment().format("YYYY");
+    
+    // Take Mouse Screen Position Real Time
+    this.subscriptions = this.ScreenService.screenStatus.subscribe((status:ScreenState)=>{
+      this.mouse_X_position = status.x
+      this.mouse_Y_position = status.y
+    })
+
+  }
+
+  ngOnDestroy():void{
+    this.loaderService.hide();
+    this.subscriptions.unsubscribe();
+  }
+
+  routeControl(evento){    
+    console.log(evento.deltaY)
     if (evento.deltaY > 0) {
       switch (this.router.url) {
         case '/': {
@@ -73,22 +97,6 @@ export class HomeViewComponent implements OnInit  {
         }
       }
     }
-  }
-
-  ngOnInit (): void {
-    this.year = moment().format("YYYY");
-    
-    // Take Mouse Screen Position Real Time
-    this.subscriptions = this.ScreenService.screenStatus.subscribe((status:ScreenState)=>{
-      this.mouse_X_position = status.x
-      this.mouse_Y_position = status.y
-    })
-
-  }
-
-  ngOnDestroy():void{
-    this.loaderService.hide();
-    this.subscriptions.unsubscribe();
   }
 
 }
