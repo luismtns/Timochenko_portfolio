@@ -9,6 +9,7 @@ import { ScreenHoverService } from './services/screen-hover.service';
 export class AppComponent {
   mouse_position: MouseEvent;
   mouse_active: boolean = false;
+  pointer_click: boolean = false;
   constructor(private ScreenService:ScreenHoverService){}
   @HostListener('mousemove', ['$event'])
   mouseMove($event: MouseEvent) {
@@ -19,6 +20,13 @@ export class AppComponent {
   @HostListener('mouseleave', ['$event'])
   mouseLeave($event: MouseEvent) {
     this.mouse_active = false
-
+  }
+  @HostListener('pointerdown', ['$event'])
+  PointerDown(evento: WheelEvent) {
+    this.pointer_click = true;
+  }
+  @HostListener('pointerup', ['$event'])
+  PointerUp(evento: PointerEvent) {
+    this.pointer_click = false;
   }
 }

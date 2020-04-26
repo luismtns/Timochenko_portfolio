@@ -17,6 +17,8 @@
 </div>
 
 <div  [@routeAnimations]="o && o.activatedRouteData 
-&& o.activatedRouteData['animation']" class="project_container">
+&& o.activatedRouteData['animation']" class="project_container" 
+(swipeup)="onSwipeUp($event)"
+(swipedown)="onSwipeDown($event)">
   <router-outlet #o="outlet"></router-outlet>
 </div>

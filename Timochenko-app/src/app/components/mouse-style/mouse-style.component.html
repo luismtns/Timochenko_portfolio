@@ -3,5 +3,5 @@
   [ngClass]="{'active': mouse_active}"
   [style.top.px]="mouse_position ? mouse_position.clientY : 0"  
   [style.left.px]="mouse_position ? mouse_position.clientX : 0" >
-  <span class="mouse_circle__inside"></span>
+  <span [ngClass]="{ 'click': pointer_click}" class="mouse_circle__inside"></span>
 </span>

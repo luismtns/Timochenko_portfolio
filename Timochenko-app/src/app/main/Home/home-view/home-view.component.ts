@@ -73,6 +73,14 @@ export class HomeViewComponent implements OnInit  {
     });
   }
 
+  onSwipeUp($event){
+    this.routeControl(true)
+  }
+
+  onSwipeDown($event){
+    this.routeControl(false)
+  }
+
   ngOnDestroy():void{
     this.loaderService.hide();
     this.subscriptions.unsubscribe();

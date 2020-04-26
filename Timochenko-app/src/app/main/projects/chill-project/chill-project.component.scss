@@ -4,6 +4,11 @@
   display: flex;
   align-items: center;
   transform-style: preserve-3d;
+  -moz-user-select: none;
+  -webkit-user-select: none; 
+  -ms-user-select:none; 
+  user-select:none;
+  -o-user-select:none;
   &__titlebox{
     position: absolute;
     left: 80px;

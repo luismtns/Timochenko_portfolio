@@ -11,7 +11,6 @@ import { SennaProjectComponent } from './projects/senna-project/senna-project.co
 import { PalmeirasProjectComponent } from './projects/palmeiras-project/palmeiras-project.component';
 
 
-
 @NgModule({
   declarations: [
     HomeViewComponent, 

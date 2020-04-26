@@ -1,6 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA, Injectable  } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module'; 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -18,6 +18,14 @@ import { MouseStyleComponent } from './components/mouse-style/mouse-style.compon
 
 registerLocaleData(localePt);
 
+import Hammer from 'hammerjs';
+@Injectable()
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any>{
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  }
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +39,15 @@ registerLocaleData(localePt);
     HttpClientModule,
     AppRoutingModule,
     MainModule,
-    NgbModule
+    NgbModule,
+    HammerModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: "pt-br"}
+    { provide: LOCALE_ID, useValue: "pt-br"},
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
   ],
   bootstrap: [AppComponent],  
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

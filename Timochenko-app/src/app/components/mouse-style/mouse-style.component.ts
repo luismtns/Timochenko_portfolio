@@ -13,5 +13,6 @@ export class MouseStyleComponent implements OnInit {
   }
   @Input() mouse_position: MouseEvent;
   @Input() mouse_active: boolean;
+  @Input() pointer_click: boolean;
 
 }
