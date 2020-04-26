@@ -15,7 +15,8 @@
   -ms-user-select: none;
   user-select: none;
   opacity: 0;
-  transition: opacity,transform  0.3s ease;
+  transition: opacity  0.3s ease;
+  transition: transform  0.3s ease;
   &.active{
     opacity: 1;
   }

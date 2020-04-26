@@ -32,7 +32,7 @@ export class HomeViewComponent implements OnInit  {
     ) { 
   }
   @HostListener('document:mousewheel', ['$event'])
-  @debounce(300)
+  @debounce(150)
   onWheelScroll(evento: WheelEvent) {
     
     if (evento.deltaY > 0) {// Scroll down
