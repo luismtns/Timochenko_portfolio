@@ -1,0 +1,138 @@
+@import "../../../sass/variables";
+.container.space{
+  margin-top: 8em;
+}
+.About{
+  padding-top: 25vh;
+  padding-bottom: 10vh;
+  min-height: 100%;
+  &--first_container{
+    min-height: 70vh;
+  }
+  &__title{
+    display:inline-block;
+    font-size: 4em;
+    padding: 0 5px;
+    min-width: fit-content;
+    overflow: hidden;
+    background-clip: border-box; 
+    opacity: 0;
+    &--pink-effect{
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $pink;
+      position: absolute;
+      top: 0;    
+      left: -100%;  
+      z-index: 1;
+    }
+    &--overlay{
+      max-width: fit-content;
+      padding: 0 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pink{
+      color: $pink;
+    }
+  }
+
+  &__subtitle{
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  &__smalltitle{
+    font-size: 2em;
+    .regular{
+      font-weight: normal;
+    }
+  }
+
+  &__text{
+    font-size: 1.5em;
+    line-height: 1.3;
+  }
+
+  &__photo{
+    position: absolute;
+    right: 0;
+    height: 13em;
+    width: 2px;
+    background-color: $pink;
+    overflow: hidden;
+    transition: right, width 1s ease-in-out;
+    text-align: right;
+    &--overlay{      
+      position: relative;
+      height: 13em;
+      width: 2px;
+      padding: 0 10px;
+    }
+    img{
+      max-width: none;
+      position: absolute;
+      right: 2px;
+      max-height: 100%;
+      z-index: 10;
+    }
+  }
+}
+
+.LogoPainel{
+  width: 110%;
+  margin: 1em auto 0;
+  position: relative;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, 0);
+}
+
+// Animate Text Setup
+.first_text_animate{
+  animation-name: show_text;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.first_pink_animate{
+  animation-name: left_negative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.second_text_animate{
+  animation-name: show_text;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.3s;
+}
+.second_pink_animate{
+  animation-name: left_negative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+
+.third_text_animate{
+  animation-name: show_text;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
+}
+.third_pink_animate{
+  animation-name: left_negative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+@keyframes left_negative {
+  0% {left: -100%;}
+  50% {left: 0%;}
+  100% {left: 100%;}
+}
+@keyframes show_text {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}

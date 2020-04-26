@@ -14,10 +14,13 @@
   width: 100vw;
   z-index: -90;
   top: 0;
-  left: 0;
+  left: 0;  
+  display: flex;
+  align-items: center;
+  justify-content: left;
   &__line{
     position: fixed;
-    top: 540px;
+    margin-top: 10%;
     width: 0%;
     border: none;
     border-top: 2px solid $pink;

@@ -17,7 +17,7 @@ export class ChillProjectComponent implements OnInit {
     reverse: true,
     glare: false,
     perspective: 1000,
-    max: 20,
+    max: 10,
     easing: "cubic-bezier(.17,.67,.83,.67)"
   }
 

@@ -5,6 +5,7 @@ import { LitPageComponent } from './pages/lit-page/lit-page.component';
 import { ReebokPageComponent } from './pages/reebok-page/reebok-page.component';
 import { SennaPageComponent } from './pages/senna-page/senna-page.component';
 import { PalmeirasPageComponent } from './pages/palmeiras-page/palmeiras-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'p/Palmeiras',
     component: PalmeirasPageComponent
+  },
+  {
+    path: 'About',
+    component: AboutPageComponent
   },
   {
     path: '',

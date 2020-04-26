@@ -7,6 +7,11 @@
   &__title{
     font-size: 22px;
     font-weight: 300;
+    -moz-user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
   }
   &__date{
     font-size: 22px;
@@ -28,5 +33,10 @@
     float: right;
     transform: rotate(-90deg) translate(-30%,0);
     -webkit-transform: rotate(-90deg) translate(-30%,0);
+    -moz-user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
   }
 }
