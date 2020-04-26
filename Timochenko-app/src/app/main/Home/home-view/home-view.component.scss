@@ -49,9 +49,13 @@
   &__line{
     position: absolute;
     bottom: 30%;
-    width: 80%;
+    width: 0%;
     border: none;
     border-top: 2px solid $pink;
+    transition: width 2s ease-out;
+    &.open{
+      width: 80%;
+    }
   }
 }
 

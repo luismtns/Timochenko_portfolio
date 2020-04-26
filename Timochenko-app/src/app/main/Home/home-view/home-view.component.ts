@@ -8,6 +8,7 @@ import { ScreenState } from 'src/app/services/screenHover.model';
 import { Router } from '@angular/router';
 import { slideInAnimation } from '../../route-animation';
 import { debounce } from 'src/app/decorators/debounce.decorator';
+import { LoaderState } from 'src/app/loader/loader.model';
 
 @Component({
   selector: 'app-home-view',
@@ -17,7 +18,7 @@ import { debounce } from 'src/app/decorators/debounce.decorator';
 })
 export class HomeViewComponent implements OnInit  {
 
-  pink_text:boolean = false;
+  animate_line:boolean = false;
   year:string;
   mouse_X_position: number = 0;
   mouse_Y_position: number = 0;
@@ -60,6 +61,16 @@ export class HomeViewComponent implements OnInit  {
       this.mouse_Y_position = status.y
     })
 
+    this.subscriptions = this.loaderService.loaderState
+    .subscribe((state: LoaderState) => {
+      if(state.show == false){
+        setTimeout(() => {
+          this.animate_line = true;
+          console.log('animate_line');
+          
+        }, 800);
+      }
+    });
   }
 
   ngOnDestroy():void{
