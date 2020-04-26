@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TiltModule } from "@ssv/ngx.tilt";
 
 import { ImageLoaderComponent } from './components/image-loader/image-loader.component';
+import { MouseStyleComponent } from './components/mouse-style/mouse-style.component';
 
 registerLocaleData(localePt);
 
@@ -22,6 +23,7 @@ registerLocaleData(localePt);
     AppComponent,
     LoaderComponent,
     ImageLoaderComponent,
+    MouseStyleComponent,
   ],
   imports: [
     BrowserModule,

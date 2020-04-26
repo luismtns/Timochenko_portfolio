@@ -11,6 +11,7 @@ export class ChillProjectComponent implements OnInit {
   constructor() { }
   
   tiltOptions: TiltOptions = {
+    reverse: true,
     glare: false,
     perspective: 1000,
     max: 20,
