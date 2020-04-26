@@ -1,10 +1,14 @@
 
   <div *ngIf="show" class="loader">
-    <app-image-loader 
-      imgSrc="./assets/images/loader.gif" 
-      (onLoad)="runLoader()" 
-      loaderSrc="./assets/images/pre_loader.jpg"
-      imgAlt="Loader"></app-image-loader>
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2">
+        <app-image-loader 
+          imgSrc="./assets/images/loader.gif" 
+          (onLoad)="runLoader()" 
+          loaderSrc="./assets/images/pre_loader.jpg"
+          imgAlt="Loader"></app-image-loader>
+      </div>
+    </div>
     <div class="progress">
       <div class="progress__bar" id="progress_bar" [style.width.%]="progress_percent">
         <p class="progress__value">
