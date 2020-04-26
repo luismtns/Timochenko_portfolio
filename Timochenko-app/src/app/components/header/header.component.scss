@@ -1,0 +1,32 @@
+@import "../../../sass/variables";
+.header{
+  position: fixed;
+  top: 60px;
+  z-index: 9;
+  width: 100vw;
+  &__title{
+    font-size: 22px;
+    font-weight: 300;
+  }
+  &__date{
+    font-size: 22px;
+    font-weight: 300;
+    hr{
+      width: 40px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: -1px 12px 0;
+      border: 0;
+      border-bottom: 1px solid $white;
+    }
+  }
+  &__about{
+    font-size: 22px;
+    font-weight: 300;
+    transform: rotate(-90deg);
+    max-width: fit-content;
+    float: right;
+    transform: rotate(-90deg) translate(-30%,0);
+    -webkit-transform: rotate(-90deg) translate(-30%,0);
+  }
+}

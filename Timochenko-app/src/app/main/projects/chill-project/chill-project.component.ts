@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TiltOptions } from 'vanilla-tilt';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chill-project',
@@ -8,7 +9,9 @@ import { TiltOptions } from 'vanilla-tilt';
 })
 export class ChillProjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
   
   tiltOptions: TiltOptions = {
     reverse: true,
@@ -20,5 +23,7 @@ export class ChillProjectComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  openProject(){
+      this.router.navigate(['/p/Chill'])
+  }
 }

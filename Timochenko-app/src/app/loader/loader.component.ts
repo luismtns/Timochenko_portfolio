@@ -3,6 +3,7 @@ import { Subscription, timer } from 'rxjs';
 import { LoaderService } from '../services/loader.service';
 import { LoaderState } from './loader.model';
 import { environment } from 'src/environments/environment';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-loader',
@@ -24,7 +25,9 @@ export class LoaderComponent implements OnInit, OnDestroy {
   imgs = new Array();
 
   private subscription: Subscription;
-  constructor(private loaderService: LoaderService) { }
+  constructor(
+    private loaderService: LoaderService,
+    private router: Router) { }
   ngOnInit() {
     this.pload(
       "./assets/images/pre_loader.jpg",

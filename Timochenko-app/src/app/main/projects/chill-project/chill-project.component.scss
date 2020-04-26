@@ -1,8 +1,5 @@
 
 .project{
-  margin-top: 220px;  
-  display: flex;
-  align-items: center;
   transform-style: preserve-3d;
   -moz-user-select: none;
   -webkit-user-select: none; 
@@ -12,6 +9,7 @@
   &__titlebox{
     position: absolute;
     left: 80px;
+    z-index: 1;
     -webkit-transform: translate(-50%,0) translateZ(80px);
     -moz-transform: translate(-50%,0) translateZ(80px);
     transform: translate(-50%,0) translateZ(80px);
@@ -35,6 +33,5 @@
     margin: 0 auto;
     width: 100%;
     max-width: 680px;
-    z-index: -100;
   }
 }

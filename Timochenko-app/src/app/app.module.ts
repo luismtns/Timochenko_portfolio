@@ -16,9 +16,17 @@ import { TiltModule } from "@ssv/ngx.tilt";
 import { ImageLoaderComponent } from './components/image-loader/image-loader.component';
 import { MouseStyleComponent } from './components/mouse-style/mouse-style.component';
 
+import { ChillPageComponent } from './pages/chill-page/chill-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { LitPageComponent } from './pages/lit-page/lit-page.component';
+import { PalmeirasPageComponent } from './pages/palmeiras-page/palmeiras-page.component';
+
 registerLocaleData(localePt);
 
 import Hammer from 'hammerjs';
+import { HeaderComponent } from './components/header/header.component';
+import { ReebokPageComponent } from './pages/reebok-page/reebok-page.component';
+import { SennaPageComponent } from './pages/senna-page/senna-page.component';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -32,6 +40,10 @@ export class MyHammerConfig extends HammerGestureConfig {
     LoaderComponent,
     ImageLoaderComponent,
     MouseStyleComponent,
+    ChillPageComponent, 
+    AboutPageComponent, 
+    LitPageComponent, 
+    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, 
   ],
   imports: [
     BrowserModule,

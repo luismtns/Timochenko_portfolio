@@ -18,8 +18,7 @@ import { LoaderState } from 'src/app/loader/loader.model';
 })
 export class HomeViewComponent implements OnInit  {
 
-  animate_line:boolean = false;
-  year:string;
+  animate_line:boolean;
   mouse_X_position: number = 0;
   mouse_Y_position: number = 0;
 
@@ -27,7 +26,6 @@ export class HomeViewComponent implements OnInit  {
 
   constructor(
     private loaderService: LoaderService,
-    private ScreenService: ScreenHoverService,
     private router: Router
     ) { 
   }
@@ -53,26 +51,22 @@ export class HomeViewComponent implements OnInit  {
   }
 
   ngOnInit (): void {
-    this.year = moment().format("YYYY");
     
-    // Take Mouse Screen Position Real Time
-    this.subscriptions = this.ScreenService.screenStatus.subscribe((status:ScreenState)=>{
-      this.mouse_X_position = status.x
-      this.mouse_Y_position = status.y
-    })
-
     this.subscriptions = this.loaderService.loaderState
     .subscribe((state: LoaderState) => {
-      if(state.show == false){
+      if(!state.show){
         setTimeout(() => {
           this.animate_line = true;
-          console.log('animate_line');
           
         }, 800);
       }
     });
   }
 
+  ngOnDestroy():void{
+    this.subscriptions.unsubscribe();
+  }
+  
   onSwipeUp($event){
     this.routeControl(true)
   }
@@ -81,10 +75,6 @@ export class HomeViewComponent implements OnInit  {
     this.routeControl(false)
   }
 
-  ngOnDestroy():void{
-    this.loaderService.hide();
-    this.subscriptions.unsubscribe();
-  }
 
   routeControl(scrolldown){    
     if (scrolldown) {

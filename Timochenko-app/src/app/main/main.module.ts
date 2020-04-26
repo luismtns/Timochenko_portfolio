@@ -14,7 +14,12 @@ import { PalmeirasProjectComponent } from './projects/palmeiras-project/palmeira
 @NgModule({
   declarations: [
     HomeViewComponent, 
-    ImageLoaderComponent, ChillProjectComponent, LitProjectComponent, ReebokProjectComponent, SennaProjectComponent, PalmeirasProjectComponent, 
+    ImageLoaderComponent, 
+    ChillProjectComponent, 
+    LitProjectComponent, 
+    ReebokProjectComponent, 
+    SennaProjectComponent, 
+    PalmeirasProjectComponent, 
   ],
   imports: [
     CommonModule,
