@@ -15,9 +15,12 @@
   -ms-user-select: none;
   user-select: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity,transform  0.3s ease;
   &.active{
     opacity: 1;
+  }
+  &.click{
+    transform: translate(-50%, -50%) scale(1.2);
   }
   &__inside{
     position: relative;
