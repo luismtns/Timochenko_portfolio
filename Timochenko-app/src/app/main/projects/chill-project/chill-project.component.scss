@@ -6,7 +6,10 @@
   transform-style: preserve-3d;
   &__titlebox{
     position: absolute;
-    transform: translateZ(80px);
+    left: 80px;
+    -webkit-transform: translate(-50%,0) translateZ(80px);
+    -moz-transform: translate(-50%,0) translateZ(80px);
+    transform: translate(-50%,0) translateZ(80px);
     &__title{
       font-size: 90px;
       font-weight: bold;
@@ -19,7 +22,14 @@
   }
   &__image{
     position: relative;
+    display: flex;
+    align-items: center;
     top: 0;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 680px;
     z-index: -100;
   }
 }
