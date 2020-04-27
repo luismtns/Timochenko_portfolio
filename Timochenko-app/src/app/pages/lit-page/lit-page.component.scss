@@ -30,6 +30,7 @@
     max-width: 680px;
     animation-name: effect_open_page;
     animation-duration: 1s;
+    animation-timing-function: $cubic;
     animation-fill-mode: forwards;
     z-index: -1;
   }

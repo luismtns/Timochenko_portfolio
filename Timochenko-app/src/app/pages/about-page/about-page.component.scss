@@ -62,7 +62,7 @@
     width: 2px;
     background-color: $pink;
     overflow: hidden;
-    transition: right, width 1s ease-in-out;
+    transition: right, width 1s $cubic;
     text-align: right;
     &--overlay{      
       position: relative;
@@ -93,24 +93,28 @@
 .first_text_animate{
   animation-name: show_text;
   animation-duration: 0.1s;
+  animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 1s;
 }
 .first_pink_animate{
   animation-name: left_negative;
   animation-duration: 2s;
+  animation-timing-function: $cubic;
   animation-fill-mode: forwards;
 }
 
 .second_text_animate{
   animation-name: show_text;
   animation-duration: 0.1s;
+  animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 1.3s;
 }
 .second_pink_animate{
   animation-name: left_negative;
   animation-duration: 2s;
+  animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 0.3s;
 }
@@ -118,12 +122,14 @@
 .third_text_animate{
   animation-name: show_text;
   animation-duration: 0.1s;
+  animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 1.6s;
 }
 .third_pink_animate{
   animation-name: left_negative;
   animation-duration: 2s;
+  animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 0.6s;
 }
@@ -135,4 +141,22 @@
 @keyframes show_text {
   from {opacity: 0;}
   to {opacity: 100;}
+}
+
+.rotate_animate{
+  display: inline-block;
+  animation-name: rotate_transform;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  transform: rotate(0deg);
+  img{
+    display: inline-block;
+  }
+  will-change: transform;
+}
+@keyframes rotate_transform {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }

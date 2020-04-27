@@ -1,4 +1,4 @@
 <app-loader></app-loader>
 <app-mouse-style [pointer_click]="pointer_click" [mouse_active]="mouse_active" [mouse_position]="mouse_position"></app-mouse-style>
 <app-header></app-header>
-<router-outlet></router-outlet>
+<router-outlet *ngIf="!show"></router-outlet>

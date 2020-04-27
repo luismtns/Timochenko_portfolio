@@ -24,7 +24,7 @@
     width: 0%;
     border: none;
     border-top: 2px solid $pink;
-    transition: width 2s ease-out;
+    transition: width 2s $cubic;
     &.open{
       width: 80%;
     }

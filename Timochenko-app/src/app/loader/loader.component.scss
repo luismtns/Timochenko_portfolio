@@ -10,12 +10,12 @@
     &.fade-in{
       opacity: 1;
       left: 0;
-      transition: left 0.8s ease-in;
+      transition: left 0.8s $cubic;
     }
     &.fade-out{
       opacity: 1;
       left: 100%;
-      transition: left 0.8s ease-in;
+      transition: left 0.8s $cubic;
     }
 }
 .loader{
@@ -50,7 +50,7 @@
       bottom: 0;
       left: 0;
       background-color: $pink;
-      transition: 1s ease-out;
+      transition: 1s ease;
       // -webkit-box-shadow: 0px 0px 20px 2px rgb(248, 59, 173, 0.30);
       // -moz-box-shadow: 0px 0px 20px 2px rgb(248, 59, 173, 0.30);
       // box-shadow: 0px 0px 20px 2px rgb(248, 59, 173, 0.30);

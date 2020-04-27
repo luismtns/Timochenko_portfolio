@@ -52,19 +52,10 @@ export class HomeViewComponent implements OnInit  {
 
   ngOnInit (): void {
     
-    this.subscriptions = this.loaderService.loaderState
-    .subscribe((state: LoaderState) => {
-      if(!state.show){
-        setTimeout(() => {
-          this.animate_line = true;
-          
-        }, 800);
-      }
-    });
+    setTimeout(() => {this.animate_line = true;}, 800);
   }
 
   ngOnDestroy():void{
-    this.subscriptions.unsubscribe();
   }
   
   onSwipeUp($event){

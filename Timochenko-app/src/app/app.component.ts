@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { ScreenHoverService } from './services/screen-hover.service';
+import { LoaderState } from './loader/loader.model';
+import { LoaderService } from './services/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,14 @@ export class AppComponent {
   mouse_position: MouseEvent;
   mouse_active: boolean = false;
   pointer_click: boolean = false;
-  constructor(private ScreenService:ScreenHoverService){}
+  show:boolean = true;
+  constructor(private loaderService:LoaderService){
+    
+    this.loaderService.loaderState
+    .subscribe((state: LoaderState) => {
+      this.show = state.show;
+    });
+  }
   @HostListener('mousemove', ['$event'])
   mouseMove($event: MouseEvent) {
     this.mouse_active = true;
@@ -29,4 +38,5 @@ export class AppComponent {
   PointerUp(evento: PointerEvent) {
     this.pointer_click = false;
   }
+  
 }
