@@ -12,7 +12,7 @@ export class AppComponent {
   mouse_position: MouseEvent;
   mouse_active: boolean = false;
   pointer_click: boolean = false;
-  show:boolean = true;
+  show:boolean = false;
   constructor(private loaderService:LoaderService){
     
     this.loaderService.loaderState

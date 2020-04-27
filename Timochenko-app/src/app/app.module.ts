@@ -28,6 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ReebokPageComponent } from './pages/reebok-page/reebok-page.component';
 import { SennaPageComponent } from './pages/senna-page/senna-page.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { BlankComponent } from './components/blank/blank.component';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -44,7 +45,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ChillPageComponent, 
     AboutPageComponent, 
     LitPageComponent, 
-    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, 
+    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, 
   ],
   imports: [
     BrowserModule,

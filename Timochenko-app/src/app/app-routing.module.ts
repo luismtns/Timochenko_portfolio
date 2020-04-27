@@ -7,6 +7,7 @@ import { SennaPageComponent } from './pages/senna-page/senna-page.component';
 import { PalmeirasPageComponent } from './pages/palmeiras-page/palmeiras-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { LoaderComponent } from './loader/loader.component';
+import { BlankComponent } from './components/blank/blank.component';
 
 const routes: Routes = [
   {
@@ -38,11 +39,15 @@ const routes: Routes = [
     component: AboutPageComponent
   },
   {
+    path: 'About',
+    component: AboutPageComponent
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
   },
-  { path: '**', component:LoaderComponent  }
+  { path: '**', component:BlankComponent  }
 ];
 
 @NgModule({
