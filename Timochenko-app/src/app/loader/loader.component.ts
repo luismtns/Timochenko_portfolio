@@ -48,21 +48,14 @@ export class LoaderComponent implements OnInit, OnDestroy {
     });
     
     if(environment.production){
+      this.updateProgress();
       const subscrive_timer = timer(1000, 1000).subscribe((val) =>{
         if(val > this.time_seconds){
           this.pinkTransition()
           setTimeout(()=>{this.loaderService.hide();}, 800)
           subscrive_timer.unsubscribe()
-        }else{
-          var progress_value = (val / this.time_seconds);
-          if(progress_value > 1){
-            progress_value = 1;
-          }
-          this.updateProgress(progress_value)
         }
-        
       });
-
     }else{
       this.loaderService.hide();
     }
@@ -79,7 +72,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
       setTimeout(()=>{this.pink_transition = null}, 800)
     }, 1000)
   }
-  updateProgress (progressRatio) {
-    this.progress_percent = Math.floor(progressRatio*100);
+  updateProgress () {
+    var updtate_interval = setInterval(()=>{this.progress_percent < 100 ? this.progress_percent++ : clearInterval(updtate_interval)}, 1000*(this.time_seconds/100) )
   };
 }
