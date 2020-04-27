@@ -27,6 +27,7 @@ import Hammer from 'hammerjs';
 import { HeaderComponent } from './components/header/header.component';
 import { ReebokPageComponent } from './pages/reebok-page/reebok-page.component';
 import { SennaPageComponent } from './pages/senna-page/senna-page.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -43,7 +44,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ChillPageComponent, 
     AboutPageComponent, 
     LitPageComponent, 
-    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, 
+    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, 
   ],
   imports: [
     BrowserModule,

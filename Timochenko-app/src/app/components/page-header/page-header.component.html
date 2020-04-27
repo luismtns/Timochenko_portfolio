@@ -1,0 +1,18 @@
+<div class="projectHeader">
+  <div class="container projectHeader__titlebox">
+    <div class="row">
+      <div class="col-12">
+          <h1 class="projectHeader__titlebox__title">{{page.title}}</h1>
+          <h4 class="projectHeader__titlebox__subtitle">{{page.subTitle}}</h4>
+      </div>
+    </div>
+  </div>
+  <div  class="projectHeader__image">
+    <img src="./assets/images/{{page.imgSrc}}.jpg" [alt]="page.imgAlt">
+    <p class="projectHeader__image--scroll pink-effect--overlay">
+      <span class="pink-effect"></span>
+      Scroll
+    </p>
+    <span class="projectHeader__image--line"></span>
+  </div>
+</div>

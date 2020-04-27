@@ -6,6 +6,7 @@ import { ReebokPageComponent } from './pages/reebok-page/reebok-page.component';
 import { SennaPageComponent } from './pages/senna-page/senna-page.component';
 import { PalmeirasPageComponent } from './pages/palmeiras-page/palmeiras-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { LoaderComponent } from './loader/loader.component';
 
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
+  { path: '**', component:LoaderComponent  }
 ];
 
 @NgModule({
