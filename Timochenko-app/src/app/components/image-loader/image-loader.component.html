@@ -1,4 +1,4 @@
 <div [class]="imgClass" class="img">
   <img *ngIf="loading" src="{{loaderSrc}}" alt="loading"/>
-  <img [hidden]="loading" (load)="onLoadImg()" src="{{imgSrc}}" alt="{{imgAlt}}"/>
+  <img [hidden]="loading" draggable="false" (load)="onLoadImg()" src="{{imgSrc}}" alt="{{imgAlt}}"/>
 </div>

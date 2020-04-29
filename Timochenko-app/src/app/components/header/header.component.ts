@@ -24,7 +24,12 @@ export class HeaderComponent implements OnInit {
 
   goHome(){
     if(this.router.url.indexOf('/p/') > -1){
-      this._location.back();
+      var route_split = location.pathname.split('/')
+      var route_navigate = route_split[route_split.length - 1];
+      if(route_navigate == 'Chill'){
+        route_navigate = ''
+      }
+      this.router.navigate(['/'+route_navigate])
     }else{
       this.router.navigate(['/'])
     }

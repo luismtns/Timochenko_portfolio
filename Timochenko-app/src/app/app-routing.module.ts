@@ -39,10 +39,6 @@ const routes: Routes = [
     component: AboutPageComponent
   },
   {
-    path: 'About',
-    component: AboutPageComponent
-  },
-  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
@@ -54,6 +50,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { 
     preloadingStrategy: PreloadAllModules,
     onSameUrlNavigation: 'reload',
+    scrollPositionRestoration: 'enabled'
   })],
   exports: [RouterModule]
 })

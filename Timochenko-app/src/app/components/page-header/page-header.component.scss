@@ -9,6 +9,7 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
+  margin-bottom: 8em;
   &__titlebox{
     z-index: 1;
     position: absolute;
@@ -23,8 +24,10 @@
     }
   }
   &__image{
-    position: relative;
+    // position: relative;
     top: auto;
+    position: absolute;
+    // top: 0;
     right: auto;
     left: auto;
     bottom: auto;
@@ -88,8 +91,8 @@
   }
 }
 @keyframes effect_open_page {
-  from {max-width: 60%;}
-  to {max-width: 100%;}
+  0% {max-width: 60%;max-height: auto; }
+  100% {max-width: 100%;max-height: 100%; }
 }
 @keyframes revel_effect {
   from {opacity: 0;}

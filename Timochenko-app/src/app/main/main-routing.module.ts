@@ -19,22 +19,22 @@ const routes: Routes = [
         data: {animation: 'Home'}
       },
       {
-        path: 'lit',
+        path: 'Lit',
         component: LitProjectComponent, 
         data: {animation: 'Lit'}
       },
       {
-        path: 'reebok',
+        path: 'Reebok',
         component: ReebokProjectComponent, 
         data: {animation: 'Reebok'}
       },
       {
-        path: 'senna',
+        path: 'Senna',
         component: SennaProjectComponent, 
         data: {animation: 'Senna'}
       },
       {
-        path: 'palmeiras',
+        path: 'Palmeiras',
         component: PalmeirasProjectComponent, 
         data: {animation: 'Palmeiras'}
       },

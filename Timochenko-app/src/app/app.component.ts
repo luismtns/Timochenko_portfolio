@@ -20,13 +20,13 @@ export class AppComponent {
       this.show = state.show;
     });
   }
-  @HostListener('mousemove', ['$event'])
+  @HostListener('document:mousemove', ['$event'])
   mouseMove($event: MouseEvent) {
     this.mouse_active = true;
     this.mouse_position = $event
 
   }
-  @HostListener('mouseleave', ['$event'])
+  @HostListener('document:mouseleave', ['$event'])
   mouseLeave($event: MouseEvent) {
     this.mouse_active = false
   }

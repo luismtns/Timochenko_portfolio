@@ -1,0 +1,102 @@
+@import "../../../sass/variables";
+.PageContain{
+  img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+p{
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.nextProject{
+  text-align: center;
+  padding-bottom: 10em;
+  hr{
+    border-color: $pink;
+    width: 100%;
+  }
+  h1{
+    font-size: 3em;
+    &:first-child{
+      color: $pink;
+    }
+  }
+}
+.light{
+  font-weight: 300;
+  font-size: 0.8em;
+}
+// Atoms
+.mg-t-3{
+  margin-top: 3em !important;
+  @include respond-to($medium) {
+    margin-top: 1.5em !important;
+  }
+}
+.mg-t-5{
+  margin-top: 5em !important;
+  @include respond-to($medium) {
+    margin-top: 2.5em !important;
+  }
+}
+.mg-t-10{
+  margin-top: 10em !important;
+  @include respond-to($medium) {
+    margin-top: 5em !important;
+  }
+}
+
+.mg-b-3{
+  margin-bottom: 3em !important;
+  @include respond-to($medium) {
+    margin-bottom: 1.5em !important;
+  }
+}
+.mg-b-5{
+  margin-bottom: 5em !important;
+  @include respond-to($medium) {
+    margin-bottom: 2.5em !important;
+  }
+}
+.mg-b-10{
+  margin-bottom: 10em !important;
+  @include respond-to($medium) {
+    margin-bottom: 5em !important;
+  }
+}
+
+.full-image{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  img{
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.flex-images{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div{
+    &:first-child{
+      padding-left: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+    }
+    padding: 0 1em;
+  }
+}
+.negative-margin{
+  margin-bottom: -20%;
+  
+  @include respond-to($medium) {
+    margin-bottom: 5em;
+  }
+}

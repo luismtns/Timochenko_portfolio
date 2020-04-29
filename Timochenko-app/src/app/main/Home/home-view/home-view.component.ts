@@ -71,19 +71,19 @@ export class HomeViewComponent implements OnInit  {
     if (scrolldown) {
       switch (this.router.url) {
         case '/': {
-          this.router.navigate(['/lit'])
+          this.router.navigate(['/Lit'])
           break
         }
-        case '/lit': {
-          this.router.navigate(['/reebok'])
+        case '/Lit': {
+          this.router.navigate(['/Reebok'])
           break
         }
-        case '/reebok': {
-          this.router.navigate(['/senna'])
+        case '/Reebok': {
+          this.router.navigate(['/Senna'])
           break
         }
-        case '/senna': {
-          this.router.navigate(['/palmeiras'])
+        case '/Senna': {
+          this.router.navigate(['/Palmeiras'])
           break
         }
       }
@@ -92,20 +92,20 @@ export class HomeViewComponent implements OnInit  {
         case '/': {
           break
         }
-        case '/lit': {
+        case '/Lit': {
           this.router.navigate(['/'])
           break
         }
-        case '/reebok': {
-          this.router.navigate(['/lit'])
+        case '/Reebok': {
+          this.router.navigate(['/Lit'])
           break
         }
-        case '/senna': {
-          this.router.navigate(['/reebok'])
+        case '/Senna': {
+          this.router.navigate(['/Reebok'])
           break
         }
-        case '/palmeiras': {
-          this.router.navigate(['/senna'])
+        case '/Palmeiras': {
+          this.router.navigate(['/Senna'])
           break
         }
       }
