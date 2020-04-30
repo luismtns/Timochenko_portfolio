@@ -3,6 +3,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA, Injectable  } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module'; 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -54,7 +55,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppRoutingModule,
     MainModule,
     NgbModule,
-    HammerModule
+    HammerModule,
+    NgsRevealModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "pt-br"},

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
+import { NgsRevealConfig } from 'ngx-scrollreveal';
 
 @Component({
   selector: 'app-chill-page',
@@ -12,6 +13,15 @@ export class ChillPageComponent implements OnInit {
     "subTitle": "Creative Direction",
     "imgSrc": "chill/Chillfy",
     "imgAlt": "Chill.fy project cover",
+  }
+  
+  _ngsReveal:NgsRevealConfig  = {
+    'origin': 'top',
+    'scale': 1,
+    'easing': 'cubic-bezier(.35,0,.28,1)',
+    'distance': '3em',
+    'duration': 1000,
+    'interval': 1000,
   }
   constructor() { }
 
