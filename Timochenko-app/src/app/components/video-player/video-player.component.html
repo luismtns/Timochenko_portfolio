@@ -1,0 +1,21 @@
+<div class="VideoContainer pink-effect--overlay">
+  <span [ngClass]="{'pink_animate': pink_effect}" class="pink-effect"></span>
+  <img *ngIf="vid.paused"
+    [ngClass]="{'show': pink_effect}" 
+    src="./assets/images/player-icon.svg" 
+    class="VideoContainer__play-icon" 
+    alt="Player Icon">
+  <video 
+    #vid
+    [ngClass]="{'video_animate': pink_effect}"
+    class="video_pink_effect"
+    width="100%" 
+    height="auto" 
+    poster="./assets/images/{{config.poster}}.jpg" 
+    (click)="toggleVideo($event)" 
+    preload="metadata">  
+    <source src="./assets/videos/{{config.src}}.mp4" type="video/mp4">
+      Browser não subortado.
+  </video>
+
+</div>
