@@ -92,10 +92,17 @@ p{
     }
     padding: 0 1em;
   }
+  &.small-padding{
+    div{
+      padding: 0 0.2em;
+    }
+  }
   @include respond-to($medium){
     display: block;
     div{
       margin-bottom: 2.5em;
+      padding-right: 15px !important;
+      padding-left: 15px !important;
     }
   }
 }
@@ -120,5 +127,52 @@ p{
   
   @include respond-to($medium) {
     margin-bottom: 5em;
+  }
+}
+
+.container {
+  position:relative;  
+}
+
+.row--overlay-25{
+  position: relative;
+  margin-top: -25%;
+  z-index: 20;
+  @include respond-to($medium) {
+    margin-top: 2.5em;
+    z-index: 1;
+  }
+  &.negative-index{
+    z-index: -1;
+  }
+}
+
+.row--overlay-70{
+  position: relative;
+  margin-top: -70%;
+  z-index: 20;
+  @include respond-to($medium) {
+    margin-top: 2.5em;
+    z-index: 1;
+  }
+}
+
+.row--overlay-40{
+  position: relative;
+  margin-top: -40%;
+  z-index: 21;
+  @include respond-to($medium) {
+    margin-top: 2.5em;
+    z-index: 1;
+  }
+}
+
+.row--overlay-35{
+  position: relative;
+  margin-top: -35%;
+  z-index: 20;
+  @include respond-to($medium) {
+    margin-top: 2.5em;
+    z-index: 1;
   }
 }
