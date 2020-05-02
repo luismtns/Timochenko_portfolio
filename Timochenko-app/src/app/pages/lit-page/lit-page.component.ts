@@ -1,6 +1,8 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
 import { VideoPlayerModule } from 'src/app/components/video-player/video-player.module';
+import { NgsRevealConfig } from 'ngx-scrollreveal';
+import { myNgsRevealConfig } from '../ngsRevealConfig';
 
 @Component({
   selector: 'app-lit-page',
@@ -20,6 +22,8 @@ export class LitPageComponent implements AfterViewInit {
     'src': 'lit/lit_video',
     'poster': 'lit/Lit'
   }
+  
+  _ngsReveal:NgsRevealConfig  = myNgsRevealConfig;
   constructor() { }
 
   ngAfterViewInit(): void {

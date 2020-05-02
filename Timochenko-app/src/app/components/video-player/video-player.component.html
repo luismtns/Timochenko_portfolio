@@ -1,6 +1,6 @@
 <div class="VideoContainer pink-effect--overlay">
   <span [ngClass]="{'pink_animate': pink_effect}" class="pink-effect"></span>
-  <img *ngIf="vid.paused"
+  <img *ngIf="vid.paused && !config.autoplay"
     [ngClass]="{'show': pink_effect}" 
     src="./assets/images/player-icon.svg" 
     class="VideoContainer__play-icon" 

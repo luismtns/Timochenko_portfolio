@@ -1,87 +1,89 @@
 <app-page-header [page]="_page"></app-page-header>
-<div class="container PageContain">
-  <div class="row align-items-center mg-b-10">
-    <div class="col-12 col-md-3">
-      <p>
-        <strong>
-          2019
-        </strong>
+<div class="PageContain" [ngsRevealSet]="_ngsReveal" [ngsInterval]="400" ngsSelector=".reveal">
+  <div class="container">
+    <div class="row align-items-center mg-b-10">
+      <div class="col-12 col-md-3 reveal">
+        <p>
+          <strong>
+            2019
+          </strong>
+          <br>
+          Brand Engagement
+        </p>
         <br>
-        Brand Engagement
-      </p>
-      <br>
-      <p>
-        <strong>
-          Creative Team
-        </strong>
-      </p>
-      <p>
-        Elias Suzumura <span class="light">Motion</span><br>
-        Éder Fantoni <span class="light">CopyWriter</span><br>
-        Mauro Palacios <span class="light">Creative Director</span><br>
-      </p>
+        <p>
+          <strong>
+            Creative Team
+          </strong>
+        </p>
+        <p>
+          Elias Suzumura <span class="light">Motion</span><br>
+          Éder Fantoni <span class="light">CopyWriter</span><br>
+          Mauro Palacios <span class="light">Creative Director</span><br>
+        </p>
+      </div>
+      <div class="col-12 col-md-7 reveal">
+        <p>
+          Senna Brand is the licencing company created to manage Ayrton Senna’s name and brand after his death. With a portfolio that includes Tag Heuer, Ducati and McLaren, it was a huge challenge to transmit the braveness and courage associated with such a meaningful name as Ayrton Senna and his brand.
+        </p>
+      </div>
+      <div class="col-12 col-md-2 reveal">
+        <img src="./assets/images/senna/logo_min.png" draggable="false" alt="Logo Senna">
+      </div>
     </div>
-    <div class="col-12 col-md-7">
-      <p>
-        Senna Brand is the licencing company created to manage Ayrton Senna’s name and brand after his death. With a portfolio that includes Tag Heuer, Ducati and McLaren, it was a huge challenge to transmit the braveness and courage associated with such a meaningful name as Ayrton Senna and his brand.
-      </p>
+    <div class="row">
+      <div class="col-12">
+        <!-- VIDEO GO HERE -->
+      </div>
     </div>
-    <div class="col-12 col-md-2">
-      <img src="./assets/images/senna/logo_min.png" draggable="false" alt="Logo Senna">
+    <div class="row d-none d-sm-flex">
+      <div class="col-md-6 reveal">
+        <img class="" src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
+        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_3.jpg" draggable="false" alt="Senna Project Image">
+        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_5.jpg" draggable="false" alt="Senna Project Image">
+      </div>
+      <div class="col-12 col-md-6">
+        <img class="mg-t-5 reveal" src="./assets/images/senna/senna_2.jpg" draggable="false" alt="Senna Project Image">
+        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_4.jpg" draggable="false" alt="Senna Project Image">
+        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_6.jpg" draggable="false" alt="Senna Project Image">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <!-- VIDEO GO HERE -->
-    </div>
-  </div>
-  <div class="row d-none d-sm-flex">
-    <div class="col-12 col-md-6">
-      <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
-      <img class="mg-t-3" src="./assets/images/senna/senna_3.jpg" draggable="false" alt="Senna Project Image">
-      <img class="mg-t-3" src="./assets/images/senna/senna_5.jpg" draggable="false" alt="Senna Project Image">
-    </div>
-    <div class="col-12 col-md-6">
-      <img class="mg-t-5" src="./assets/images/senna/senna_2.jpg" draggable="false" alt="Senna Project Image">
-      <img class="mg-t-3" src="./assets/images/senna/senna_4.jpg" draggable="false" alt="Senna Project Image">
-      <img class="mg-t-3" src="./assets/images/senna/senna_6.jpg" draggable="false" alt="Senna Project Image">
-    </div>
-  </div>
-  <div class="row d-sm-none">
-    <div class="col-12 col-md-6">
-      <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
-      <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
-    </div>
-    <div class="col-12 col-md-6">
-      <span class="mg-t-5"></span>
-    </div>
-    <div class="col-12 col-md-6">
-      <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
-    </div>
-    <div class="col-12 col-md-6">
-      <span class="mg-t-5 d-none d-sm-block"></span>
-      <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
+    <div class="row d-sm-none">
+      <div class="col-12 col-md-6">
+        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mg-t-5"></span>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mg-t-5 d-none d-sm-block"></span>
+        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      </div>
     </div>
   </div>
-</div>
-<div class="full-image mg-t-10 mg-b-10">
-  <img src="./assets/images/senna/bottom.jpg" alt="Senna Bottom Project Image">
-</div>
-
-<div class="nextProject" [routerLink]="[ '/p/Palmeiras']">
-  <div class="row">
-    <div class="col-12 col-md-2 offset-md-5">
-      <hr>
-    </div>
+  <div class="full-image mg-t-10 mg-b-10">
+    <img src="./assets/images/senna/bottom.jpg" alt="Senna Bottom Project Image" class="reveal">
   </div>
-  <div class="row">
-    <div class="col-12">
-      <h1>
-        Next Proj
-      </h1>
-      <h1>
-        Palmeiras
-      </h1>
+  
+  <div class="nextProject" [routerLink]="[ '/p/Palmeiras']">
+    <div class="row">
+      <div class="col-12 col-md-2 offset-md-5">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Next Proj
+        </h1>
+        <h1>
+          Palmeiras
+        </h1>
+      </div>
     </div>
   </div>
 </div>

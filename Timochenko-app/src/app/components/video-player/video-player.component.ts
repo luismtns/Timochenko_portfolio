@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, Input, Inject, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { VideoPlayerModule } from './video-player.module';
 import { DOCUMENT } from '@angular/common';
 
@@ -7,7 +7,7 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss']
 })
-export class VideoPlayerComponent implements OnInit {
+export class VideoPlayerComponent implements AfterViewInit {
 
   @Input() config: VideoPlayerModule = {
     'poster': "",
@@ -23,6 +23,10 @@ export class VideoPlayerComponent implements OnInit {
   onWindowScroll() {
     if(this.video_element.nativeElement.getBoundingClientRect().top < window.innerHeight / 2){
       this.pink_effect = true;
+      if(this.config.autoplay){
+        var _videoRef = this.video_element.nativeElement as HTMLVideoElement;
+        _videoRef.play();
+      }
     }
     // if (this.video_element.nativeElement.getBoundingClientRect().top) {
     //   document.getElementById('subTitle').classList.add('red');
@@ -31,7 +35,7 @@ export class VideoPlayerComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
   }
 
   

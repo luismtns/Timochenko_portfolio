@@ -12,4 +12,5 @@ import { CommonModule } from '@angular/common';
 export class VideoPlayerModule {
   poster: string;
   src:string;
+  autoplay?:boolean = false;
  }

@@ -1,22 +1,73 @@
 <app-page-header [page]="_page"></app-page-header>
-<div class="container PageContain">
-  <div class="row mg-b-5">
-    <div class="col-12">
-      <app-video-player [config]="_config"></app-video-player>
+<div class="PageContain" [ngsRevealSet]="_ngsReveal" [ngsInterval]="400" ngsSelector=".reveal">
+  <div class="container">  
+    <div class="row align-items-center mg-b-10">
+      <div class="col-12 col-md-3 reveal">
+        <p>
+          <strong>
+            2019
+          </strong>
+          <br>
+          Awareness Campaign
+        </p>
+        <br>
+        <p>
+          <strong>
+            Creative Team
+          </strong>
+        </p>
+        <p>
+          G. Shimako <span class="light">Illustrator</span><br>
+          Jonas Barbosa <span class="light">Illustrator</span><br>
+          Sara Garrido <span class="light">Illustrator</span><br>
+          Eduardo Mazzi <span class="light">Illustrator</span><br>
+          Mauro Palacios <span class="light">Creative Director</span><br>
+        </p>
+      </div>
+      <div class="col-12 col-md-7 reveal">
+        <p>
+          Peça chave de uma campanha de awareness, o vídeo explicativo para a plataforma online da escola de negócios Saint Paul, LIT, demonstra como aproveitar melhor seu tempo com o conteúdo OnLearning. A estética mescla elementos ilustrativos que aludem ao universo tecnológico, em que a plataforma funciona, com a fluidez orgânica na animação.
+        </p>
+      </div>
+      <div class="col-12 col-md-2 reveal">
+        <img src="./assets/images/lit/logo_min.png" draggable="false" alt="Logo Lit">
+      </div>
+    </div>
+    <div class="row mg-b-5">
+      <div class="col-12">
+        <app-video-player [config]="_config"></app-video-player>
+      </div>
     </div>
   </div>
-</div>
-<div class="flex-gifs">
-  <div class="flex-gifs__container">
-    <app-image-loader 
-      imgSrc="./assets/images/lit/Lit_cut_1.gif" 
-      loaderSrc="./assets/images/lit/Lit_cut_1_cover.jpg"
-      imgAlt="Lit Cut"></app-image-loader>
+  <div class="flex-gifs mg-b-10">
+    <div class="flex-gifs__container">
+      <app-image-loader 
+        imgSrc="./assets/images/lit/Lit_cut_1.gif" 
+        loaderSrc="./assets/images/lit/Lit_cut_1_cover.jpg"
+        imgAlt="Lit Cut"></app-image-loader>
+    </div>
+    <div class="flex-gifs__container">
+      <app-image-loader 
+        imgSrc="./assets/images/lit/Lit_cut_2.gif" 
+        loaderSrc="./assets/images/lit/Lit_cut_2_cover.jpg"
+        imgAlt="Lit Cut"></app-image-loader>
+    </div>
   </div>
-  <div class="flex-gifs__container">
-    <app-image-loader 
-      imgSrc="./assets/images/lit/Lit_cut_2.gif" 
-      loaderSrc="./assets/images/lit/Lit_cut_2_cover.jpg"
-      imgAlt="Lit Cut"></app-image-loader>
-  </div>
+  <div class="nextProject" [routerLink]="[ '/p/Reebok']">
+    <div class="row">
+      <div class="col-12 col-md-2 offset-md-5">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Next Proj
+        </h1>
+        <h1>
+          Reebok
+        </h1>
+      </div>
+    </div>
+  </div> 
 </div>
