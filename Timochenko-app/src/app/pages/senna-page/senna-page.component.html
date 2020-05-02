@@ -1,8 +1,8 @@
 <app-page-header [page]="_page"></app-page-header>
 <div class="PageContain" [ngsRevealSet]="_ngsReveal" [ngsInterval]="100" [ngsSelector]="'.reveal'">
   <div class="container">
-    <div class="row align-items-center mg-b-10">
-      <div class="col-12 col-md-3 reveal">
+    <div class="row align-items-center mg-b-5">
+      <div class="col-12 col-md-3 mg-b-5 reveal">
         <p>
           <strong>
             2019
@@ -22,12 +22,12 @@
           Mauro Palacios <span class="light">Creative Director</span><br>
         </p>
       </div>
-      <div class="col-12 col-md-7 reveal">
+      <div class="col-12 col-md-7 mg-b-5 reveal">
         <p>
           Senna Brand is the licencing company created to manage Ayrton Senna’s name and brand after his death. With a portfolio that includes Tag Heuer, Ducati and McLaren, it was a huge challenge to transmit the braveness and courage associated with such a meaningful name as Ayrton Senna and his brand.
         </p>
       </div>
-      <div class="col-12 col-md-2 reveal">
+      <div class="col-12 col-md-2 mg-b-5 reveal">
         <img src="./assets/images/senna/logo_min.png" draggable="false" alt="Logo Senna">
       </div>
     </div>
@@ -38,38 +38,54 @@
     </div>
     <div class="row d-none d-sm-flex">
       <div class="col-md-6 reveal">
-        <img class="" src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
-        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_3.jpg" draggable="false" alt="Senna Project Image">
-        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_5.jpg" draggable="false" alt="Senna Project Image">
+        <div class="reveal">
+          <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
+        </div>
+        <div class="reveal">
+          <img class="mg-t-3" src="./assets/images/senna/senna_3.jpg" draggable="false" alt="Senna Project Image">
+        </div>
+        <div class="reveal">
+          <img class="mg-t-3" src="./assets/images/senna/senna_5.jpg" draggable="false" alt="Senna Project Image">
+        </div>
       </div>
       <div class="col-12 col-md-6">
-        <img class="mg-t-5 reveal" src="./assets/images/senna/senna_2.jpg" draggable="false" alt="Senna Project Image">
-        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_4.jpg" draggable="false" alt="Senna Project Image">
-        <img class="mg-t-3 reveal" src="./assets/images/senna/senna_6.jpg" draggable="false" alt="Senna Project Image">
+        <div class="reveal">
+          <img class="mg-t-5" src="./assets/images/senna/senna_2.jpg" draggable="false" alt="Senna Project Image">
+        </div>
+        <div class="reveal">
+          <img class="mg-t-3" src="./assets/images/senna/senna_4.jpg" draggable="false" alt="Senna Project Image">
+        </div>
+        <div class="reveal">
+          <img class="mg-t-3" src="./assets/images/senna/senna_6.jpg" draggable="false" alt="Senna Project Image">
+        </div>
       </div>
     </div>
     <div class="row d-sm-none">
-      <div class="col-12 col-md-6">
-        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
-        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      <div class="col-12 reveal mg-b-3">
+        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image">
       </div>
-      <div class="col-12 col-md-6">
-        <span class="mg-t-5"></span>
+      <div class="col-12 reveal mg-b-3">
+        <img src="./assets/images/senna/senna_2.jpg" draggable="false" alt="Senna Project Image" class="reveal">
       </div>
-      <div class="col-12 col-md-6">
-        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      <div class="col-12 reveal mg-b-3">
+        <img src="./assets/images/senna/senna_3.jpg" draggable="false" alt="Senna Project Image" class="reveal">
       </div>
-      <div class="col-12 col-md-6">
-        <span class="mg-t-5 d-none d-sm-block"></span>
-        <img src="./assets/images/senna/senna_1.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      <div class="col-12 reveal mg-b-3">
+        <img src="./assets/images/senna/senna_4.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      </div>
+      <div class="col-12 reveal mg-b-3">
+        <img src="./assets/images/senna/senna_5.jpg" draggable="false" alt="Senna Project Image" class="reveal">
+      </div>
+      <div class="col-12 reveal mg-b-3">
+        <img src="./assets/images/senna/senna_6.jpg" draggable="false" alt="Senna Project Image" class="reveal">
       </div>
     </div>
   </div>
-  <div class="full-image mg-t-10 mg-b-10">
-    <img src="./assets/images/senna/bottom.jpg" alt="Senna Bottom Project Image" class="reveal">
+  <div class="full-image mg-t-10 reveal mg-b-10">
+    <img src="./assets/images/senna/bottom.jpg" alt="Senna Bottom Project Image">
   </div>
   
-  <div class="nextProject" [routerLink]="[ '/p/Palmeiras']">
+  <div class="nextProject reveal" [routerLink]="[ '/p/Palmeiras']">
     <div class="row">
       <div class="col-12 col-md-2 offset-md-5">
         <hr>
