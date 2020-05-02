@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
 import { NgsRevealConfig } from 'ngx-scrollreveal';
 import { myNgsRevealConfig } from '../ngsRevealConfig';
@@ -8,7 +8,7 @@ import { myNgsRevealConfig } from '../ngsRevealConfig';
   templateUrl: './chill-page.component.html',
   styleUrls: ['./chill-page.component.scss']
 })
-export class ChillPageComponent implements AfterViewInit {
+export class ChillPageComponent implements OnInit {
   _page:PageModule = {
     "title": "Chill.fy",
     "subTitle": "Creative Direction",
@@ -19,7 +19,7 @@ export class ChillPageComponent implements AfterViewInit {
   _ngsReveal:NgsRevealConfig  = myNgsRevealConfig;
   constructor() { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
   }
 
 }

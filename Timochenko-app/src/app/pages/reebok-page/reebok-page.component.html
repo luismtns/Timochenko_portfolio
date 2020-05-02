@@ -1,4 +1,39 @@
 <app-page-header [page]="_page"></app-page-header>
-<div class="container PageContain">
-  
+<div class="PageContain" [ngsRevealSet]="_ngsReveal" [ngsInterval]="100" [ngsSelector]="'.reveal'">
+  <div class="container">  
+    <div class="row align-items-center mg-b-5">
+      <div class="col-12 col-md-3 mg-b-5 reveal">
+        <p>
+          <strong>
+            2019
+          </strong>
+          <br>
+          Brand Engagement
+        </p>
+        <br>
+        <p>
+          <strong>
+            Creative Team
+          </strong>
+        </p>
+        <p>
+          Paula Saviolli <span class="light">Copywriter</span><br>
+          Marianna Schmidt <span class="light">Art Director</span><br>
+          Stephanie Ramos <span class="light">Copywriter</span><br>
+        </p>
+      </div>
+      <div class="col-12 col-md-7 mg-b-5 reveal">
+        <p>
+          Reebok is one of the largest footwear and sports apparel company in the world. To raise awareness and increase consideration and product value, we developed on social channels a visual identity that reinforces brand messages: dynamic, bold and inspirational, mixing GIFs, interactive formats on Stories and short videos optimized for the platforms.
+        </p>
+      </div>
+      <div class="col-12 col-md-2 mg-b-5 reveal">
+        <img src="./assets/images/reebok/logo_min.png" draggable="false" alt="Logo Lit">
+      </div>
+    </div>
+    <div class="row mg-b-5">
+      <div class="col-12">
+      </div>
+    </div>
+  </div>  
 </div>

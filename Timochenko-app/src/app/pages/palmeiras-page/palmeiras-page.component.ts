@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
 import {NgsRevealConfig} from 'ngx-scrollreveal';
 import { myNgsRevealConfig } from '../ngsRevealConfig';
@@ -8,7 +8,7 @@ import { myNgsRevealConfig } from '../ngsRevealConfig';
   templateUrl: './palmeiras-page.component.html',
   styleUrls: ['./palmeiras-page.component.scss']
 })
-export class PalmeirasPageComponent implements AfterViewInit {
+export class PalmeirasPageComponent implements OnInit {
   _page:PageModule = {
     "title": "Palmeiras",
     "subTitle": "Ui & Art Direction",
@@ -20,7 +20,7 @@ export class PalmeirasPageComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
   }
 
 }

@@ -7,5 +7,6 @@ export const myNgsRevealConfig: NgsRevealConfig = {
   'distance': '3em',
   'duration': 800,
   'cleanup': true,
-  'viewFactor': 0
+  'viewFactor': 0.1,
+  'useDelay': 'onload'
 }

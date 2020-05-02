@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
 import { NgsRevealConfig } from 'ngx-scrollreveal';
 import { myNgsRevealConfig } from '../ngsRevealConfig';
@@ -8,7 +8,7 @@ import { myNgsRevealConfig } from '../ngsRevealConfig';
   templateUrl: './senna-page.component.html',
   styleUrls: ['./senna-page.component.scss']
 })
-export class SennaPageComponent implements AfterViewInit {
+export class SennaPageComponent implements OnInit {
   _page:PageModule = {
     "title": "Senna",
     "subTitle": "Art Direction & Motion Design",
@@ -19,7 +19,7 @@ export class SennaPageComponent implements AfterViewInit {
   _ngsReveal:NgsRevealConfig  = myNgsRevealConfig;
   constructor() { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
   }
 
 }
