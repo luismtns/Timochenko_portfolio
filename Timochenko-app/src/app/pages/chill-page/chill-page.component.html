@@ -1,140 +1,142 @@
 <app-page-header [page]="_page"></app-page-header>
-<div class="container PageContain">
-  <div class="row align-items-center mg-b-10">
-    <div class="col-12 col-md-3">
-      <p>
-        <strong>
-          2019
-        </strong>
+<div class="PageContain" [ngsRevealSet]="_ngsReveal" [ngsInterval]="400" ngsSelector=".reveal">
+  <div class="container">
+    <div class="row align-items-center mg-b-10">
+      <div class="col-12 col-md-3 reveal">
+        <p>
+          <strong>
+            2019
+          </strong>
+          <br>
+          Personal Project
+        </p>
         <br>
-        Personal Project
-      </p>
-      <br>
-      <p>
-        <strong>
-          Creative Team
-        </strong>
-      </p>
-      <p>
-        Danny França  <span class="light">Writer</span><br>
-        Natalia Martins <span class="light">Illustrator</span><br>
-        Iago Assis <span class="light">Designer</span><br>
-        Ingrid Tomazini <span class="light">Designer</span><br>
-        Marcelo Sanchez <span class="light">Designer</span>
-      </p>
+        <p>
+          <strong>
+            Creative Team
+          </strong>
+        </p>
+        <p>
+          Danny França  <span class="light">Writer</span><br>
+          Natalia Martins <span class="light">Illustrator</span><br>
+          Iago Assis <span class="light">Designer</span><br>
+          Ingrid Tomazini <span class="light">Designer</span><br>
+          Marcelo Sanchez <span class="light">Designer</span>
+        </p>
+      </div>
+      <div class="col-12 col-md-7 reveal">
+        <p>
+          Chill.fy is a personal project based on the roots of the gender lo-fi, in which the artists has the principles of do it yourself. The user has the experience of creating their own music that can be used for relaxing and to bust concentration
+        </p>
+      </div>
+      <div class="col-12 col-md-2 reveal">
+        <img src="./assets/images/chill/logo_min.png" draggable="false" alt="Logo Chill.fy White">
+      </div>
     </div>
-    <div class="col-12 col-md-7">
-      <p>
-        Chill.fy is a personal project based on the roots of the gender lo-fi, in which the artists has the principles of do it yourself. The user has the experience of creating their own music that can be used for relaxing and to bust concentration
-      </p>
+    <div class="row mg-b-5">
+      <div class="col-12 reveal">
+        <img src="./assets/images/chill/guidlines_1.png" draggable="false" alt="Chill.fy guidelines">
+      </div>
     </div>
-    <div class="col-12 col-md-2">
-      <img src="./assets/images/chill/logo_min.png" draggable="false" alt="Logo Chill.fy White">
+    <div class="row mg-b-10">
+      <div class="col-12 col-md-6 offset-md-3 reveal">
+        <img src="./assets/images/chill/guidlines_2.png" draggable="false" alt="Chill.fy guidelines">
+      </div>
     </div>
-  </div>
-  <div class="row mg-b-5">
-    <div class="col-12">
-      <img src="./assets/images/chill/guidlines_1.png" draggable="false" alt="Chill.fy guidelines" [ngsReveal]="_ngsReveal">
+    <div class="row mg-b-10">
+      <div class="col-12 col-md-8 offset-md-2">
+        <h2 class="PageContain__title reveal">
+          CORES PRIMÁRIAS
+        </h2>
+        <img class="reveal" src="./assets/images/chill/primary_colors.png" draggable="false" alt="Chill.fy Primary Colors">
+      </div>
     </div>
-  </div>
-  <div class="row mg-b-10">
-    <div class="col-12 col-md-6 offset-md-3">
-      <img src="./assets/images/chill/guidlines_2.png" draggable="false" alt="Chill.fy guidelines" [ngsReveal]="_ngsReveal">
+    <div class="row">
+      <div class="col-12 col-md-8 offset-2">
+        <h2 class="PageContain__title reveal">
+          CORES SECUNDÁRIAS & GRADIENTES
+        </h2>
+      </div>
     </div>
-  </div>
-  <div class="row mg-b-10" [ngsReveal]="_ngsReveal">
-    <div class="col-12 col-md-8 offset-md-2">
-      <h2 class="PageContain__title">
-        CORES PRIMÁRIAS
-      </h2>
-      <img src="./assets/images/chill/primary_colors.png" draggable="false" alt="Chill.fy Primary Colors">
-    </div>
-  </div>
-  <div class="row" [ngsReveal]="_ngsReveal">
-    <div class="col-12 col-md-8 offset-2">
-      <h2 class="PageContain__title">
-        CORES SECUNDÁRIAS & GRADIENTES
-      </h2>
-    </div>
-  </div>
-  <div class="row mg-b-10" [ngsReveal]="_ngsReveal">
-    <div class="col-12">
-      <div class="row">
-        <div class="col-6">
-          <img src="./assets/images/chill/secondary_colors.png" draggable="false" alt="Chill.fy Secondary Colors">
-        </div>
-        <div class="col-6">
-          <img src="./assets/images/chill/gradient.png" draggable="false" alt="Chill.fy Gradient">
+    <div class="row mg-b-10">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-6 reveal">
+            <img src="./assets/images/chill/secondary_colors.png" draggable="false" alt="Chill.fy Secondary Colors">
+          </div>
+          <div class="col-6 reveal">
+            <img src="./assets/images/chill/gradient.png" draggable="false" alt="Chill.fy Gradient">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row mg-b-3" [ngsReveal]="_ngsReveal">
-    <div class="col-12 col-md-8 offset-2">
-      <h2 class="PageContain__title">
-        DESKTOP LAYOUT
-      </h2>
+    <div class="row mg-b-3">
+      <div class="col-12 col-md-8 offset-2">
+        <h2 class="PageContain__title reveal">
+          DESKTOP LAYOUT
+        </h2>
+      </div>
+    </div>
+    <div class="row mg-b-3">
+      <div class="col-12">
+        <img src="./assets/images/chill/desktop_1.jpg" draggable="false" alt="Chill.fy Desktop Screen" class="reveal">
+      </div>
+    </div>
+    <div class="row mg-b-3">
+      <div class="col-12">
+        <img src="./assets/images/chill/desktop_2.jpg" draggable="false" alt="Chill.fy Desktop Screen" class="reveal">
+      </div>
     </div>
   </div>
-  <div class="row mg-b-3">
-    <div class="col-12">
-      <img src="./assets/images/chill/desktop_1.jpg" draggable="false" alt="Chill.fy Desktop Screen" [ngsReveal]="_ngsReveal">
+  
+  <div class="full-image mg-b-10">
+    <img src="./assets/images/chill/desktop_3.png" alt="Chill.fy Desktop Screen" class="reveal">
+  </div>
+  
+  <div class="PageContain">
+    <div class="row mg-b-3">
+      <div class="col-12 col-md-8 offset-2">
+        <h2 class="PageContain__title reveal">
+          MOBILE LAYOUT
+        </h2>
+      </div>
+    </div>
+    <div class="row mg-b-3">
+      <div class="col-12 col-md-4 offset-4">
+        <img src="./assets/images/chill/mobile_1.jpg" draggable="false" alt="Chill.fy Mobile Screen" class="reveal">
+      </div>
+    </div>
+    <div class="row mg-b-3">
+      <div class="col-12 col-md-4 offset-2">
+        <img src="./assets/images/chill/mobile_2.jpg" draggable="false" alt="Chill.fy Mobile Screen" class="reveal">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="./assets/images/chill/mobile_3.jpg" draggable="false" alt="Chill.fy Mobile Screen" class="reveal">
+      </div>
     </div>
   </div>
-  <div class="row mg-b-3">
-    <div class="col-12">
-      <img src="./assets/images/chill/desktop_2.jpg" draggable="false" alt="Chill.fy Desktop Screen" [ngsReveal]="_ngsReveal">
-    </div>
+  
+  <div class="full-image mg-b-10">
+    <img src="./assets/images/chill/mobile_4.png" alt="Chill.fy Mobile Screen" class="reveal">
   </div>
-</div>
-
-<div class="full-image mg-b-10">
-  <img src="./assets/images/chill/desktop_3.png" alt="Chill.fy Desktop Screen" [ngsReveal]="_ngsReveal">
-</div>
-
-<div class="container PageContain">
-  <div class="row mg-b-3" [ngsReveal]="_ngsReveal">
-    <div class="col-12 col-md-8 offset-2">
-      <h2 class="PageContain__title">
-        MOBILE LAYOUT
-      </h2>
+  
+  <div class="nextProject" [routerLink]="[ '/p/Lit']">
+    <div class="row">
+      <div class="col-12 col-md-2 offset-md-5">
+        <hr>
+      </div>
     </div>
-  </div>
-  <div class="row mg-b-3">
-    <div class="col-12 col-md-4 offset-4">
-      <img src="./assets/images/chill/mobile_1.jpg" draggable="false" alt="Chill.fy Mobile Screen" [ngsReveal]="_ngsReveal">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Next Proj
+        </h1>
+        <h1>
+          Lit
+        </h1>
+      </div>
     </div>
-  </div>
-  <div class="row mg-b-3">
-    <div class="col-12 col-md-4 offset-2">
-      <img src="./assets/images/chill/mobile_2.jpg" draggable="false" alt="Chill.fy Mobile Screen" [ngsReveal]="_ngsReveal">
-    </div>
-    <div class="col-12 col-md-4">
-      <img src="./assets/images/chill/mobile_3.jpg" draggable="false" alt="Chill.fy Mobile Screen" [ngsReveal]="_ngsReveal">
-    </div>
-  </div>
-</div>
-
-<div class="full-image mg-b-10">
-  <img src="./assets/images/chill/mobile_4.png" alt="Chill.fy Mobile Screen" [ngsReveal]="_ngsReveal">
-</div>
-
-<div class="nextProject" [routerLink]="[ '/p/Lit']">
-  <div class="row">
-    <div class="col-12 col-md-2 offset-md-5">
-      <hr>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <h1>
-        Next Proj
-      </h1>
-      <h1>
-        Lit
-      </h1>
-    </div>
-  </div>
+  </div>  
 </div>
 <!-- <app-image-loader 
 imgSrc="./assets/images/chill/Chillfy.jpg" 

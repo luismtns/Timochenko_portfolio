@@ -92,7 +92,29 @@ p{
     }
     padding: 0 1em;
   }
+  @include respond-to($medium){
+    display: block;
+    div{
+      margin-bottom: 2.5em;
+    }
+  }
 }
+
+.flex-gifs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__container{
+    
+  }
+  @include respond-to($medium){
+    display: block;
+    &__container{
+      margin-bottom: 2.5em;
+    }
+  }
+}
+
 .negative-margin{
   margin-bottom: -20%;
   

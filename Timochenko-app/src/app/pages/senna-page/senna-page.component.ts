@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
 
 @Component({
@@ -6,7 +6,7 @@ import { PageModule } from 'src/app/components/page-header/page/page.module';
   templateUrl: './senna-page.component.html',
   styleUrls: ['./senna-page.component.scss']
 })
-export class SennaPageComponent implements OnInit {
+export class SennaPageComponent implements AfterViewInit {
   _page:PageModule = {
     "title": "Senna",
     "subTitle": "Art Direction & Motion Design",
@@ -16,7 +16,7 @@ export class SennaPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
   }
 
 }

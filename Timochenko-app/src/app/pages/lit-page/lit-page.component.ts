@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
 import { VideoPlayerModule } from 'src/app/components/video-player/video-player.module';
 
@@ -7,7 +7,7 @@ import { VideoPlayerModule } from 'src/app/components/video-player/video-player.
   templateUrl: './lit-page.component.html',
   styleUrls: ['./lit-page.component.scss']
 })
-export class LitPageComponent implements OnInit {
+export class LitPageComponent implements AfterViewInit {
 
   _page:PageModule = {
     "title": "Lit",
@@ -22,7 +22,7 @@ export class LitPageComponent implements OnInit {
   }
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
   }
 
 }
