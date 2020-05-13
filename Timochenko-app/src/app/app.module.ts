@@ -31,6 +31,7 @@ import { SennaPageComponent } from './pages/senna-page/senna-page.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { BlankComponent } from './components/blank/blank.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { RevealScrollComponent } from './components/reveal-scroll/reveal-scroll.component';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -47,7 +48,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ChillPageComponent, 
     AboutPageComponent, 
     LitPageComponent, 
-    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, 
+    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, RevealScrollComponent, 
   ],
   imports: [
     BrowserModule,
