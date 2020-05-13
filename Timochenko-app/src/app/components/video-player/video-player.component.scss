@@ -18,6 +18,9 @@
       animation-fill-mode: forwards;
       animation-delay: 1s;
     }
+    &.show_autoplay{
+
+    }
   }
 }
 .pink-effect{
@@ -35,7 +38,9 @@
     position: relative;
     overflow: hidden;
   }
-
+  &.autoplay{
+    visibility: hidden;
+  }
 }
 @keyframes left_negative {
   0% {left: -100%;}
@@ -44,7 +49,22 @@
 }
 @keyframes show_vid {
   from {opacity: 0;}
-  to {opacity: 100;}
+  to {opacity: 1;}
+}
+.video_show{
+  &-setup{
+    position: relative;
+    margin-top: 3em;
+    opacity: 0;
+  }
+  animation-name: show_vid_autoplay;
+  animation-duration: 1s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+}
+@keyframes show_vid_autoplay {
+  from {opacity: 0;margin-top:3em;}
+  to {opacity: 1;margin-top: 0;}
 }
 // Animate Video Setup
 .video_pink_effect{

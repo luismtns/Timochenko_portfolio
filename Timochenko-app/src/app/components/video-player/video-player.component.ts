@@ -13,21 +13,27 @@ export class VideoPlayerComponent implements AfterViewInit {
     'poster': "",
     'src': ""
   }
+  @Input() pinkdisable:boolean=false;
+  @Input() delay:string = '0.5s';
+  
 
   @ViewChild('vid') video_element: ElementRef;
 
   pink_effect: boolean = false;
+  show_animate:boolean = false;
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if(this.video_element.nativeElement.getBoundingClientRect().top < window.innerHeight / 2){
-      this.pink_effect = true;
+    if(this.video_element.nativeElement.getBoundingClientRect().top < window.innerHeight){
       if(this.config.autoplay){
+        this.show_animate = true;
         var _videoRef = this.video_element.nativeElement as HTMLVideoElement;
         _videoRef.muted = true;
         _videoRef.loop = true;
         _videoRef.play();
+      }else{        
+        this.pink_effect = true;
       }
     }
     // if (this.video_element.nativeElement.getBoundingClientRect().top) {

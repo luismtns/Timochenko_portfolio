@@ -1,13 +1,14 @@
 <div class="VideoContainer pink-effect--overlay">
-  <span [ngClass]="{'pink_animate': pink_effect}" class="pink-effect"></span>
+  <span [ngClass]="{'pink_animate': pink_effect, 'autoplay': config.autoplay}" class="pink-effect"></span>
   <img *ngIf="vid.paused && !config.autoplay"
-    [ngClass]="{'show': pink_effect}" 
+    [ngClass]="{'show': pink_effect, 'show_autoplay': config.autoplay}" 
     src="./assets/images/player-icon.svg" 
     class="VideoContainer__play-icon" 
     alt="Player Icon">
   <video 
     #vid
-    [ngClass]="{'video_animate': pink_effect}"
+    [ngClass]="{'video_animate': pink_effect, 'video_show': show_animate, 'video_show--setup': config.autoplay}"
+    [ngStyle]="{'animation-delay': delay}"
     class="video_pink_effect"
     width="100%" 
     height="auto" 
