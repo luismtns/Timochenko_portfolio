@@ -15,17 +15,10 @@ export class RevealScrollComponent implements OnInit {
   constructor() { }
 
   @HostListener('window:scroll', [])
-  onWindowScroll() {
-    console.log('posit', this.item.nativeElement.getBoundingClientRect().top);
-    console.log('window.innerHeight', window.innerHeight);
-    
+  onWindowScroll() {    
     if(this.item.nativeElement.getBoundingClientRect().top < window.innerHeight){
       this.animate_class = true;
     }
-    // if (this.video_element.nativeElement.getBoundingClientRect().top) {
-    //   document.getElementById('subTitle').classList.add('red');
-    //   document.getElementById('paragraph').classList.add('green');
-    // }
   }
 
   ngOnInit(): void {
