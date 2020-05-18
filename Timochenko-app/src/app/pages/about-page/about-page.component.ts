@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { VideoPlayerModule } from './../../components/video-player/video-player.module';
 @Component({
   selector: 'app-about-page',
   templateUrl: './about-page.component.html',
@@ -7,6 +8,13 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class AboutPageComponent implements OnInit {
   @ViewChild('photo_container') photoDivRef: ElementRef
   pink_text_effect: boolean = false;
+  
+  video_1:VideoPlayerModule = {
+    'src': 'about/pink_lines',
+    'poster': 'about/cover_pink_lines',
+    'autoplay': true
+  }
+
   constructor() { }
 
   ngOnInit(): void {

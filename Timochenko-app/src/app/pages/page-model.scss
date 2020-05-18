@@ -29,44 +29,6 @@ p{
   font-weight: 300;
   font-size: 0.8em;
 }
-// Atoms
-.mg-t-3{
-  margin-top: 3em !important;
-  @include respond-to($medium) {
-    margin-top: 1.5em !important;
-  }
-}
-.mg-t-5{
-  margin-top: 5em !important;
-  @include respond-to($medium) {
-    margin-top: 2.5em !important;
-  }
-}
-.mg-t-10{
-  margin-top: 10em !important;
-  @include respond-to($medium) {
-    margin-top: 5em !important;
-  }
-}
-
-.mg-b-3{
-  margin-bottom: 3em !important;
-  @include respond-to($medium) {
-    margin-bottom: 1.5em !important;
-  }
-}
-.mg-b-5{
-  margin-bottom: 5em !important;
-  @include respond-to($medium) {
-    margin-bottom: 2.5em !important;
-  }
-}
-.mg-b-10{
-  margin-bottom: 10em !important;
-  @include respond-to($medium) {
-    margin-bottom: 5em !important;
-  }
-}
 
 .full-image{
   display: block;

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PageModule } from 'src/app/components/page-header/page/page.module';
-import { NgsRevealConfig } from 'ngx-scrollreveal';
-import { myNgsRevealConfig } from './../ngsRevealConfig';
 import { VideoPlayerModule } from 'src/app/components/video-player/video-player.module';
 
 @Component({
@@ -16,7 +14,6 @@ export class ReebokPageComponent implements OnInit {
     "imgSrc": "reebok/Reebok_cover",
     "imgAlt": "Reebok project cover",
   }
-  _ngsReveal:NgsRevealConfig  = myNgsRevealConfig;
 
   video_1:VideoPlayerModule = {
     'src': 'reebok/vid_1',
