@@ -14,7 +14,7 @@ export class VideoPlayerComponent implements AfterViewInit {
     'src': ""
   }
   @Input() pinkdisable:boolean=false;
-  @Input() delay:string = '0.5s';
+  @Input() delay:string = '1s';
   
 
   @ViewChild('vid') video_element: ElementRef;
