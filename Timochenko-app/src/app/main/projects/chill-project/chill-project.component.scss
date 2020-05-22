@@ -1,4 +1,5 @@
 
+@import "../../../../sass/variables";
 .project{
   transform-style: preserve-3d;
   -moz-user-select: none;
@@ -13,6 +14,7 @@
     -webkit-transform: translate(-50%,0) translateZ(80px);
     -moz-transform: translate(-50%,0) translateZ(80px);
     transform: translate(-50%,0) translateZ(80px);
+    transition: translate $cubic;
     &__title{
       font-size: 90px;
       font-weight: bold;

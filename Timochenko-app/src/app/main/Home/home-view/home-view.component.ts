@@ -86,10 +86,15 @@ export class HomeViewComponent implements OnInit  {
           this.router.navigate(['/Palmeiras'])
           break
         }
+        case '/Palmeiras': {
+          this.router.navigate(['/'])
+          break
+        }
       }
     } else { // Scroll up
       switch (this.router.url) {
         case '/': {
+          this.router.navigate(['/Palmeiras'])
           break
         }
         case '/Lit': {

@@ -29,8 +29,5 @@ export class AboutPageComponent implements OnInit {
       }, 1000);
     }, 2600);
   }
-  showPhoto(){
-    console.log('show')
-  }
 
 }
