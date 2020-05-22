@@ -10,12 +10,12 @@
     &.fade-in{
       opacity: 1;
       left: 0;
-      transition: left 0.8s $cubic;
+      transition: left 0.5s $cubic;
     }
     &.fade-out{
       opacity: 1;
       left: 100%;
-      transition: left 0.8s $cubic;
+      transition: left 0.5s $cubic;
     }
 }
 .loader{

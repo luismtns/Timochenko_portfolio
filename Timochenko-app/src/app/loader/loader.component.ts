@@ -51,7 +51,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
       const subscrive_timer = timer(1000, 1000).subscribe((val) =>{
         if(val > this.time_seconds){
           this.pinkTransition()
-          setTimeout(()=>{this.loaderService.hide();}, 800)
+          setTimeout(()=>{this.loaderService.hide();}, 200)
           subscrive_timer.unsubscribe()
         }
       });
@@ -69,7 +69,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
       this.pink_transition['fade-in'] = false;
       this.pink_transition['fade-out'] = true;
       setTimeout(()=>{this.pink_transition = null}, 800)
-    }, 1000)
+    }, 500)
   }
   updateProgress () {
     var updtate_interval = setInterval(()=>{this.progress_percent < 100 ? this.progress_percent++ : clearInterval(updtate_interval)}, 1000*(this.time_seconds/100) )
