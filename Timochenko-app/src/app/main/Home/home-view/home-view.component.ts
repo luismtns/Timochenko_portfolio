@@ -23,7 +23,34 @@ export class HomeViewComponent implements OnInit  {
   mouse_Y_position: number = 0;
 
   subscriptions: Subscription;
-
+  page_count: Object[] = [
+    {
+      name: '/',
+      number:1,
+      position: '0em',
+    },
+    {
+      name: '/Lit',
+      number:2,
+      position: '-2em',
+    },
+    {
+      name: '/Reebok',
+      number:3,
+      position: '-4em',
+    },
+    {
+      name: '/Senna',
+      number:4,
+      position: '-6em',
+    },
+    {
+      name: '/Palmeiras',
+      number:5,
+      position: '-8em',
+    },
+  ];
+  top_number_cont:string = '0em'
   constructor(
     private loaderService: LoaderService,
     private router: Router
@@ -115,6 +142,17 @@ export class HomeViewComponent implements OnInit  {
         }
       }
     }
+    setTimeout(() => {
+      this.getNumberPosition(this.router.url)
+    }, 200);
+  }
+
+  getNumberPosition(page){
+    console.log(page);
+    
+    var select_page = this.page_count.find(e=>e['name'] == page)
+    var top_em = select_page['position']
+    this.top_number_cont = top_em;
   }
 
 }

@@ -50,3 +50,35 @@
   height: 50%;
   margin: auto;
 }
+
+.PageCounter{
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  &--overflow{
+    width: 1em;
+    height: 2em;
+    overflow: hidden;
+  }
+  &__container{
+    position: relative;
+    top: 0em;
+    transition: top 500ms $cubic;
+  }
+  &__number{
+    font-size: 1em;
+    line-height: 2em;
+    height: 2em;
+    width: 1em;
+    display: block;
+  }
+  &__line{
+    position: relative;
+    width: 0;
+    height: 3em;
+    margin: 0 auto;
+    top: 1em;
+    border-color: $pink;
+  }
+}
