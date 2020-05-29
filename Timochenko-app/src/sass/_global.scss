@@ -17,6 +17,9 @@ body{
   top: 0;
   left: 0;
   cursor: none;
+  @include respond-to($medium){
+    cursor: auto;
+  }
 }
 html{
   cursor: none;

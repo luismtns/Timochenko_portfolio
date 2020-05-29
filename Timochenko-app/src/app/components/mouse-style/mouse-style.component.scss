@@ -20,6 +20,9 @@ $time_delay_circle: 100ms;
   -webkit-transition: opacity  0.3s ease;
   transition: opacity  0.3s ease;
   will-change: auto;
+  @include respond-to($medium){
+    visibility: hidden;
+  }
   &.active{
     opacity: 1;
   }
@@ -43,6 +46,9 @@ $time_delay_circle: 100ms;
     user-select: none;
     opacity: 0;
     will-change: auto;
+    @include respond-to($medium){
+      visibility: hidden;
+    }
     &.click{
       opacity: 1;
       background-color: $pink;

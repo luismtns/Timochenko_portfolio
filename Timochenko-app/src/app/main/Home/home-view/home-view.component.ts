@@ -80,6 +80,7 @@ export class HomeViewComponent implements OnInit  {
   ngOnInit (): void {
     
     setTimeout(() => {this.animate_line = true;}, 800);
+    setTimeout(() => {this.getNumberPosition(this.router.url)}, 200);
   }
 
   ngOnDestroy():void{
@@ -148,8 +149,6 @@ export class HomeViewComponent implements OnInit  {
   }
 
   getNumberPosition(page){
-    console.log(page);
-    
     var select_page = this.page_count.find(e=>e['name'] == page)
     var top_em = select_page['position']
     this.top_number_cont = top_em;

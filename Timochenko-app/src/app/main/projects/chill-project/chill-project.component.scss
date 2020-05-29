@@ -15,14 +15,27 @@
     -moz-transform: translate(-50%,0) translateZ(80px);
     transform: translate(-50%,0) translateZ(80px);
     transition: translate $cubic;
+    @include respond-to($medium){
+      left: -10%;
+      bottom: -15%;
+      transform: none;
+    }
     &__title{
       font-size: 90px;
       font-weight: bold;
+      @include respond-to($medium){
+        font-size: 4.5em;
+      }
     }
     &__subtitle{
-      font-size: 18px;
+      font-size: 0.9em;
       font-weight: 600;
       margin-left: 15px;
+      @include respond-to($medium){
+        font-size: 0.8em;
+        font-weight: 400;
+        margin-left: 0;
+      }
     }
   }
   &__image{
@@ -35,5 +48,16 @@
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
+    @include respond-to($medium){
+      position: absolute;
+      display: flex;
+      align-items: center;
+      left: 10vw;
+      top: -20vh;
+      right: auto;
+      margin: 0 auto;
+      width: 160vw;
+      max-width: 160vw;
+    }
   }
 }

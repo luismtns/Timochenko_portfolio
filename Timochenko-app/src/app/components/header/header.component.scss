@@ -4,6 +4,10 @@
   top: 60px;
   z-index: 9;
   width: 100vw;
+  @include respond-to($medium){
+    position: absolute;
+    top: 2em;
+  }
   &__title{
     font-size: 22px;
     font-weight: 300;
@@ -12,10 +16,18 @@
     -ms-user-select:none; 
     user-select:none;
     -o-user-select:none;
+    @include respond-to($medium){
+      font-size: 0.9em;
+      font-weight: 200;
+    }
   }
   &__date{
     font-size: 22px;
     font-weight: 300;
+    @include respond-to($medium){
+      font-size: 0.9em;
+      font-weight: 200;
+    }
     hr{
       width: 40px;
       display: inline-block;
@@ -23,6 +35,14 @@
       margin: -1px 12px 0;
       border: 0;
       border-bottom: 1px solid $white;
+      @include respond-to($medium){
+        width: 1.8em;
+        display: inline-block;
+        vertical-align: middle;
+        margin: -1px 0.5em 0;
+        border: 0;
+        border-bottom: 1px solid #FFFFFF;
+      }
     }
   }
   &__about{
@@ -38,5 +58,11 @@
     -ms-user-select:none; 
     user-select:none;
     -o-user-select:none;
+      @include respond-to($medium){
+        font-size: 0.9em;
+        font-weight: 200;
+        position: relative;
+        right: -10%;
+      }
   }
 }

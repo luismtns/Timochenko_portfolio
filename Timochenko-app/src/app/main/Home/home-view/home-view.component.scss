@@ -25,8 +25,21 @@
     border: none;
     border-top: 2px solid $pink;
     transition: width 2s $cubic;
+    
+    @include respond-to($medium){
+      border: none;
+      height: 0%;
+      left: 10%;
+      border-left: 1px solid $pink;
+      bottom: -65vh;
+      margin-top: 0;
+      transition: height 1s $cubic;
+    }
     &.open{
       width: 80%;
+      @include respond-to($medium){
+        height: 80%;
+      }
     }
   }
 }
@@ -49,6 +62,10 @@
   width: 50.83%;
   height: 50%;
   margin: auto;
+  @include respond-to($medium){
+    width: 75%;
+    height: 26%;
+  }
 }
 
 .PageCounter{
@@ -56,6 +73,11 @@
   position: absolute;
   top: 30%;
   right: 15%;
+  @include respond-to($medium){
+    top: 25%;
+    left: 5%;
+    width: 1em
+  }
   &--overflow{
     width: 1em;
     height: 2em;
