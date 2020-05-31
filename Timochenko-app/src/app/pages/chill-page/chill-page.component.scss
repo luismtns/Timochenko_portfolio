@@ -1,1 +1,30 @@
-@import '../page-model.scss'
+@import '../page-model.scss';
+h2.PageContain__title {
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+img.max-width-65 {
+  max-width: 65% !important;
+  
+  @include respond-to($medium) {
+    max-width: 100% !important;
+  }
+}
+img.float-right {
+  margin: 0;
+  float: right;
+  
+  @include respond-to($medium) {
+    margin: 0 auto;
+    float: none;
+  }
+}
+img.float-left {
+  margin: 0;
+  float: left;
+  
+  @include respond-to($medium) {
+    margin: 0 auto;
+    float: none;
+  }
+}

@@ -81,6 +81,7 @@
       animation-fill-mode: forwards;
       animation-delay: 1s;
       will-change: opacity;
+      line-height: 0;
       p{
         font-size: 1.1em;
         font-weight: 400;
@@ -115,7 +116,7 @@
   z-index: 1;
   &--overlay{
     max-width: fit-content;
-    padding: 0 10px;
+    padding: 0 4px;
     position: relative;
     overflow: hidden;
     p,h1,h2,h3,h4,h5{
