@@ -32,6 +32,7 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { BlankComponent } from './components/blank/blank.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { RevealScrollComponent } from './components/reveal-scroll/reveal-scroll.component';
+import { ParallaxDirective } from './directives/parallax.directive';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -48,7 +49,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ChillPageComponent, 
     AboutPageComponent, 
     LitPageComponent, 
-    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, RevealScrollComponent, 
+    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, RevealScrollComponent, ParallaxDirective, 
   ],
   imports: [
     BrowserModule,

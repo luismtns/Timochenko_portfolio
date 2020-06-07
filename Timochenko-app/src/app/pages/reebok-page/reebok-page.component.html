@@ -45,9 +45,9 @@
       </div>
     </div>
     <div class="row row--overlay-25">
-      <div class="col-12 col-md-4 offset-md-6">
+      <div parallax [ratio]="8" class="col-12 col-md-4 offset-md-6">
         <app-reveal-scroll>
-          <img src="./assets/images/reebok/image_2.jpg" draggable="false" alt="Logo Lit">
+          <img src="./assets/images/reebok/image_2.jpg" draggable="false">
         </app-reveal-scroll>
       </div>
     </div>
@@ -58,12 +58,12 @@
         <app-video-player delay="0.1s" [config]="video_2"></app-video-player>
       </div>
     </div>
-    <div class="row row--overlay-40" style="z-index: 22;">
+    <div  parallax [ratio]="4" class="row" style="z-index: 22;">
       <div class="col-12 col-md-4 offset-md-7">
         <app-video-player delay="0.8s" [config]="video_4"></app-video-player>
       </div>
     </div>
-    <div class="row row--overlay-40">
+    <div  parallax [ratio]="5" class="row">
       <div class="col-12 col-md-4 offset-md-4">
         <app-video-player delay="0.2s" [config]="video_3"></app-video-player>
       </div>
@@ -75,8 +75,8 @@
         <app-video-player delay="0.2s" [config]="video_5"></app-video-player>
       </div>
     </div>
-    <div class="row row--overlay-25 negative-index">
-      <div class="col-12 col-md-6 offset-md-2">
+    <div parallax [ratio]="6" class="row">
+      <div  class="col-12 col-md-6 offset-md-2 negative-index">
         <app-reveal-scroll>
           <img src="./assets/images/reebok/image_3.jpg" draggable="false" alt="Logo Lit">
         </app-reveal-scroll>
@@ -89,7 +89,7 @@
         <app-video-player delay="0.2s" [config]="video_6"></app-video-player>
       </div>
     </div>
-    <div class="row row--overlay-25 negative-index">
+    <div parallax [ratio]="8" class="row negative-index">
       <div class="col-12 col-md-6 offset-md-6">
         <app-video-player delay="0.4s" [config]="video_7"></app-video-player>
       </div>

@@ -104,11 +104,10 @@ p{
     margin-top: 2.5em;
     z-index: 1;
   }
-  &.negative-index{
-    z-index: -1;
-  }
 }
-
+.negative-index{
+  z-index: -1;
+}
 .row--overlay-70{
   position: relative;
   margin-top: -70%;
