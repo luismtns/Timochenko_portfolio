@@ -20,13 +20,13 @@ export class ChillPageComponent implements OnInit {
   video_1:VideoPlayerModule = {
     'src': 'chill/desk_vid_1',
     'poster': 'chill/cover_desk_vid_1',
-    'autoplay': true
+    'autoplay': false
   }
 
   video_2:VideoPlayerModule = {
     'src': 'chill/desk_vid_2',
     'poster': 'chill/cover_desk_vid_2',
-    'autoplay': true
+    'autoplay': false
   }
   
   _ngsReveal:NgsRevealConfig  = myNgsRevealConfig;

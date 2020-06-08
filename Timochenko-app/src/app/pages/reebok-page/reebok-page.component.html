@@ -40,14 +40,14 @@
   </div>
   <div class="container mg-b-5">
     <div class="row">
-      <div class="col-12 col-md-6 offset-md-2">
+      <div parallax [ratio]="9" class="col-12 col-md-6 offset-md-2">
         <app-video-player [config]="video_1" delay="0.2s"></app-video-player>
       </div>
     </div>
     <div class="row row--overlay-25">
-      <div parallax [ratio]="8" class="col-12 col-md-4 offset-md-6">
+      <div parallax [ratio]="7" class="col-12 col-md-4 offset-md-6">
         <app-reveal-scroll>
-          <img src="./assets/images/reebok/image_2.jpg" draggable="false">
+          <img src="./assets/images/reebok/image_2.jpg" draggable="false" alt="Reeebok Art 2">
         </app-reveal-scroll>
       </div>
     </div>
@@ -89,7 +89,7 @@
         <app-video-player delay="0.2s" [config]="video_6"></app-video-player>
       </div>
     </div>
-    <div parallax [ratio]="8" class="row negative-index">
+    <div parallax [ratio]="7" class="row negative-index">
       <div class="col-12 col-md-6 offset-md-6">
         <app-video-player delay="0.4s" [config]="video_7"></app-video-player>
       </div>

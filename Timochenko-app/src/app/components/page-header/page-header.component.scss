@@ -1,5 +1,6 @@
 
 @import "../../../sass/variables";
+$scale_title: 1.15;
 
 .projectHeader{
   display: flex;
@@ -10,9 +11,41 @@
   overflow: hidden;
   position: relative;
   margin-bottom: 8em;
+  transform-style: preserve-3d;
+  perspective: 1000px;
   &__titlebox{
     z-index: 1;
     position: absolute;
+    left: 80px;
+    z-index: 1;
+    -webkit-transform: translate(-50%,0) translateZ(80px) scale($scale_title);
+    -moz-transform: translate(-50%,0) translateZ(80px) scale($scale_title);
+    transform: translate(-50%,0) translateZ(80px) scale($scale_title);
+    animation-name: title_open_page;
+    animation-duration: 0.6s;
+    animation-timing-function: $cubic;
+    animation-fill-mode: forwards;
+    @include respond-to($medium){
+      left: -10%;
+      bottom: -15%;
+      transform: none;
+    }
+    &--overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50.83%;
+      height: 50%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      @include respond-to($medium){
+        width: 75%;
+        height: 26%;
+      }
+    }
     &__title{
       font-size: 90px;
       font-weight: bold;
@@ -103,6 +136,21 @@
   0% {bottom: -5em;opacity: 0;}
   20% {opacity: 1;}
   100% {bottom:  0em;opacity: 1;}
+}
+
+@keyframes title_open_page {
+  0% {
+    left: 50px;
+    -webkit-transform: translate(-50%,0) translateZ(80px) scale($scale_title);
+    -moz-transform: translate(-50%,0) translateZ(80px) scale($scale_title);
+    transform: translate(-50%,0) translateZ(80px) scale($scale_title);
+  }
+  100% {
+    left: 80px;
+    -webkit-transform: translate(-50%,0) translateZ(80px) scale(1);
+    -moz-transform: translate(-50%,0) translateZ(80px) scale(1);
+    transform: translate(-50%,0) translateZ(80px) scale(1);
+  }
 }
 
 .pink-effect{

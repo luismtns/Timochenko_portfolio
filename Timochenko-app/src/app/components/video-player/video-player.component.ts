@@ -34,12 +34,14 @@ export class VideoPlayerComponent implements AfterViewInit {
         _videoRef.play();
       }else{        
         this.pink_effect = true;
+        if(this.pinkdisable){
+          var _videoRef = this.video_element.nativeElement as HTMLVideoElement;
+          _videoRef.muted = true;
+          _videoRef.loop = true;
+          _videoRef.play();
+        }
       }
     }
-    // if (this.video_element.nativeElement.getBoundingClientRect().top) {
-    //   document.getElementById('subTitle').classList.add('red');
-    //   document.getElementById('paragraph').classList.add('green');
-    // }
   }
 
 

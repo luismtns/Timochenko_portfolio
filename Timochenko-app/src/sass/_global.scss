@@ -12,7 +12,6 @@ body{
   color: $white;
   position: relative;
   width: 100%;
-  height: 100%;
   display: block;
   top: 0;
   left: 0;
@@ -20,6 +19,15 @@ body{
   @include respond-to($medium){
     cursor: auto;
   }
+}
+::-moz-selection { /* Code for Firefox */
+  color:$background;
+  background: $pink;
+}
+
+::selection {
+  color: $background;
+  background: $pink;
 }
 html{
   cursor: none;
@@ -74,5 +82,32 @@ img, embed,video{
   margin-bottom: 10em !important;
   @include respond-to($medium) {
     margin-bottom: 5em !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  position: relative;
+  cursor: none;
+  transition: color 0.4s 0.3s $cubic;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 0.1em;
+    background-color: $pink;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.8s $cubic;
+  }
+  &:hover{
+    color: $pink;
+    &::after {
+      width: 0%;
+    }
+  }
+  &.strong{
+    font-weight: bold;
   }
 }

@@ -53,6 +53,10 @@
   &__text{
     font-size: 1.5em;
     line-height: 1.3;
+    font-weight: 500;
+    &--light{
+      font-weight: 300;
+    }
   }
 
   &__photo{
@@ -159,4 +163,10 @@
 @keyframes rotate_transform {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
+}
+.text-md-right{
+  text-align: right;
+  @include respond-to($medium){
+    text-align: left;
+  }
 }
