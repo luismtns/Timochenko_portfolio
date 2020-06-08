@@ -104,3 +104,23 @@
     border-color: $pink;
   }
 }
+
+.scroll-downs {
+  position: absolute;
+  right: 5em;
+  bottom: -11em;
+  margin: auto;
+  width: 20em;
+  height: 20em;
+  transform: rotate(0deg);
+  transition: 2s $cubic;
+}
+@keyframes rotate_transform {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}

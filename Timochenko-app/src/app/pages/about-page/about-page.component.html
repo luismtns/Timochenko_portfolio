@@ -1,7 +1,9 @@
 <div class="About">
   <div class="container mg-b-10">
-    <div class="row align-items-center">
-      <div class="col-12 col-md-9">
+    <div class="row align-items-center"
+    (mouseover)="photo_container.style.width = '465px'" 
+    (mouseleave)="photo_container.style.width = '2px'" >
+      <div class="col-12 col-md-11">
         <div class="About__title--overlay">
           <span class="About__title--pink-effect first_pink_animate"></span>
           <h1 class="About__title first_text_animate">Art Director //
@@ -12,7 +14,7 @@
           <h1 class="About__title second_text_animate">
             What Matter’s 
             <span class="pink">Art</span>
-          </h1>          
+          </h1>
         </div>
         <div class="About__title--overlay">
           <span class="About__title--pink-effect third_pink_animate"></span>
@@ -21,10 +23,8 @@
           </h1>
         </div>
       </div>
-      <div class="col-12 col-md-3">
+      <div class="col-12 col-md-1">
         <div 
-        (mouseover)="photo_container.style.width = '360px'" 
-        (mouseleave)="photo_container.style.width = '2px'" 
         class="About__photo--overlay">
           <div class="About__photo" #photo_container>
             <img src="./assets/images/about/photo.jpg" alt="Photo">
@@ -53,8 +53,8 @@
       <div class="col-12">
         <app-reveal-scroll>
           <h2 class="About__subtitle">
-            A few clients that
-            <br>I made some stuff
+            A feel cliente for witch 
+            <br>I’ve made some stuff
           </h2>
         </app-reveal-scroll>
       </div>
@@ -70,7 +70,9 @@
       <div class="col-12 col-md-6">
         <app-reveal-scroll>
           <h2 class="About__subtitle mb-3">
-            Get in touch
+            <a href="mailto:felipetimochenko@gmail.com">
+              Get in touch
+            </a>
           </h2>
         </app-reveal-scroll>
         <app-reveal-scroll delay="0.2s">

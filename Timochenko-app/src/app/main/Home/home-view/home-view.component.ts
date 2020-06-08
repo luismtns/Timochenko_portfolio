@@ -19,6 +19,7 @@ import { LoaderState } from 'src/app/loader/loader.model';
 export class HomeViewComponent implements OnInit  {
 
   animate_line:boolean;
+  animate_roll:number = 0;
   mouse_X_position: number = 0;
   mouse_Y_position: number = 0;
 
@@ -144,8 +145,9 @@ export class HomeViewComponent implements OnInit  {
       }
     }
     setTimeout(() => {
-      this.getNumberPosition(this.router.url)
+      this.getNumberPosition(this.router.url);
     }, 200);
+    this.animate_roll += 90;
   }
 
   getNumberPosition(page){

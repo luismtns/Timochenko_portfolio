@@ -11,6 +11,9 @@
     </div>
     <hr class="PageCounter__line">
   </div>
+  <div class="scroll-downs" [ngStyle]="{'transform': 'rotate('+animate_roll+'deg)'}">
+    <img src="./assets/images/rolling.png" alt="">
+  </div>
   <hr class="backgroundLines__line" [ngClass]="{'open': animate_line}">
 </div>
 <div  [@routeAnimations]="o && o.activatedRouteData 

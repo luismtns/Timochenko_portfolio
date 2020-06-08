@@ -11,7 +11,7 @@
   }
   &__title{
     display:inline-block;
-    font-size: 4em;
+    font-size: 4.5em;
     padding: 0 5px;
     min-width: fit-content;
     overflow: hidden;
@@ -32,6 +32,7 @@
       padding: 0 10px;
       position: relative;
       overflow: hidden;
+      margin-bottom: 0.3em;
     }
     .pink{
       color: $pink;
@@ -62,7 +63,7 @@
   &__photo{
     position: absolute;
     right: 0;
-    height: 13em;
+    height: 100%;
     width: 2px;
     background-color: $pink;
     overflow: hidden;
@@ -70,7 +71,7 @@
     text-align: right;
     &--overlay{      
       position: relative;
-      height: 13em;
+      height: 18em;
       width: 2px;
       padding: 0 10px;
     }
@@ -99,11 +100,11 @@
   animation-duration: 0.1s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 0.7s;
 }
 .first_pink_animate{
   animation-name: left_negative;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
 }
@@ -113,11 +114,11 @@
   animation-duration: 0.1s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
-  animation-delay: 1.3s;
+  animation-delay: 1s;
 }
 .second_pink_animate{
   animation-name: left_negative;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 0.3s;
@@ -128,11 +129,11 @@
   animation-duration: 0.1s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
-  animation-delay: 1.6s;
+  animation-delay: 1.3s;
 }
 .third_pink_animate{
   animation-name: left_negative;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-delay: 0.6s;
