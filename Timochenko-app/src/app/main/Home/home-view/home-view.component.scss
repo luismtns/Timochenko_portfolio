@@ -114,6 +114,12 @@
   height: 20em;
   transform: rotate(0deg);
   transition: 2s $cubic;
+  @include respond-to($medium){
+    right: -4em;
+    bottom: -8em;
+    width: 18em;
+    height: 18em;
+  }
 }
 @keyframes rotate_transform {
   from {transform: rotate(0deg);}

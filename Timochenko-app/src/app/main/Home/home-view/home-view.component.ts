@@ -155,5 +155,4 @@ export class HomeViewComponent implements OnInit  {
     var top_em = select_page['position']
     this.top_number_cont = top_em;
   }
-
 }

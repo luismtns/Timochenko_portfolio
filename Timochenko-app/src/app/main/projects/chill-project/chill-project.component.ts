@@ -19,6 +19,7 @@ export class ChillProjectComponent implements OnInit {
     perspective: 1000,
     max: 10,
     easing: "cubic-bezier(.17,.67,.83,.67)",
+    gyroscope: true
   }
 
   ngOnInit(): void {
