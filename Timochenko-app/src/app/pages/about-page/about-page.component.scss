@@ -146,8 +146,15 @@
   min-width: 100%;
   width: 100%;
   display: block;
+  margin-bottom: 8em;
+  @include respond-to($medium){
+    margin-bottom: 3em;
+  }
   &__item{
-    
+    padding: 0 5em;
+    @include respond-to($medium){
+      padding: 0 1em;
+    }
   }
 }
 

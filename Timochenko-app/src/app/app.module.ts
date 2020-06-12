@@ -33,6 +33,9 @@ import { BlankComponent } from './components/blank/blank.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { RevealScrollComponent } from './components/reveal-scroll/reveal-scroll.component';
 import { ParallaxDirective } from './directives/parallax.directive';
+
+// Slick JS  https://kenwheeler.github.io/slick/
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -59,7 +62,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     MainModule,
     NgbModule,
     HammerModule,
-    NgsRevealModule
+    NgsRevealModule,
+    SlickCarouselModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "pt-br"},

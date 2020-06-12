@@ -52,7 +52,7 @@
     <div class="row">
       <div class="col-12">
         <app-reveal-scroll>
-          <h2 class="About__subtitle">
+          <h2 class="About__subtitle mg-b-3">
             A feel cliente for witch 
             <br>I’ve made some stuff
           </h2>
@@ -62,9 +62,30 @@
   </div>
   <div class="LogoPainel">
     <app-reveal-scroll>
-      <div class="LogoPainel__item" *ngFor="let logo of logo_list">
+      <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let logo of logo_list.slice(0,5)" class="slide LogoPainel__item">
+          <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
+        </div>
+    </ngx-slick-carousel>
+      <!-- <div *ngFor="let logo of logo_list" class="LogoPainel__item">
         <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
-      </div>
+      </div> -->
+    </app-reveal-scroll>
+  </div>
+  <div class="LogoPainel">
+    <app-reveal-scroll>
+      <ngx-slick-carousel class="carousel" 
+                        #slickModal2="slick-carousel" 
+                        [config]="slideConfig_2">
+        <div ngxSlickItem *ngFor="let logo of logo_list.slice(5)" class="slide LogoPainel__item">
+          <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
+        </div>
+    </ngx-slick-carousel>
+      <!-- <div *ngFor="let logo of logo_list" class="LogoPainel__item">
+        <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
+      </div> -->
     </app-reveal-scroll>
   </div>
   <div class="container space">
