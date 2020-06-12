@@ -62,7 +62,9 @@
   </div>
   <div class="LogoPainel">
     <app-reveal-scroll>
-      <img src="./assets/images/about/logos_painel.png" draggable="false" alt="Logo Painel">
+      <div class="LogoPainel__item" *ngFor="let logo of logo_list">
+        <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
+      </div>
     </app-reveal-scroll>
   </div>
   <div class="container space">

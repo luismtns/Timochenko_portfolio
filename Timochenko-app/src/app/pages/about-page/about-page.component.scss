@@ -143,12 +143,12 @@
 }
 
 .LogoPainel{
-  width: 110%;
-  margin: 1em auto 0;
-  position: relative;
-  left: 50%;
-  right: auto;
-  transform: translate(-50%, 0);
+  min-width: 100%;
+  width: 100%;
+  display: block;
+  &__item{
+    
+  }
 }
 
 // Animate Text Setup

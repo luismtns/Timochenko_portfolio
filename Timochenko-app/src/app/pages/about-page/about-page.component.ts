@@ -15,6 +15,53 @@ export class AboutPageComponent implements OnInit {
     'autoplay': true
   }
 
+  logo_list:Object[] = [
+    {
+      'name':'avon',
+      'alt':'Avon White Logo',
+    },
+    {
+      'name':'bradesco',
+      'alt':'Bradesco White Logo',
+    },
+    {
+      'name':'casa_santa_luiza',
+      'alt':'Casa Santa Luiza White Logo',
+    },
+    {
+      'name':'chill',
+      'alt':'Chill White Logo',
+    },
+    {
+      'name':'heineken',
+      'alt':'Heineken White Logo',
+    },
+    {
+      'name':'hershey',
+      'alt':'Hershey White Logo',
+    },
+    {
+      'name':'instituto_ayrton_senna',
+      'alt':'Instituto Ayrton Senna White Logo',
+    },
+    {
+      'name':'lit',
+      'alt':'Lit White Logo',
+    },
+    {
+      'name':'reebok',
+      'alt':'Reebok White Logo',
+    },
+    {
+      'name':'saintpaul',
+      'alt':'Saint Paul White Logo',
+    },
+    {
+      'name':'udacity',
+      'alt':'Udacity White Logo',
+    },
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
