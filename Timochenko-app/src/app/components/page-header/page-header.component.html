@@ -1,3 +1,20 @@
+
+<div class="backgroundLines">
+  <div class="PageCounter">
+    <div class="PageCounter--overflow">
+      <div class="PageCounter__container" [style.top]="top_number_cont">
+        <span class="PageCounter__number" #page.name *ngFor="let page of page_count">
+          {{page.number}}
+        </span>
+      </div>
+    </div>
+    <hr class="PageCounter__line">
+  </div>
+  <div class="scroll-downs" [ngStyle]="{'transform': 'rotate('+animate_roll+'deg)'}">
+    <img src="./assets/images/rolling.png" alt="">
+  </div>
+  <hr class="backgroundLines__line open">
+</div>
 <div class="projectHeader">
   <div class="projectHeader__titlebox--overlay">
     <div class="projectHeader__titlebox">

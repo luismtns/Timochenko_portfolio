@@ -46,12 +46,13 @@
 .project_container{ 
   width: 100vw;
   height: 100vh;
-  max-width: 100%;
+  max-width: 1640px;
   max-height: 100%;
   overflow: hidden;
   position: relative;
   top: 0;
   display: block;
+  margin: 0 auto;
 }
 .center-box{
   position: absolute;
@@ -117,8 +118,8 @@
   @include respond-to($medium){
     right: -4em;
     bottom: -8em;
-    width: 18em;
-    height: 18em;
+    width: 15em;
+    height: 15em;
   }
 }
 @keyframes rotate_transform {

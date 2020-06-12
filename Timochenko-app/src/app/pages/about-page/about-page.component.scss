@@ -1,6 +1,9 @@
 @import "../../../sass/variables";
 .container.space{
   margin-top: 8em;
+  @include respond-to($medium){
+    margin-top: 2.5em;
+  }
 }
 .About{
   padding-top: 25vh;
@@ -17,6 +20,9 @@
     overflow: hidden;
     background-clip: border-box; 
     opacity: 0;
+    @include respond-to($medium){
+      font-size: 1.85em;
+    }
     &--pink-effect{
       display: block;
       width: 100%;
@@ -33,6 +39,10 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 0.3em;
+      @include respond-to($medium){
+        margin-bottom: 0em;
+        padding: 0 0;
+      }
     }
     .pink{
       color: $pink;
@@ -42,6 +52,14 @@
   &__subtitle{
     font-size: 3em;
     margin-bottom: 1em;
+    @include respond-to($medium){
+      font-size: 1.55em;
+      margin-bottom: 0.5em;
+    }
+    @include respond-to($little){
+      font-size: 1.45em;
+      margin-bottom: 0.5em;
+    }
   }
 
   &__smalltitle{
@@ -49,12 +67,19 @@
     .regular{
       font-weight: normal;
     }
+    @include respond-to($medium){
+      font-size: 1.1em;
+    }
   }
 
   &__text{
     font-size: 1.5em;
     line-height: 1.3;
     font-weight: 500;
+    @include respond-to($medium){
+      font-size: 1em;
+      font-weight: 300;
+    }
     &--light{
       font-weight: 300;
     }
@@ -69,11 +94,25 @@
     overflow: hidden;
     transition: right, width 1s $cubic;
     text-align: right;
+    @include respond-to($medium){
+      position: relative;
+      width: 100% !important;
+      max-width: 100%;
+      height: auto;
+      background-color: transparent;
+      border-left: 1px solid $pink;
+    }
     &--overlay{      
       position: relative;
       height: 18em;
       width: 2px;
       padding: 0 10px;
+      @include respond-to($medium){
+        margin-top: 2em;
+        right: 0;
+        height: auto;
+        width: 100%;
+      }
     }
     img{
       max-width: none;
@@ -81,8 +120,26 @@
       right: 2px;
       max-height: 100%;
       z-index: 10;
+      @include respond-to($medium){
+        position: relative;
+        right: auto;
+        left: -100%;
+        max-height: none;
+        max-width: 100%;
+        margin-bottom: -5px;
+        animation-name: photo_mobile_animate;
+        animation-duration: 1s;
+        animation-timing-function: $cubic;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+      }
     }
   }
+}
+
+@keyframes photo_mobile_animate {
+  0% {left: -100%;}
+  100% {left: 0%;}
 }
 
 .LogoPainel{

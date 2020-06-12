@@ -8,6 +8,9 @@
   padding: 0;
   cursor: none;
 }
+html, body {
+  overflow-x: hidden;
+}
 body{
   background-color: $background;
   color: $white;
@@ -17,6 +20,7 @@ body{
   top: 0;
   left: 0;
   cursor: none;
+  overflow: hidden;
   @include respond-to($medium){
     cursor: auto;
   }
@@ -70,19 +74,19 @@ img, embed,video{
 .mg-b-3{
   margin-bottom: 3em !important;
   @include respond-to($medium) {
-    margin-bottom: 1.5em !important;
+    margin-bottom: 0.75em !important;
   }
 }
 .mg-b-5{
   margin-bottom: 5em !important;
   @include respond-to($medium) {
-    margin-bottom: 2.5em !important;
+    margin-bottom: 1.25em !important;
   }
 }
 .mg-b-10{
   margin-bottom: 10em !important;
   @include respond-to($medium) {
-    margin-bottom: 5em !important;
+    margin-bottom: 2.5em !important;
   }
 }
 
@@ -124,4 +128,7 @@ a {
   &.strong{
     font-weight: bold;
   }
+}
+.text-right{
+  text-align: right;
 }

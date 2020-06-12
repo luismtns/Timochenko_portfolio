@@ -9,6 +9,10 @@
 p{
   font-weight: 500;
   font-size: 1.1em;
+  @include respond-to($medium){
+    font-size: 0.9em;
+    font-weight: 400;
+  }
 }
 
 .nextProject{
