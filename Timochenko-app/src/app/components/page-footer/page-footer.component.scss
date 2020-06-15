@@ -1,0 +1,92 @@
+
+@import "../../../sass/variables";
+.nextProject{
+  text-align: center;
+  padding-bottom: 10em;
+  padding-top: 10em;
+  position: relative;
+  hr{
+    border-color: $pink;
+    width: 100%;
+  }
+  h1{
+    font-size: 3em;
+    &:first-child{
+      color: $pink;
+    }
+  }
+}
+.negative-index{
+  z-index: -1;
+}
+.full-size { 
+	height : 100%; 
+	width : 100%; 
+	position: absolute; 
+	top : 0; 
+	left : 0;
+}
+.blend-multiply {
+	mix-blend-mode : multiply;
+}
+.blend-screen {
+	mix-blend-mode : screen;
+}
+
+.mask-bg-color {
+	background-color: $background;
+	// background-color: pink;
+}
+.animated-bg {
+	background-position:center;  
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-webkit-background-size:cover;
+	background-size:cover;
+}
+.element-mask {
+	background-color: black;
+}
+
+.circle-follow {
+	position :fixed;
+  overflow : hidden;
+  cursor: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 120px 240px 120px;
+  border-color: transparent transparent white transparent;
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg);
+  -webkit-transition: opacity 0.3s $cubic, border 0.3s $cubic;  
+  transition: opacity 0.3s $cubic, border 0.3s $cubic;  
+  opacity : 0; 
+  animation-name: rotate_a;
+  animation-duration: 8s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  will-change: auto;
+  @include respond-to($medium){
+    display: none;
+  }
+  &.click{
+    animation-name: scale_a;
+    animation-duration: 1s;
+    animation-timing-function: $cubic;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes rotate_a {
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes scale_a {
+  0%{transform:scale(1)rotate(0deg)}
+  100%{transform:scale(5)rotate(90deg)}
+}
+
+.circle-follow.moving {
+	opacity : 1;
+}

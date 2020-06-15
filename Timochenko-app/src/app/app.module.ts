@@ -36,6 +36,7 @@ import { ParallaxDirective } from './directives/parallax.directive';
 
 // Slick JS  https://kenwheeler.github.io/slick/
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { PageFooterComponent } from './components/page-footer/page-footer.component';
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -52,7 +53,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ChillPageComponent, 
     AboutPageComponent, 
     LitPageComponent, 
-    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, RevealScrollComponent, ParallaxDirective, 
+    PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, RevealScrollComponent, ParallaxDirective, PageFooterComponent, 
   ],
   imports: [
     BrowserModule,

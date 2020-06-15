@@ -1,0 +1,36 @@
+
+<div class="nextProject" (click)="openRoute()" (mouseover)="mouse_active = true" (mouseleave)="mouse_active = false">
+  <div class="row">
+    <div class="col-12 col-md-2 offset-md-5">
+      <hr>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-12">
+      <h1>
+        Next Proj
+      </h1>
+      <h1 [innerHtml]="pageName">
+      </h1>
+    </div>
+  </div>
+</div> 
+<div class="full-size negative-index">
+  <div class="mask-bg-color full-size">
+  </div>
+  <div class="blend-screen full-size">
+
+    <div class="animated-bg full-size" [ngStyle]="{'background-image': 'url('+pageBgLink+')'}">
+    </div>
+    
+    <div class="blend-multiply element-mask full-size">
+    
+      <span class="circle-follow" 
+      [ngClass]="{'moving': mouse_active, 'click': pointer_click}"
+      [style.top.px]="mouse_top"  
+      [style.left.px]="mouse_left"
+      >
+      </span>
+    </div>
+    </div>
+</div>

@@ -15,20 +15,6 @@ p{
   }
 }
 
-.nextProject{
-  text-align: center;
-  padding-bottom: 10em;
-  hr{
-    border-color: $pink;
-    width: 100%;
-  }
-  h1{
-    font-size: 3em;
-    &:first-child{
-      color: $pink;
-    }
-  }
-}
 .light{
   font-weight: 300;
   font-size: 0.8em;

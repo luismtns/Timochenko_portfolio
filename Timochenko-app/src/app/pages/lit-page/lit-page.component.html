@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div class="flex-gifs mg-b-10">
+  <div class="flex-gifs">
     <div class="flex-gifs__container">
       <app-reveal-scroll>
         <app-image-loader 
@@ -64,22 +64,10 @@
     </div>
   </div>
   <app-reveal-scroll>
-    <div class="nextProject" [routerLink]="[ '/p/Reebok']">
-      <div class="row">
-        <div class="col-12 col-md-2 offset-md-5">
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h1>
-            Next Proj
-          </h1>
-          <h1>
-            Reebok
-          </h1>
-        </div>
-      </div>
-    </div> 
+    <app-page-footer 
+      pageName="Reebok"
+      pageLink="/p/Reebok"
+      pageBgLink="./assets/images/reebok/Reebok_cover.jpg"
+    ></app-page-footer>
   </app-reveal-scroll>
 </div>

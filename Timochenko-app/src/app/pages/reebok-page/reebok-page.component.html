@@ -95,7 +95,7 @@
       </div>
     </div>
   </div>
-  <div class="flex-images small-padding mg-b-5">
+  <div class="flex-images small-padding">
     <app-reveal-scroll>
       <img src="./assets/images/reebok/bottom_1.jpg" draggable="false" alt="Reebok Brand Engagement" >
     </app-reveal-scroll>
@@ -106,24 +106,11 @@
       <img src="./assets/images/reebok/bottom_3.jpg" draggable="false" alt="Reebok Brand Engagement">
     </app-reveal-scroll>
   </div>
-
   <app-reveal-scroll>
-    <div class="nextProject" [routerLink]="[ '/p/Senna']">
-      <div class="row">
-        <div class="col-12 col-md-2 offset-md-5">
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h1>
-            Next Proj
-          </h1>
-          <h1>
-            Senna
-          </h1>
-        </div>
-      </div>
-    </div>
+    <app-page-footer 
+      pageName="Senna"
+      pageLink="/p/Senna"
+      pageBgLink="./assets/images/senna/Senna_cover.jpg"
+    ></app-page-footer>
   </app-reveal-scroll>
 </div>

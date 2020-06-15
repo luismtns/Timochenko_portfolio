@@ -87,29 +87,17 @@
       </div>
     </div>
   </div>
-  <div class="full-image mg-t-10 mg-b-10">
+  <div class="full-image mg-t-10">
     <app-reveal-scroll>
       <img src="./assets/images/senna/bottom.jpg" alt="Senna Bottom Project Image">
     </app-reveal-scroll>
   </div>
 
   <app-reveal-scroll>
-    <div class="nextProject" [routerLink]="[ '/p/Palmeiras']">
-      <div class="row">
-        <div class="col-12 col-md-2 offset-md-5">
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h1>
-            Next Proj
-          </h1>
-          <h1>
-            Palmeiras
-          </h1>
-        </div>
-      </div>
-    </div>
+    <app-page-footer 
+      pageName="Palmeiras"
+      pageLink="/p/Palmeiras"
+      pageBgLink="./assets/images/palmeiras/Palmeiras_cover.jpg"
+    ></app-page-footer>
   </app-reveal-scroll>
 </div>
