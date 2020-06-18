@@ -60,34 +60,28 @@
       </div>
     </div>
   </div>
-  <div class="LogoPainel">
-    <app-reveal-scroll>
+  <app-reveal-scroll>
+    <div class="LogoPainel">
       <ngx-slick-carousel class="carousel" 
                         #slickModal="slick-carousel" 
                         [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let logo of logo_list.slice(0,5)" class="slide LogoPainel__item">
+        <div ngxSlickItem *ngFor="let logo of logo_list" class="slide LogoPainel__item">
           <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
         </div>
     </ngx-slick-carousel>
-      <!-- <div *ngFor="let logo of logo_list" class="LogoPainel__item">
-        <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
-      </div> -->
-    </app-reveal-scroll>
-  </div>
-  <div class="LogoPainel">
-    <app-reveal-scroll>
+    </div>
+  </app-reveal-scroll>
+  <app-reveal-scroll>
+    <div class="LogoPainel">
       <ngx-slick-carousel class="carousel" 
                         #slickModal2="slick-carousel" 
                         [config]="slideConfig_2">
-        <div ngxSlickItem *ngFor="let logo of logo_list.slice(5)" class="slide LogoPainel__item">
+        <div (mouseover)="reverseAutoplay = false" (mouseleave)="reverseAutoplay = true" ngxSlickItem *ngFor="let logo of logo_list.reverse()" class="slide LogoPainel__item">
           <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
         </div>
     </ngx-slick-carousel>
-      <!-- <div *ngFor="let logo of logo_list" class="LogoPainel__item">
-        <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
-      </div> -->
-    </app-reveal-scroll>
-  </div>
+    </div>
+  </app-reveal-scroll>
   <div class="container space">
     <div class="row align-items-center">
       <div class="col-12 col-md-6">
@@ -149,7 +143,7 @@
           <br>
           <h4 class="About__text--light">Developed by <a class="strong" href="https://www.behance.net/luismtns" rel="noopener noreferrer" target="_blank">Luís Otávio Bovo</a></h4>
           <br>
-          <h4 class="About__text--light">Some texts by <a class="strong" rel="noopener noreferrer" target="_blank">Mariana Moro</a></h4>
+          <h4 class="About__text--light">Some texts by <a class="strong" href="https://medium.com/@mmrnmr" rel="noopener noreferrer" target="_blank">Mariana Moro</a></h4>
           <br>
         </app-reveal-scroll>
       </div>

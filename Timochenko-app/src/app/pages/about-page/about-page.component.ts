@@ -70,49 +70,60 @@ export class AboutPageComponent implements OnInit {
       breakpoint: 768,
       settings: {
         slidesToShow: 2.5,
-        slidesToScroll: 2,
+        slidesToScroll: 2.5,
         "centerMode": true,
+        autoplay: true,
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1.5,
-        slidesToScroll: 1,
+        slidesToScroll: 1.5,
         "centerMode": true,
+        autoplay: true,
       }
     }
   ]
   
   slideConfig = {
-    "speed": 300,
+    "speed": 1000,
     "slidesToShow": 4.5, 
-    "slidesToScroll": 3, 
+    "slidesToScroll": 4.5, 
     "centerMode": true,
     "infinite": true,
-    "autoplay": false,
-    "cssEase": "cubic-bezier(.35,0,.28,1)",
+    "autoplay": true,
+    "autoplaySpeed": 0,
+    "cssEase": 'linear',
     "responsive": this.responsive_slides,
   };
   slideConfig_2 = {
-    "speed": 300,
+    "speed": 1000,
     "slidesToShow": 4.5, 
-    "slidesToScroll": 3,
+    "slidesToScroll": 4.5,
     "centerMode": true,
     "infinite": true,
     "autoplay": false,
-    "cssEase": "cubic-bezier(.35,0,.28,1)",
+    "cssEase": 'linear',
     "responsive": this.responsive_slides,
   };
-
+  reverseAutoplay:boolean = true;
+  handle_reverseAutoplay:any;
   constructor() { }
 
   ngOnInit(): void {
     this.introEffect();
-    window.setInterval(()=>{
-      this.slickModal.slickNext();
-      this.slickModal2.slickPrev();
-    }, 2000)
+    // if(window.innerWidth > 768){
+      window.setInterval(()=>{
+        // this.slickModal.slickNext();
+        if (!this.reverseAutoplay) return;
+        this.slickModal2.slickPrev();
+      }, 0);
+    // }
+  }
+  ngOnDestroy(): void {
+    this.slickModal.ngOnDestroy();
+    this.slickModal2.ngOnDestroy();
   }
 
   introEffect(){

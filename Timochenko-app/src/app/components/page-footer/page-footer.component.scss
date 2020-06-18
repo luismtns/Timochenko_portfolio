@@ -55,7 +55,7 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 120px 240px 120px;
+  border-width: 0 120px 207.8px 120px;
   border-color: transparent transparent white transparent;
   -webkit-transform:rotate(360deg);
   transform:rotate(360deg);
@@ -63,8 +63,8 @@
   transition: opacity 0.3s $cubic, border 0.3s $cubic;  
   opacity : 0; 
   animation-name: rotate_a;
-  animation-duration: 8s;
-  animation-timing-function: $cubic;
+  animation-duration: 6s;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   will-change: auto;
