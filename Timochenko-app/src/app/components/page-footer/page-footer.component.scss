@@ -15,6 +15,13 @@
       color: $pink;
     }
   }
+  @include respond-to($medium){
+    padding-bottom: 4em;
+    padding-top: 2.5em;
+    h1{
+      font-size: 1.55em;
+    }
+  }
 }
 .negative-index{
   z-index: -1;

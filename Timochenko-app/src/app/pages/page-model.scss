@@ -68,6 +68,7 @@ p{
   }
   @include respond-to($medium){
     display: block;
+    padding: 0 15px;
     &__container{
       margin-bottom: 2.5em;
     }

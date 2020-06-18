@@ -2,6 +2,10 @@
 h2.PageContain__title {
   text-align: center;
   letter-spacing: 0.1em;
+  @include respond-to($medium) {
+    font-size: 0.9em;
+    margin-top: 1em;
+  }
 }
 img.max-width-65 {
   max-width: 65% !important;

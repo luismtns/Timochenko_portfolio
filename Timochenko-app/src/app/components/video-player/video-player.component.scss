@@ -11,6 +11,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    @include respond-to($medium){
+      max-width: 5em;
+    }
     &.show{
       animation-name: show_vid;
       animation-duration: 0.1s;
