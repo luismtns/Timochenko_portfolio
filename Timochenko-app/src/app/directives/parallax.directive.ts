@@ -15,6 +15,7 @@ export class ParallaxDirective {
 
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(event) {
+    if(window.innerWidth < 768) return;
     this.eleRef.nativeElement.style.marginTop = (this.initialTop - (window.scrollY / this.parallaxRatio))  + 'px'
     // this.eleRef.nativeElement.style.marginBottom = (this.initialTop - (window.scrollY / this.parallaxRatio))/2  + 'px'
   }
