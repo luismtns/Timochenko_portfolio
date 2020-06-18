@@ -79,7 +79,7 @@ p{
   margin-bottom: -20%;
   
   @include respond-to($medium) {
-    margin-bottom: 5em;
+    margin-bottom: 1.25em !important
   }
 }
 

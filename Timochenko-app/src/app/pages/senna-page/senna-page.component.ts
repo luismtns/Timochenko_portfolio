@@ -15,6 +15,12 @@ export class SennaPageComponent implements OnInit {
     "imgAlt": "Senna project cover",
   }
 
+  video_main:VideoPlayerModule = {
+    'src': 'senna/senna_vid',
+    'poster': 'senna/video_cover',
+    'autoplay': false
+  }
+
   video_1:VideoPlayerModule = {
     'src': 'senna/vid_1',
     'poster': 'senna/cover_vid_1',
