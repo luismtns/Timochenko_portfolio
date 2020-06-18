@@ -89,7 +89,7 @@ export class AboutPageComponent implements OnInit {
   slideConfig = {
     "speed": 1000,
     "slidesToShow": 4.5, 
-    "slidesToScroll": 4.5, 
+    "slidesToScroll": 1, 
     "centerMode": true,
     "infinite": true,
     "autoplay": true,
@@ -113,16 +113,18 @@ export class AboutPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.introEffect();
+    this.handle_reverseAutoplay = window.setInterval(()=>{
+      if (!this.reverseAutoplay) return;
+      this.slickModal2.slickPrev();
+    }, 0);
   }
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-      window.setInterval(()=>{
-        // this.slickModal.slickNext();
-        if (!this.reverseAutoplay) return;
-        this.slickModal2.slickPrev();
-      }, 0);
-    
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    clearInterval(this.handle_reverseAutoplay);
+    this.slickModal.unslick();
+    this.slickModal2.unslick();
   }
 
   introEffect(){
