@@ -31,7 +31,7 @@
       height: 0%;
       left: 10%;
       border-left: 1px solid $pink;
-      bottom: -65vh;
+      bottom: -70%;
       margin-top: 0;
       transition: height 1s $cubic;
     }
@@ -49,13 +49,13 @@
   max-width: 1640px;
   max-height: 100%;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   display: block;
   margin: 0 auto;
 }
 .center-box{
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -65,7 +65,7 @@
   margin: auto;
   @include respond-to($medium){
     width: 75%;
-    height: 26%;
+    height: 65%;
   }
 }
 

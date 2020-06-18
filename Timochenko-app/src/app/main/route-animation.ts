@@ -17,7 +17,7 @@ export const slideInAnimation =
             group([
                  query(':enter', [
                     stagger(100, [
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }),
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({ transform: 'rotate(0deg)', top: '0'}))
                     ])
@@ -26,7 +26,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({  transform: 'rotate(0deg)', top: '0vh' }),
                         animate('1s cubic-bezier(.35,0,.28,1)', 
-                        style({ transform: 'rotate(15deg)', top: '100vh' }))
+                        style({ transform: 'rotate(30deg)', top: '300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -38,7 +38,7 @@ export const slideInAnimation =
             group([
                  query(':enter', [
                     stagger(100, [
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }),
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({ transform: 'rotate(0deg)', top: '0'}))
                     ])
@@ -47,7 +47,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({  transform: 'rotate(0deg)', top: '0vh' }),
                         animate('1s cubic-bezier(.35,0,.28,1)', 
-                        style({ transform: 'rotate(15deg)', top: '100vh' }))
+                        style({ transform: 'rotate(30deg)', top: '300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -59,7 +59,7 @@ export const slideInAnimation =
             group([
                  query(':enter', [
                     stagger(100, [
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }),
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({ transform: 'rotate(0deg)', top: '0'}))
                     ])
@@ -68,7 +68,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({  transform: 'rotate(0deg)', top: '0vh' }),
                         animate('1s cubic-bezier(.35,0,.28,1)', 
-                        style({ transform: 'rotate(15deg)', top: '100vh' }))
+                        style({ transform: 'rotate(30deg)', top: '300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -80,7 +80,7 @@ export const slideInAnimation =
             group([
                  query(':enter', [
                     stagger(100, [
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }),
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({ transform: 'rotate(0deg)', top: '0'}))
                     ])
@@ -89,7 +89,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({  transform: 'rotate(0deg)', top: '0vh' }),
                         animate('1s cubic-bezier(.35,0,.28,1)', 
-                        style({ transform: 'rotate(15deg)', top: '100vh' }))
+                        style({ transform: 'rotate(30deg)', top: '300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -101,7 +101,7 @@ export const slideInAnimation =
             group([
                  query(':enter', [
                     stagger(100, [
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }),
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({ transform: 'rotate(0deg)', top: '0'}))
                     ])
@@ -110,7 +110,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({  transform: 'rotate(0deg)', top: '0vh' }),
                         animate('1s cubic-bezier(.35,0,.28,1)', 
-                        style({ transform: 'rotate(15deg)', top: '100vh' }))
+                        style({ transform: 'rotate(30deg)', top: '300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -122,7 +122,7 @@ export const slideInAnimation =
             group([
                  query(':enter',[
                     stagger(100, [
-                         style({ transform: 'rotate(15deg)', top: '100vh' }),
+                         style({ transform: 'rotate(30deg)', top: '300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({  transform: 'rotate(0deg)', top: '0vh' }))
                     ])
@@ -131,7 +131,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({ transform: 'rotate(0deg)', top: '0'}),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }))
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -143,7 +143,7 @@ export const slideInAnimation =
             group([
                  query(':enter',[
                     stagger(100, [
-                         style({ transform: 'rotate(15deg)', top: '100vh' }),
+                         style({ transform: 'rotate(30deg)', top: '300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({  transform: 'rotate(0deg)', top: '0vh' }))
                     ])
@@ -152,7 +152,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({ transform: 'rotate(0deg)', top: '0'}),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }))
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -164,7 +164,7 @@ export const slideInAnimation =
             group([
                  query(':enter',[
                     stagger(100, [
-                         style({ transform: 'rotate(15deg)', top: '100vh' }),
+                         style({ transform: 'rotate(30deg)', top: '300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({  transform: 'rotate(0deg)', top: '0vh' }))
                     ])
@@ -173,7 +173,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({ transform: 'rotate(0deg)', top: '0'}),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }))
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -185,7 +185,7 @@ export const slideInAnimation =
             group([
                  query(':enter',[
                     stagger(100, [
-                         style({ transform: 'rotate(15deg)', top: '100vh' }),
+                         style({ transform: 'rotate(30deg)', top: '300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({  transform: 'rotate(0deg)', top: '0vh' }))
                     ])
@@ -194,7 +194,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({ transform: 'rotate(0deg)', top: '0'}),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }))
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }))
                     ])
                  ], { optional: true }),
             ])
@@ -206,7 +206,7 @@ export const slideInAnimation =
             group([
                  query(':enter',[
                     stagger(100, [
-                         style({ transform: 'rotate(15deg)', top: '100vh' }),
+                         style({ transform: 'rotate(30deg)', top: '300%' }),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
                          style({  transform: 'rotate(0deg)', top: '0vh' }))
                     ])
@@ -215,7 +215,7 @@ export const slideInAnimation =
                     stagger(100, [
                          style({ transform: 'rotate(0deg)', top: '0'}),
                          animate('1s cubic-bezier(.35,0,.28,1)', 
-                         style({  transform: 'rotate(-15deg)', top: '-100vh' }))
+                         style({  transform: 'rotate(-30deg)', top: '-300%' }))
                     ])
                  ], { optional: true }),
             ])
