@@ -17,6 +17,7 @@ $scale_title: 1.15;
   z-index: 1;
   @include respond-to($medium){
     margin-bottom: 4em;
+    min-height: 100vh;
   }
   &__titlebox{
     z-index: 1;
@@ -38,7 +39,7 @@ $scale_title: 1.15;
     animation-fill-mode: forwards;
     @include respond-to($medium){
       left: -5%;
-      top: -17%;
+      top: -8%;
       transform: none;
       -webkit-animation-name: none;
       animation-name: none;
@@ -138,9 +139,8 @@ $scale_title: 1.15;
       animation-delay: 1s;
       will-change: opacity;
       @include respond-to($medium){
-        animation-name: revel_line_up_effect_m;
         width: 1px;
-        height: 1.2em;
+        height: 5.2em;
         left: 25%;
         bottom: 0;
         right: auto;
