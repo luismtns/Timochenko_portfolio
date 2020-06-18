@@ -3,7 +3,7 @@
   position: absolute;
   top: 60px;
   z-index: 9;
-  width: 100vw;
+  width: 100%;
   @include respond-to($medium){
     position: absolute;
     top: 2em;
