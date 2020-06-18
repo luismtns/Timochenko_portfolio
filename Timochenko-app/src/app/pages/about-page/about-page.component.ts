@@ -113,17 +113,16 @@ export class AboutPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.introEffect();
-    // if(window.innerWidth > 768){
+  }
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
       window.setInterval(()=>{
         // this.slickModal.slickNext();
         if (!this.reverseAutoplay) return;
         this.slickModal2.slickPrev();
       }, 0);
-    // }
-  }
-  ngOnDestroy(): void {
-    this.slickModal.ngOnDestroy();
-    this.slickModal2.ngOnDestroy();
+    
   }
 
   introEffect(){
