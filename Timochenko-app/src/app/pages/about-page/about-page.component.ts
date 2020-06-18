@@ -123,8 +123,6 @@ export class AboutPageComponent implements OnInit {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     clearInterval(this.handle_reverseAutoplay);
-    this.slickModal.unslick();
-    this.slickModal2.unslick();
   }
 
   introEffect(){
