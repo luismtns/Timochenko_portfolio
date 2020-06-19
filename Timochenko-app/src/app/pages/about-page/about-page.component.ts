@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { VideoPlayerModule } from './../../components/video-player/video-player.module';
-import { SlickCarouselComponent, SlickCarouselModule } from 'ngx-slick-carousel';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 import { interval } from 'rxjs';
 
 @Component({
@@ -10,10 +10,7 @@ import { interval } from 'rxjs';
 })
 export class AboutPageComponent implements OnInit  {
   @ViewChild('photo_container') photoDivRef: ElementRef;
-  @ViewChild('slickModal') slickModal: SlickCarouselComponent
-  @ViewChild('slickModal2') slickModal2: SlickCarouselComponent
   pink_text_effect: boolean = false;
-  destroy_slick:boolean = true;
 
   video_1:VideoPlayerModule = {
     'src': 'about/pink_lines',
@@ -90,6 +87,7 @@ export class AboutPageComponent implements OnInit  {
   ]
   
   slideConfig = {
+    "lazyLoad": 'ondemand',
     "speed": 1000,
     "slidesToShow": 4.5, 
     "slidesToScroll": 1, 
@@ -98,33 +96,26 @@ export class AboutPageComponent implements OnInit  {
     "autoplay": true,
     "autoplaySpeed": 0,
     "cssEase": 'linear',
-    // "responsive": this.responsive_slides,
+    "responsive": this.responsive_slides,
   };
   slideConfig_2 = {
+    "lazyLoad": 'ondemand',
     "speed": 1000,
     "slidesToShow": 4.5, 
-    "slidesToScroll": 4.5,
+    "slidesToScroll": -1,
     "centerMode": true,
     "infinite": true,
-    "autoplay": false,
+    "autoplay": true,
     "cssEase": 'linear',
-    // "responsive": this.responsive_slides,
+    "responsive": this.responsive_slides,
+    "autoplaySpeed": 0,
   };
   reverseAutoplay:boolean = true;
   handle_reverseAutoplay:any;
-  constructor(
-    private SlickCarouselModule:SlickCarouselModule
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.introEffect();
-    this.handle_reverseAutoplay = interval(0);
-      this.handle_reverseAutoplay.subscribe(n=>{
-        if(this.slickModal2){
-          if (!this.reverseAutoplay) return;
-          this.slickModal2.slickPrev();
-        }
-      });
   }
   
   introEffect(){

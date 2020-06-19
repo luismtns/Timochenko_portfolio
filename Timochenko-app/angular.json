@@ -31,7 +31,7 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/slick-carousel/slick/slick.min.js",
-              "./node_modules/scrollreveal/dist/scrollreveal.js"
+              "node_modules/scrollreveal/dist/scrollreveal.js"
             ]
           },
           "configurations": {
@@ -53,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "9mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "15kb"
                 }
               ]
             }

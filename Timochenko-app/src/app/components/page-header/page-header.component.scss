@@ -29,7 +29,7 @@ $scale_title: 1.15;
     align-items: flex-start;
     justify-content: center;
     left: 80px;
-    z-index: 1;
+    z-index: 10;
     -webkit-transform: translate(-50%,0) translateZ(80px) scale($scale_title);
     -moz-transform: translate(-50%,0) translateZ(80px) scale($scale_title);
     transform: translate(-50%,0) translateZ(80px) scale($scale_title);
@@ -242,7 +242,7 @@ $scale_title: 1.15;
   }
   100%{
     left: 0;
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -276,7 +276,7 @@ $scale_title: 1.15;
 }
 @keyframes show_text {
   from {opacity: 0;}
-  to {opacity: 100;}
+  to {opacity: 1;}
 }
 // Animate Text Setup
 .text_animate{
@@ -340,7 +340,6 @@ $scale_title: 1.15;
     }
   }
 }
-
 .PageCounter{
   text-align: center;
   position: absolute;
@@ -377,7 +376,6 @@ $scale_title: 1.15;
     border-color: $pink;
   }
 }
-
 .scroll-downs {
   position: absolute;
   right: 5em;
