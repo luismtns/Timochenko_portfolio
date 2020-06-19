@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { VideoPlayerModule } from './../../components/video-player/video-player.module';
 import { SlickCarouselComponent, SlickCarouselModule } from 'ngx-slick-carousel';
 import { interval } from 'rxjs';
@@ -8,7 +8,7 @@ import { interval } from 'rxjs';
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.scss']
 })
-export class AboutPageComponent implements OnInit, OnDestroy  {
+export class AboutPageComponent implements OnInit  {
   @ViewChild('photo_container') photoDivRef: ElementRef;
   @ViewChild('slickModal') slickModal: SlickCarouselComponent
   @ViewChild('slickModal2') slickModal2: SlickCarouselComponent
@@ -127,12 +127,6 @@ export class AboutPageComponent implements OnInit, OnDestroy  {
       });
   }
   
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.destroy_slick = false;
-  }
-
   introEffect(){
     setTimeout(() => {
       this.photoDivRef.nativeElement.style.width = '360px'
