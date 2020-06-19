@@ -1,17 +1,20 @@
 import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { VideoPlayerModule } from './../../components/video-player/video-player.module';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import { SlickCarouselComponent, SlickCarouselModule } from 'ngx-slick-carousel';
+import { interval } from 'rxjs';
+
 @Component({
   selector: 'app-about-page',
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.scss']
 })
-export class AboutPageComponent implements OnInit, OnDestroy {
+export class AboutPageComponent implements OnInit, OnDestroy  {
   @ViewChild('photo_container') photoDivRef: ElementRef;
   @ViewChild('slickModal') slickModal: SlickCarouselComponent
   @ViewChild('slickModal2') slickModal2: SlickCarouselComponent
   pink_text_effect: boolean = false;
-  
+  destroy_slick:boolean = true;
+
   video_1:VideoPlayerModule = {
     'src': 'about/pink_lines',
     'poster': 'about/cover_pink_lines',
@@ -95,7 +98,7 @@ export class AboutPageComponent implements OnInit, OnDestroy {
     "autoplay": true,
     "autoplaySpeed": 0,
     "cssEase": 'linear',
-    "responsive": this.responsive_slides,
+    // "responsive": this.responsive_slides,
   };
   slideConfig_2 = {
     "speed": 1000,
@@ -105,24 +108,29 @@ export class AboutPageComponent implements OnInit, OnDestroy {
     "infinite": true,
     "autoplay": false,
     "cssEase": 'linear',
-    "responsive": this.responsive_slides,
+    // "responsive": this.responsive_slides,
   };
   reverseAutoplay:boolean = true;
   handle_reverseAutoplay:any;
-  constructor() { }
+  constructor(
+    private SlickCarouselModule:SlickCarouselModule
+  ) { }
 
   ngOnInit(): void {
     this.introEffect();
-    this.handle_reverseAutoplay = window.setInterval(()=>{
-      if (!this.reverseAutoplay) return;
-      this.slickModal2.slickPrev();
-    }, 0);
+    this.handle_reverseAutoplay = interval(0);
+      this.handle_reverseAutoplay.subscribe(n=>{
+        if(this.slickModal2){
+          if (!this.reverseAutoplay) return;
+          this.slickModal2.slickPrev();
+        }
+      });
   }
-
+  
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
-    clearInterval(this.handle_reverseAutoplay);
+    this.destroy_slick = false;
   }
 
   introEffect(){

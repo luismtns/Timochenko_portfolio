@@ -61,7 +61,7 @@
     </div>
   </div>
   <app-reveal-scroll>
-    <div class="LogoPainel">
+    <div *ngIf="destroy_slick" class="LogoPainel">
       <ngx-slick-carousel class="carousel" 
                         #slickModal="slick-carousel" 
                         [config]="slideConfig">
@@ -72,7 +72,7 @@
     </div>
   </app-reveal-scroll>
   <app-reveal-scroll>
-    <div class="LogoPainel">
+    <div *ngIf="destroy_slick" class="LogoPainel">
       <ngx-slick-carousel *ngIf="logo_list && logo_list.length" class="carousel" 
                         #slickModal2="slick-carousel" 
                         [config]="slideConfig_2">
