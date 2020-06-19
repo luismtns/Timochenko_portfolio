@@ -51,12 +51,7 @@
     max-width: 100%;
     @include respond-to($medium){
       position: absolute;
-      display: flex;
-      align-items: center;
       left: 10%;
-      top: 0;
-      right: auto;
-      margin: 0 auto;
       width: 200%;
       max-width: 200%;
     }

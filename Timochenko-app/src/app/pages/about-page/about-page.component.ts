@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { VideoPlayerModule } from './../../components/video-player/video-player.module';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 @Component({
@@ -6,7 +6,7 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
   templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.scss']
 })
-export class AboutPageComponent implements OnInit {
+export class AboutPageComponent implements OnInit, OnDestroy {
   @ViewChild('photo_container') photoDivRef: ElementRef;
   @ViewChild('slickModal') slickModal: SlickCarouselComponent
   @ViewChild('slickModal2') slickModal2: SlickCarouselComponent

@@ -8,7 +8,7 @@ $scale_title: 1.15;
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   margin-bottom: 8em;
@@ -38,13 +38,12 @@ $scale_title: 1.15;
     animation-timing-function: $cubic;
     animation-fill-mode: forwards;
     @include respond-to($medium){
-      left: -5%;
-      top: -8%;
+      left: 0;
+      top: 60%;
       transform: none;
-      -webkit-animation-name: none;
-      animation-name: none;
       position: relative;
-      animation-name: none;
+      -webkit-animation-name: reveal_text_m;
+      animation-name: reveal_text_m;
       animation-duration: 0.6s;
       animation-timing-function: $cubic;
       animation-fill-mode: forwards;
@@ -59,13 +58,8 @@ $scale_title: 1.15;
       height: 50%;
       margin: auto;
       @include respond-to($medium){
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-        padding-bottom: 15%;
-        padding-left: 40px;
+        width: 75%;
+        height: 65%;
       }
     }
     &__title{
@@ -87,9 +81,9 @@ $scale_title: 1.15;
     }
   }
   &__image{
-    // position: relative;
+    position: relative;
     top: auto;
-    position: absolute;
+    // position: absolute;
     // top: 0;
     right: auto;
     left: auto;
@@ -104,20 +98,23 @@ $scale_title: 1.15;
     animation-fill-mode: forwards;
     z-index: -1;
     will-change: width;
+    overflow: hidden;
     img{
       display: block;
     }
     @include respond-to($medium){
       position: absolute;
       display: block;
-      top: 17%;
-      left: 10%;
+      left: 20%;
+      top: 17.5%;
       margin: 0 auto;
       right: auto;
       width: 200%;
-      max-width: 200%;
+      max-width: 150%;
       -webkit-animation-name: open_image_mobile;
       animation-name: open_image_mobile;
+      // -webkit-animation-name: none;
+      // animation-name: none;
       will-change: auto;
       overflow: hidden;
     }
@@ -126,9 +123,9 @@ $scale_title: 1.15;
       left: 0;
       margin: auto;
       right: 0;
-      bottom: -5em;
+      top: 90%;
       width: 2px;
-      height: 5em;
+      height: 10%;
       padding: 0;
       background-color: $white;
       opacity: 0;
@@ -140,10 +137,8 @@ $scale_title: 1.15;
       will-change: opacity;
       @include respond-to($medium){
         width: 1px;
-        height: 5.2em;
-        left: 25%;
+        height: 10%;
         bottom: 0;
-        right: auto;
       }
     }
     img{
@@ -155,7 +150,7 @@ $scale_title: 1.15;
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 5.5em;
+      top: 85%;
       margin: 0 auto;
       text-align: center;
       width: -webkit-fit-content;
@@ -171,9 +166,6 @@ $scale_title: 1.15;
       line-height: 0;
       @include respond-to($medium){
         bottom: 5.3em;
-        right: auto;
-        left: 22.5%;
-        transform: scale(0.5);
       }
       p{
         font-size: 1.1em;
@@ -193,10 +185,14 @@ $scale_title: 1.15;
 
 @keyframes open_image_mobile{
   0%{
-    transform: scale(1) translateX(0%)
+    width: 200%;
+    height: 62%;
   }
   100%{
-    transform: scale(2) translateX(10%)
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -205,9 +201,9 @@ $scale_title: 1.15;
   to {opacity: 1;}
 }
 @keyframes revel_line_up_effect {
-  0% {bottom: -5em;opacity: 0;}
+  0% {top: 110%;opacity: 0;}
   20% {opacity: 1;}
-  100% {bottom:  0em;opacity: 1;}
+  100% {top:  90%;opacity: 1;}
 }
 @keyframes revel_line_up_effect_m {
   0% {bottom: 0;opacity: 0;}
@@ -239,6 +235,17 @@ $scale_title: 1.15;
   }
 }
 
+@keyframes reveal_text_m {
+  0%{
+    left: -5%;
+    opacity: 0;
+  }
+  100%{
+    left: 0;
+    opacity: 100%;
+  }
+}
+
 .pink-effect{
   display: block;
   width: 100%;
@@ -247,15 +254,15 @@ $scale_title: 1.15;
   position: absolute;
   top: 0;    
   left: -100%;  
-  z-index: 1;
+  z-index: 10;
   &--overlay{
-    max-width: fit-content;
+    max-width: 100%;
     padding: 0 4px;
     position: relative;
     overflow: hidden;
     p,h1,h2,h3,h4,h5{
       display:inline-block;
-      min-width: fit-content;
+      min-width: 100%;
       overflow: hidden;
       background-clip: border-box; 
     }
