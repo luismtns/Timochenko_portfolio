@@ -60,11 +60,11 @@
       </div>
     </div>
   </div>
-  <app-reveal-scroll>
+  <!-- <app-reveal-scroll>
     <div class="LogoPainel">
       <ngx-slick-carousel class="carousel" 
-                        [config]="slideConfig"
-                        *ngIf="(logo_list && logo_list.length)">
+        #slickModal="slick-carousel"
+        [config]="slideConfig">
         <div ngxSlickItem *ngFor="let logo of logo_list" class="slide LogoPainel__item">
           <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
         </div>
@@ -73,14 +73,15 @@
   </app-reveal-scroll>
   <app-reveal-scroll>
     <div class="LogoPainel">
-      <ngx-slick-carousel *ngIf="(logo_list && logo_list.length)" class="carousel" 
-                        [config]="slideConfig_2">
+      <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel"
+        [config]="slideConfig_2">
         <div ngxSlickItem *ngFor="let logo of logo_list.reverse()" class="slide LogoPainel__item">
           <img src="./assets/images/about/logos/{{logo.name}}.png" draggable="false" [alt]="logo.alt">
         </div>
     </ngx-slick-carousel>
     </div>
-  </app-reveal-scroll>
+  </app-reveal-scroll> -->
   <div class="container space">
     <div class="row align-items-center">
       <div class="col-12 col-md-6">

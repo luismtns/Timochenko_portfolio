@@ -11,6 +11,11 @@ import { Location } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   year:string;
+  pink_transition: object = {
+    'pink-transition': true,
+    'fade-in': false,
+    'fade-out': false
+  };
 
   constructor(
     private loaderService: LoaderService,
@@ -33,9 +38,20 @@ export class HeaderComponent implements OnInit {
     }else{
       this.router.navigate(['/'])
     }
-    
+    this.pinkTransition();
     setTimeout(()=>{this.loaderService.hide();}, 100)
     
+  }
+  
+  pinkTransition(){
+    this.pink_transition['fade-in'] = true;
+    setTimeout(()=>{
+      this.pink_transition['fade-in'] = false;
+      this.pink_transition['fade-out'] = true;
+      setTimeout(()=>{
+        this.pink_transition['fade-out'] = false;
+      }, 400)
+    }, 600)
   }
 
 }

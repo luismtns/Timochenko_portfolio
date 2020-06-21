@@ -66,3 +66,22 @@
       }
   }
 }
+.pink-transition{
+  height: 100%;
+  width: 100%;
+  background-color: $pink;
+  position: fixed;
+  left: -100%;
+  z-index: 999;
+  opacity: 0;
+  &.fade-in{
+    opacity: 1;
+    left: 0;
+    transition: left 350ms $cubic;
+  }
+  &.fade-out{
+    opacity: 1;
+    left: 100%;
+    transition: left 350ms $cubic;
+  }
+}
