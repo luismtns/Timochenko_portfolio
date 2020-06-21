@@ -9,10 +9,36 @@
     border-color: $pink;
     width: 100%;
   }
-  h1{
+  &__title{
     font-size: 3em;
-    &:first-child{
+    display:inline-block;
+    min-width: fit-content;
+    padding: 0 5px;
+    opacity: 0;
+    &.pink{
       color: $pink;
+    }
+    &--pink-effect{
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $pink;
+      position: absolute;
+      top: 0;    
+      left: -100%;  
+      z-index: 1;
+    }
+    &--overlay{
+      max-width: fit-content;
+      padding: 0 10px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-bottom: 0.3em;
+      @include respond-to($medium){
+        margin-bottom: 0em;
+        padding: 0 0;
+      }
     }
   }
   @include respond-to($medium){
@@ -64,7 +90,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 120px 207.8px 120px;
-  border-color: transparent transparent white transparent;
+  border-color: transparent transparent gray transparent;
   -webkit-transform:rotate(360deg);
   transform:rotate(360deg);
   -webkit-transition: opacity 0.3s $cubic, border 0.3s $cubic;  
@@ -98,4 +124,47 @@
 .circle-follow.moving {
   visibility:visible;
 	opacity : 1;
+}
+
+// Animate Text Setup
+@keyframes left_negative {
+  0% {left: -100%;}
+  50% {left: 0%;}
+  100% {left: 100%;}
+}
+@keyframes show_text {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.first_text_animate{
+  will-change: auto;
+  animation-name: show_text;
+  animation-duration: 0.1s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.first_pink_animate{
+  will-change: auto;
+  animation-name: left_negative;
+  animation-duration: 1.5s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+}
+
+.second_text_animate{
+  will-change: auto;
+  animation-name: show_text;
+  animation-duration: 0.1s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.second_pink_animate{
+  will-change: auto;
+  animation-name: left_negative;
+  animation-duration: 1.5s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
 }

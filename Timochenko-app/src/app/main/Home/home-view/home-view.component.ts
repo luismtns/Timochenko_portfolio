@@ -57,10 +57,10 @@ export class HomeViewComponent implements OnInit  {
     private router: Router
     ) { 
   }
-  @HostListener('document:mousewheel', ['$event'])
+  @HostListener('window:mousewheel', ['$event'])
   @debounce(150)
   onWheelScroll(evento: WheelEvent) {
-    
+    console.log('scrolling')
     if (evento.deltaY > 0) {// Scroll down
       this.routeControl(true)
     }else{// Scroll up  

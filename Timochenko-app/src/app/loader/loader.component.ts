@@ -68,8 +68,10 @@ export class LoaderComponent implements OnInit, OnDestroy {
     setTimeout(()=>{
       this.pink_transition['fade-in'] = false;
       this.pink_transition['fade-out'] = true;
-      setTimeout(()=>{this.pink_transition = null}, 800)
-    }, 500)
+      setTimeout(()=>{
+        this.pink_transition['fade-out'] = false;
+      }, 400)
+    }, 400)
   }
   updateProgress () {
     var updtate_interval = setInterval(()=>{this.progress_percent < 100 ? this.progress_percent++ : clearInterval(updtate_interval)}, 1000*(this.time_seconds/100) )

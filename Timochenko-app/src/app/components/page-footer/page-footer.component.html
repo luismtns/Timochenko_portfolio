@@ -1,5 +1,5 @@
 
-<div class="nextProject" (click)="openRoute()" (mouseover)="mouse_active = true" (mouseleave)="mouse_active = false">
+<div #item class="nextProject" (click)="openRoute()" (mouseover)="mouseOverFooter()" (mouseleave)="mouseLeaveFooter()">
   <div class="row">
     <div class="col-4 offset-4 col-md-2 offset-md-5">
       <hr>
@@ -7,11 +7,17 @@
   </div>
   <div class="row" >
     <div class="col-12">
-      <h1>
-        Next Proj
-      </h1>
-      <h1 [innerHtml]="pageName">
-      </h1>
+      <div class="nextProject__title--overlay">
+        <span class="nextProject__title--pink-effect" [ngClass]="{'first_pink_animate': animate_class}"></span>
+        <h1 class="nextProject__title pink" [ngClass]="{'first_text_animate': animate_class}">
+          Next Proj
+        </h1>
+      </div>
+      <div class="nextProject__title--overlay">
+        <span class="nextProject__title--pink-effect" [ngClass]="{'second_pink_animate': animate_class}"></span>
+        <h1 class="nextProject__title" [ngClass]="{'second_text_animate': animate_class}" [innerHtml]="pageName">
+        </h1>
+      </div>
     </div>
   </div>
 </div> 

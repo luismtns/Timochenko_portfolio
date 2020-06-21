@@ -77,11 +77,11 @@
   &.fade-in{
     opacity: 1;
     left: 0;
-    transition: left 350ms $cubic;
+    transition: left 200ms $cubic;
   }
   &.fade-out{
     opacity: 1;
     left: 100%;
-    transition: left 350ms $cubic;
+    transition: left 400ms $cubic;
   }
 }
