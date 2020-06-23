@@ -34,9 +34,22 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
 import { RevealScrollComponent } from './components/reveal-scroll/reveal-scroll.component';
 import { ParallaxDirective } from './directives/parallax.directive';
 
+// Swiper ngx
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+ 
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto'
+};
+
 // Slick JS  https://kenwheeler.github.io/slick/
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+
+ 
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -54,6 +67,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     AboutPageComponent, 
     LitPageComponent, 
     PalmeirasPageComponent, HeaderComponent, ReebokPageComponent, SennaPageComponent, PageHeaderComponent, BlankComponent, VideoPlayerComponent, RevealScrollComponent, ParallaxDirective, PageFooterComponent, 
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -64,13 +78,18 @@ export class MyHammerConfig extends HammerGestureConfig {
     NgbModule,
     HammerModule,
     NgsRevealModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    SwiperModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "pt-br"},
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig
+    },
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
     }
   ],
   bootstrap: [AppComponent],  
