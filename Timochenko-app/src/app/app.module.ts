@@ -12,7 +12,6 @@ import { LoaderComponent } from './loader/loader.component';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TiltModule } from "@ssv/ngx.tilt";
 
 import { ImageLoaderComponent } from './components/image-loader/image-loader.component';
 import { MouseStyleComponent } from './components/mouse-style/mouse-style.component';
