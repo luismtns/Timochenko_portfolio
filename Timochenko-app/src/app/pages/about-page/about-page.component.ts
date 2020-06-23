@@ -1,7 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { VideoPlayerModule } from './../../components/video-player/video-player.module';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
-import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-about-page',
@@ -65,53 +63,6 @@ export class AboutPageComponent implements OnInit  {
     },
   ];
 
-  responsive_slides:any = [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2.5,
-        slidesToScroll: 2.5,
-        "centerMode": true,
-        autoplay: true,
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1.5,
-        slidesToScroll: 1.5,
-        "centerMode": true,
-        autoplay: true,
-      }
-    }
-  ]
-  
-  slideConfig = {
-    "lazyLoad": 'ondemand',
-    "speed": 1000,
-    "slidesToShow": 4.5, 
-    "slidesToScroll": 1, 
-    "centerMode": true,
-    "infinite": true,
-    "autoplay": true,
-    "autoplaySpeed": 0,
-    "cssEase": 'linear',
-    "responsive": this.responsive_slides,
-  };
-  slideConfig_2 = {
-    "lazyLoad": 'ondemand',
-    "speed": 1000,
-    "slidesToShow": 4.5, 
-    "slidesToScroll": -1,
-    "centerMode": true,
-    "infinite": true,
-    "autoplay": true,
-    "cssEase": 'linear',
-    "responsive": this.responsive_slides,
-    "autoplaySpeed": 0,
-  };
-  reverseAutoplay:boolean = true;
-  handle_reverseAutoplay:any;
   constructor() { }
 
   ngOnInit(): void {
