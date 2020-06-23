@@ -2,9 +2,21 @@
 @import "../../../sass/variables";
 .nextProject{
   text-align: center;
-  padding-bottom: 10em;
-  padding-top: 10em;
   position: relative;
+  padding:0;
+  max-height: fit-content;
+  padding-bottom: 10em;
+  padding-top: 2em;
+  @include respond-to($medium){
+    padding:0;
+  }
+  &--padding{
+    padding-top: 8em;
+    @include respond-to($medium){
+      padding-bottom: 4em;
+      padding-top: 4em;
+    }
+  }
   hr{
     border-color: $pink;
     width: 100%;
@@ -42,8 +54,6 @@
     }
   }
   @include respond-to($medium){
-    padding-bottom: 4em;
-    padding-top: 2.5em;
     h1{
       font-size: 1.55em;
     }
@@ -91,10 +101,10 @@
   border-style: solid;
   border-width: 0 120px 207.8px 120px;
   border-color: transparent transparent gray transparent;
-  -webkit-transform:rotate(360deg);
-  transform:rotate(360deg);
-  -webkit-transition: opacity 0.3s $cubic, border 0.3s $cubic;  
-  transition: opacity 0.3s $cubic, border 0.3s $cubic;  
+  -webkit-transform:rotate(360deg) scale(0);
+  transform:rotate(360deg) scale(0);
+  -webkit-transition: opacity 1s $cubic, visibility 1s $cubic;
+  transition: opacity 1s $cubic, visibility 1s $cubic;
   opacity : 0; 
   animation-name: rotate_a;
   animation-duration: 6s;
@@ -122,8 +132,52 @@
 }
 
 .circle-follow.moving {
-  visibility:visible;
-	opacity : 1;
+  visibility: visible;
+  opacity: 1;
+}
+.circle-follow.out-animate{
+  animation-name: mouse_out;
+  animation-duration: 1s;
+  animation-timing-function: $cubic;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+}
+
+@keyframes mouse_out {
+  0%{    
+    visibility: visible;
+    transform:rotate(45deg)  scale(1) translate(0,0);
+    opacity: 1;
+  }
+  90%{
+    visibility: visible;
+    transform:rotate(180deg)  scale(0) translate(-50%,-50%);
+    opacity: 0;
+  }
+  100%{
+    visibility: hidden;
+    transform:rotate(360deg)  scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes mouse_in {
+  0%{ 
+    visibility: hidden;
+    transform:rotate(0deg)  scale(0);
+    opacity: 0;
+  }
+  10%{
+    visibility: visible;
+    transform:rotate(0deg)  scale(0) translate(-50%,-50%);
+    opacity: 0;
+  }
+  100%{   
+    visibility: visible;
+    transform:rotate(135deg)  scale(1) translate(0,0);
+    opacity: 1;
+  }
 }
 
 // Animate Text Setup

@@ -27,7 +27,7 @@ export class CarouselComponent implements OnInit {
       slidesPerView: 4.5, // Slides Visible in Single View Default is 1
       pagination: false, // Pagination Class defined
       spaceBetween: 200, // Space between each Item
-      speed: 1000,
+      speed: 1500,
       "loop": true,
       direction: "horizontal",
       breakpoints: {

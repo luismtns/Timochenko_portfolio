@@ -1,42 +1,42 @@
-
-<div #item class="nextProject" (click)="openRoute()" (mouseover)="mouseOverFooter()" (mouseleave)="mouseLeaveFooter()">
-  <div class="row">
-    <div class="col-4 offset-4 col-md-2 offset-md-5">
-      <hr>
-    </div>
-  </div>
-  <div class="row" >
-    <div class="col-12">
-      <div class="nextProject__title--overlay">
-        <span class="nextProject__title--pink-effect" [ngClass]="{'first_pink_animate': animate_class}"></span>
-        <h1 class="nextProject__title pink" [ngClass]="{'first_text_animate': animate_class}">
-          Next Proj
-        </h1>
-      </div>
-      <div class="nextProject__title--overlay">
-        <span class="nextProject__title--pink-effect" [ngClass]="{'second_pink_animate': animate_class}"></span>
-        <h1 class="nextProject__title" [ngClass]="{'second_text_animate': animate_class}" [innerHtml]="pageName">
-        </h1>
+<div class="nextProject--padding">
+  <div #item class="nextProject" (click)="openRoute()" (mouseover)="mouseOverFooter()" (mouseleave)="mouseLeaveFooter()">
+    <div class="row">
+      <div class="col-4 offset-4 col-md-2 offset-md-5">
+        <hr>
       </div>
     </div>
+    <div class="row" >
+      <div class="col-12">
+        <div class="nextProject__title--overlay">
+          <span class="nextProject__title--pink-effect" [ngClass]="{'first_pink_animate': animate_class}"></span>
+          <h1 class="nextProject__title pink" [ngClass]="{'first_text_animate': animate_class}">
+            Next Proj
+          </h1>
+        </div>
+        <div class="nextProject__title--overlay">
+          <span class="nextProject__title--pink-effect" [ngClass]="{'second_pink_animate': animate_class}"></span>
+          <h1 class="nextProject__title" [ngClass]="{'second_text_animate': animate_class}" [innerHtml]="pageName">
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="full-size negative-index">
+    <div class="mask-bg-color full-size">
+    </div>
+    <div class="blend-screen full-size">
+  
+      <div class="animated-bg full-size" [ngStyle]="{'background-image': 'url('+pageBgLink+')'}">
+      </div>
+      
+      <div class="blend-multiply element-mask full-size">
+      
+        <span class="circle-follow" 
+        [ngClass]="{'moving': mouse_active, 'click': pointer_click, 'out-animate': !mouse_active}"
+        [style.top.px]="mouse_top"  
+        [style.left.px]="mouse_left">
+        </span>
+      </div>
+      </div>
   </div>
-</div> 
-<div class="full-size negative-index">
-  <div class="mask-bg-color full-size">
-  </div>
-  <div class="blend-screen full-size">
-
-    <div class="animated-bg full-size" [ngStyle]="{'background-image': 'url('+pageBgLink+')'}">
-    </div>
-    
-    <div class="blend-multiply element-mask full-size">
-    
-      <span class="circle-follow" 
-      [ngClass]="{'moving': mouse_active, 'click': pointer_click}"
-      [style.top.px]="mouse_top"  
-      [style.left.px]="mouse_left"
-      >
-      </span>
-    </div>
-    </div>
 </div>
