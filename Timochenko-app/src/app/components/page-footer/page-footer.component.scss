@@ -11,7 +11,7 @@
     padding:0;
   }
   &--padding{
-    padding-top: 8em;
+    padding-top: 10em;
     @include respond-to($medium){
       padding-bottom: 4em;
       padding-top: 4em;
@@ -100,11 +100,12 @@
   height: 0;
   border-style: solid;
   border-width: 0 120px 207.8px 120px;
-  border-color: transparent transparent gray transparent;
+  border-color: transparent;
+  border-bottom-color: white;
   -webkit-transform:rotate(360deg) scale(0);
   transform:rotate(360deg) scale(0);
-  -webkit-transition: opacity 1s $cubic, visibility 1s $cubic;
-  transition: opacity 1s $cubic, visibility 1s $cubic;
+  -webkit-transition: opacity 1s $cubic;
+  transition: opacity 1s $cubic;
   opacity : 0; 
   animation-name: rotate_a;
   animation-duration: 6s;
@@ -137,7 +138,7 @@
 }
 .circle-follow.out-animate{
   animation-name: mouse_out;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-timing-function: $cubic;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
@@ -149,36 +150,25 @@
     visibility: visible;
     transform:rotate(45deg)  scale(1) translate(0,0);
     opacity: 1;
+    border-bottom-color: #ffffff;
+  }
+  40%{
+    border-bottom-color: $background;
   }
   90%{
     visibility: visible;
     transform:rotate(180deg)  scale(0) translate(-50%,-50%);
     opacity: 0;
+    border-bottom-color: $background;
   }
   100%{
     visibility: hidden;
     transform:rotate(360deg)  scale(0);
     opacity: 0;
+    border-bottom-color: $background;
   }
 }
 
-@keyframes mouse_in {
-  0%{ 
-    visibility: hidden;
-    transform:rotate(0deg)  scale(0);
-    opacity: 0;
-  }
-  10%{
-    visibility: visible;
-    transform:rotate(0deg)  scale(0) translate(-50%,-50%);
-    opacity: 0;
-  }
-  100%{   
-    visibility: visible;
-    transform:rotate(135deg)  scale(1) translate(0,0);
-    opacity: 1;
-  }
-}
 
 // Animate Text Setup
 @keyframes left_negative {
