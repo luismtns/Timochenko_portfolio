@@ -28,6 +28,7 @@ export class CarouselComponent implements OnInit {
       pagination: false, // Pagination Class defined
       spaceBetween: 200, // Space between each Item
       speed: 1000,
+      "loop": true,
       direction: "horizontal",
       breakpoints: {
         // when window width is >= 640px
