@@ -37,13 +37,20 @@ export class PageHeaderComponent implements OnInit {
     },
   ];
 
-  top_number_cont:string = '0em'
+  top_number_cont:string = '0em';
+
+  FooterAnimation:boolean = window.localStorage.getItem('FooterAnimation') ? true:false;
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
     this.getNumberPosition(this.router.url);
+    
+    if(this.FooterAnimation){
+      console.log('FooterAnimation', window.localStorage.getItem('FooterAnimation'))
+      window.localStorage.removeItem('FooterAnimation');
+    }
   }
 
   

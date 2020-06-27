@@ -7,6 +7,14 @@
   max-height: fit-content;
   padding-bottom: 10em;
   padding-top: 2em;
+  opacity: 1;
+  transition: opacity $cubic;
+  &.click{
+    opacity: 0;
+    @include respond-to($medium){
+      opacity: 1;
+    }
+  }
   @include respond-to($medium){
     padding:0;
   }
@@ -67,8 +75,33 @@
 	width : 100%; 
 	position: absolute; 
 	top : 0; 
-	left : 0;
+  left : 0;
+  &.click{
+    position: fixed; 
+    height : 100%; 
+    top: 50%;
+    will-change: top;
+    animation-name: animate_image;
+    animation-duration: 250ms;
+    animation-timing-function: $cubic;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+    @include respond-to($medium){
+      animation-name: none;
+      position: absolute; 
+      top: 0;
+    }
+  }
 }
+@keyframes animate_image{
+  0%{
+    top:50%;
+  }
+  100%{
+    top:0;
+  }
+}
+
 .blend-multiply {
 	mix-blend-mode : multiply;
 }
@@ -81,12 +114,13 @@
 	// background-color: pink;
 }
 .animated-bg {
-	background-position:center;  
+	background-position:top;  
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-webkit-background-size:cover;
-	background-size:cover;
+  background-size:cover;
 }
+
 .element-mask {
 	background-color: black;
 }
@@ -101,7 +135,7 @@
   border-style: solid;
   border-width: 0 120px 207.8px 120px;
   border-color: transparent;
-  border-bottom-color: white;
+  border-bottom-color: $white;
   -webkit-transform:rotate(360deg) scale(0);
   transform:rotate(360deg) scale(0);
   -webkit-transition: opacity 1s $cubic;
@@ -117,10 +151,15 @@
     display: none;
   }
   &.click{
+    will-change: "auto";
     animation-name: scale_a;
-    animation-duration: 1s;
-    animation-timing-function: $cubic;
+    animation-duration: 1200ms;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    @include respond-to($medium){
+      animation-name: none;
+    }
   }
 }
 @keyframes rotate_a {
@@ -128,8 +167,16 @@
   100%{transform:rotate(360deg)}
 }
 @keyframes scale_a {
-  0%{transform:scale(1)rotate(0deg)}
-  100%{transform:scale(5)rotate(90deg)}
+  0%{
+    transform:scale(1)rotate(45deg) translateY(0%)
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform:scale(20)rotate(0deg) translateY(-30%);
+  }
 }
 
 .circle-follow.moving {
@@ -150,7 +197,7 @@
     visibility: visible;
     transform:rotate(45deg)  scale(1) translate(0,0);
     opacity: 1;
-    border-bottom-color: #ffffff;
+    border-bottom-color: $white;
   }
   40%{
     border-bottom-color: $background;

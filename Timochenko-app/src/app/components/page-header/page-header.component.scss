@@ -47,7 +47,7 @@ $scale_title: 1.15;
       animation-duration: 0.6s;
       animation-timing-function: $cubic;
       animation-fill-mode: forwards;
-  }
+    }
     &--overlay{
       position: absolute;
       top: 0;
@@ -176,8 +176,30 @@ $scale_title: 1.15;
         }
       }
     }
+
+    // Footer Animation
+    &.animation-footer{    
+      max-width: 100%;
+      top: auto;
+      top: 0;
+      animation-name:none;
+      // animation-name: image_animate_from_footer;
+      // animation-duration: 650ms;
+      // animation-timing-function: $cubic;
+      // animation-fill-mode: forwards;
+    }
   }
 }
+
+@keyframes image_animate_from_footer{
+  0%{
+    bottom: -30%;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
 @keyframes effect_open_page {
   0% {max-width: 60%;max-height: auto; }
   100% {max-width: 100%;max-height: 100%; }

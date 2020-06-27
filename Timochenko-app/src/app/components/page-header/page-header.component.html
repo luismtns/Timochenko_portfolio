@@ -1,5 +1,5 @@
 
-<div class="backgroundLines">
+<div *ngIf="!FooterAnimation" class="backgroundLines">
   <div class="PageCounter">
     <div class="PageCounter--overflow">
       <div class="PageCounter__container" [style.top]="top_number_cont">
@@ -17,12 +17,23 @@
 </div>
 <div class="projectHeader">
   <div class="projectHeader__titlebox--overlay">
-    <div class="projectHeader__titlebox">
+    
+    <div *ngIf="!FooterAnimation" class="projectHeader__titlebox">
         <h1 class="projectHeader__titlebox__title">{{page.title}}</h1>
         <h4 class="projectHeader__titlebox__subtitle">{{page.subTitle}}</h4>
     </div>
+    <div *ngIf="FooterAnimation" class="projectHeader__titlebox">
+      <div class="pink-effect--overlay">
+        <span [ngStyle]="{'animation-delay': '0.4s'}" class="pink-effect pink_animate"></span>
+          <h1 [ngStyle]="{'animation-delay': '1.4s'}" class="projectHeader__titlebox__title text_animate">{{page.title}}</h1>
+      </div>
+      <div class="pink-effect--overlay">
+        <span [ngStyle]="{'animation-delay': '0.4s'}" class="pink-effect pink_animate"></span>
+        <h4 [ngStyle]="{'animation-delay': '1.4s'}" class="projectHeader__titlebox__subtitle text_animate">{{page.subTitle}}</h4>
+      </div>
+    </div>
   </div>
-  <div  class="projectHeader__image">
+  <div  class="projectHeader__image" [ngClass]="{'animation-footer': FooterAnimation}">
     <img src="./assets/images/{{page.imgSrc}}.jpg" [alt]="page.imgAlt">
     <div class="projectHeader__image--scroll">
       <div class="pink-effect--overlay">

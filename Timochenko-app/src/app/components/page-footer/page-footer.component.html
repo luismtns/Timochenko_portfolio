@@ -1,5 +1,5 @@
 <div class="nextProject--padding">
-  <div #item class="nextProject" (click)="openRoute()" (mouseover)="mouseOverFooter()" (mouseleave)="mouseLeaveFooter()">
+  <div #item class="nextProject"  [ngClass]="{'click': pointer_click}" (click)="openRoute()" (mouseover)="mouseOverFooter()" (mouseleave)="mouseLeaveFooter()">
     <div class="row">
       <div class="col-4 offset-4 col-md-2 offset-md-5">
         <hr>
@@ -21,7 +21,7 @@
       </div>
     </div>
   </div> 
-  <div class="full-size negative-index">
+  <div class="full-size negative-index" [ngClass]="{'click': pointer_click}">
     <div class="mask-bg-color full-size">
     </div>
     <div class="blend-screen full-size">

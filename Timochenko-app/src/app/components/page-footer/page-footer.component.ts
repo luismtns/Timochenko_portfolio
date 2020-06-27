@@ -42,7 +42,10 @@ export class PageFooterComponent implements OnInit {
   openRoute(){
     this.pointer_click = true;
     this._MouseStyleService.show();
-    setTimeout(()=> this.route.navigate([this.pageLink]),400)
+    if(window.innerWidth > 768){
+      window.localStorage.setItem('FooterAnimation', 'true');
+    }
+    setTimeout(()=> this.route.navigate([this.pageLink]),800)
   }
   mouseOverFooter(){
     this.mouse_active = true
