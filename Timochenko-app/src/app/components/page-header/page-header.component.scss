@@ -72,7 +72,7 @@ $scale_title: 1.15;
     &__subtitle{
       font-size: 18px;
       font-weight: 600;
-      margin-left: 15px;
+      margin-left: 5px;
       @include respond-to($medium){
         font-size: 0.8em;
         font-weight: 400;

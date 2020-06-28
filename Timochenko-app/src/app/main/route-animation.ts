@@ -52,7 +52,7 @@ export const slideInAnimation =
                  ], { optional: true }),
             ])
        ]),
-       transition('Reebok => Lit', [
+       transition('Chillfy => Lit', [
             query(':enter, :leave', 
                  style({ position: 'absolute', width: '100%' }), 
                  { optional: true }),        
@@ -73,7 +73,7 @@ export const slideInAnimation =
                  ], { optional: true }),
             ])
        ]),
-       transition('Senna => Reebok', [
+       transition('Senna => Chillfy', [
             query(':enter, :leave', 
                  style({ position: 'absolute', width: '100%' }), 
                  { optional: true }),        
@@ -136,7 +136,7 @@ export const slideInAnimation =
                  ], { optional: true }),
             ])
        ]),
-       transition('Lit => Reebok', [
+       transition('Lit => Chillfy', [
             query(':enter, :leave', 
                  style({ position: 'absolute', width: '100%' }), 
                  { optional: true }),        
@@ -157,7 +157,7 @@ export const slideInAnimation =
                  ], { optional: true }),
             ])
        ]),
-       transition('Reebok => Senna', [
+       transition('Chillfy => Senna', [
             query(':enter, :leave', 
                  style({ position: 'absolute', width: '100%' }), 
                  { optional: true }),        

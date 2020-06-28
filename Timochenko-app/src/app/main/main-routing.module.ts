@@ -15,7 +15,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ChillProjectComponent, 
+        component: ReebokProjectComponent, 
         data: {animation: 'Home'}
       },
       {
@@ -24,9 +24,9 @@ const routes: Routes = [
         data: {animation: 'Lit'}
       },
       {
-        path: 'Reebok',
-        component: ReebokProjectComponent, 
-        data: {animation: 'Reebok'}
+        path: 'Chillfy',
+        component: ChillProjectComponent, 
+        data: {animation: 'Chillfy'}
       },
       {
         path: 'Senna',

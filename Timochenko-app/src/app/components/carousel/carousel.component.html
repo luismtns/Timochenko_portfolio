@@ -1,4 +1,4 @@
-<div #swiperEl class="swiper-container" [swiper]="config" (mouseenter)="onSwiperHover( true )" (mouseleave)="onSwiperHover( false )">
+<div #swiperEl class="swiper-container" [swiper]="config">
   <div *ngIf="images" class="swiper-wrapper">
     <div class="swiper-slide swiper-no-swiping" *ngFor="let image of images">
       <img src="./assets/images/about/logos/{{image.name}}.png" draggable="false" [alt]="image.alt">

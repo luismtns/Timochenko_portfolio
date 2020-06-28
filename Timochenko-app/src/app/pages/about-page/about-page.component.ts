@@ -30,10 +30,6 @@ export class AboutPageComponent implements OnInit  {
       'alt':'Casa Santa Luiza White Logo',
     },
     {
-      'name':'chill',
-      'alt':'Chill White Logo',
-    },
-    {
       'name':'heineken',
       'alt':'Heineken White Logo',
     },

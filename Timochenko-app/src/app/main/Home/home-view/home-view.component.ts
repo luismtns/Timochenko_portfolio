@@ -36,7 +36,7 @@ export class HomeViewComponent implements OnInit  {
       position: '-2em',
     },
     {
-      name: '/Reebok',
+      name: '/Chillfy',
       number:3,
       position: '-4em',
     },
@@ -104,10 +104,10 @@ export class HomeViewComponent implements OnInit  {
           break
         }
         case '/Lit': {
-          this.router.navigate(['/Reebok'])
+          this.router.navigate(['/Chillfy'])
           break
         }
-        case '/Reebok': {
+        case '/Chillfy': {
           this.router.navigate(['/Senna'])
           break
         }
@@ -130,12 +130,12 @@ export class HomeViewComponent implements OnInit  {
           this.router.navigate(['/'])
           break
         }
-        case '/Reebok': {
+        case '/Chillfy': {
           this.router.navigate(['/Lit'])
           break
         }
         case '/Senna': {
-          this.router.navigate(['/Reebok'])
+          this.router.navigate(['/Chillfy'])
           break
         }
         case '/Palmeiras': {

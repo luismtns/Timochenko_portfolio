@@ -1,4 +1,9 @@
 @import "../../../sass/variables";
+::ng-deep{
+  body{
+    background-color: #1a191b !important;
+  }
+}
 .container.space{
   margin-top: 8em;
   @include respond-to($medium){

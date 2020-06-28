@@ -15,7 +15,7 @@ const routes: Routes = [
     loadChildren: './main/main.module#MainModule',
   },
   {
-    path: 'p/Chill',
+    path: 'p/Chillfy',
     component: ChillPageComponent
   },
   {

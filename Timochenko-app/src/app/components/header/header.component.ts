@@ -28,16 +28,19 @@ export class HeaderComponent implements OnInit {
   }
 
   goHome(){
-    if(this.router.url.indexOf('/p/') > -1){
-      var route_split = location.pathname.split('/')
-      var route_navigate = route_split[route_split.length - 1];
-      if(route_navigate == 'Chill'){
-        route_navigate = ''
+    setTimeout(()=>{
+      if(this.router.url.indexOf('/p/') > -1){
+        var route_split = location.pathname.split('/')
+        var route_navigate = route_split[route_split.length - 1];
+        if(route_navigate == 'Reebok'){
+          route_navigate = ''
+        }
+        this.router.navigate(['/'+route_navigate])
+      }else{
+        this.router.navigate(['/'])
       }
-      this.router.navigate(['/'+route_navigate])
-    }else{
-      this.router.navigate(['/'])
-    }
+
+    }, 300)
     this.pinkTransition();
     setTimeout(()=>{this.loaderService.hide();}, 100)
     

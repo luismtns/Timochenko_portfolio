@@ -11,7 +11,7 @@ export class PageHeaderComponent implements OnInit {
   @Input() page: PageModule;
   page_count: Object[] = [
     {
-      name: '/p/Chill',
+      name: '/p/Reebok',
       number:1,
       position: '0em',
     },
@@ -21,7 +21,7 @@ export class PageHeaderComponent implements OnInit {
       position: '-2em',
     },
     {
-      name: '/p/Reebok',
+      name: '/p/Chillfy',
       number:3,
       position: '-4em',
     },

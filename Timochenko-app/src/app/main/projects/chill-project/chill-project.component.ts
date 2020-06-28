@@ -25,6 +25,6 @@ export class ChillProjectComponent implements OnInit {
   ngOnInit(): void {
   }
   openProject(){
-      this.router.navigate(['/p/Chill'])
+      this.router.navigate(['/p/Chillfy'])
   }
 }
