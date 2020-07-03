@@ -33,12 +33,14 @@ export class VideoPlayerComponent implements AfterViewInit {
         _videoRef.loop = true;
         _videoRef.play();
       }else{        
+        var _videoRef = this.video_element.nativeElement as HTMLVideoElement;
         this.pink_effect = true;
         if(this.pinkdisable){
-          var _videoRef = this.video_element.nativeElement as HTMLVideoElement;
           _videoRef.muted = true;
           _videoRef.loop = true;
           _videoRef.play();
+        }else{          
+        _videoRef.controls = true;
         }
       }
     }

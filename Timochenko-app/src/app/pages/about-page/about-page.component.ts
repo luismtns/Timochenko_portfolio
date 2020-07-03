@@ -57,6 +57,14 @@ export class AboutPageComponent implements OnInit  {
       'name':'udacity',
       'alt':'Udacity White Logo',
     },
+    {
+      'name':'senna',
+      'alt':'Senna White Logo',
+    },
+    {
+      'name':'comexport',
+      'alt':'Comexport White Logo',
+    },
   ];
 
   constructor() { }

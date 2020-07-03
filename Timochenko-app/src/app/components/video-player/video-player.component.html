@@ -1,10 +1,5 @@
 <div class="VideoContainer pink-effect--overlay">
   <span [ngClass]="{'pink_animate': pink_effect, 'autoplay': config.autoplay}" class="pink-effect"></span>
-  <img *ngIf="vid.paused && !config.autoplay"
-    [ngClass]="{'show': pink_effect, 'show_autoplay': config.autoplay}" 
-    src="./assets/images/player-icon.svg" 
-    class="VideoContainer__play-icon" 
-    alt="Player Icon">
   <video 
     #vid
     [ngClass]="{'video_animate': pink_effect, 'video_show': show_animate, 'video_show--setup': config.autoplay}"
@@ -13,7 +8,8 @@
     width="100%" 
     height="auto" 
     poster="./assets/images/{{config.poster}}.jpg" 
-    [controls]="!config.autoplay ? true:false"
+    [muted]="config.autoplay ? true:false"
+    [autoplay]="config.autoplay"
     preload="metadata">  
     <source src="./assets/videos/{{config.src}}.mp4" type="video/mp4">
       Browser não subortado.
