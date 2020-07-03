@@ -57,7 +57,7 @@ export class HomeViewComponent implements OnInit  {
     private router: Router
     ) { 
   }
-  @HostListener('window:mousewheel', ['$event'])
+  @HostListener('mousewheel', ['$event'])
   @debounce(150)
   onWheelScroll(evento: WheelEvent) {
     console.log('scrolling')
