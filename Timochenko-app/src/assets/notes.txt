@@ -1,2 +1,2 @@
-ng deploy --base-href=/Timochenko_portfolio/
+firebase deploy
 ng serve -o --host 192.168.15.105
