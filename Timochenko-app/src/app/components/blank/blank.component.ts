@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-blank',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlankComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public _router:Router
+  ) { }
 
   ngOnInit(): void {
+    this._router.navigate([''])
   }
 
 }
