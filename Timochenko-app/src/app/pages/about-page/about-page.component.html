@@ -1,33 +1,29 @@
 <div class="About">
   <div class="container mg-b-10">
-    <div class="row align-items-center"
-    (mouseover)="photo_container.style.width = '465px'" 
-    (mouseleave)="photo_container.style.width = '2px'" >
+    <div
+      class="row align-items-center"
+      (mouseover)="photo_container.style.width = '465px'"
+      (mouseleave)="photo_container.style.width = '2px'"
+    >
       <div class="col-12 col-md-11">
         <div class="About__title--overlay">
           <span class="About__title--pink-effect first_pink_animate"></span>
-          <h1 class="About__title first_text_animate">Art Director //
+          <h1 class="About__title first_text_animate">
+            <span class="pink">Art</span> Director
+            <span class="pink">&</span>
           </h1>
         </div>
         <div class="About__title--overlay">
           <span class="About__title--pink-effect second_pink_animate"></span>
           <h1 class="About__title second_text_animate">
-            What Matters’ 
-            <span class="pink">Art</span>
-          </h1>
-        </div>
-        <div class="About__title--overlay">
-          <span class="About__title--pink-effect third_pink_animate"></span>
-          <h1 class="About__title third_text_animate">
-           and I don’t care
+            <span class="pink">Motion</span> Designer //
           </h1>
         </div>
       </div>
       <div class="col-10 col-md-1">
-        <div 
-        class="About__photo--overlay">
+        <div class="About__photo--overlay">
           <div class="About__photo" #photo_container>
-            <img src="./assets/images/about/photo.jpg" alt="Photo">
+            <img src="./assets/images/about/photo.jpg" alt="Photo" />
           </div>
         </div>
       </div>
@@ -35,11 +31,15 @@
   </div>
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-10 col-md-6">        
+      <div class="col-10 col-md-6">
         <app-reveal-scroll>
           <h2 class="About__subtitle">You knowwww</h2>
           <p class="About__text">
-            My main source of inspiration are the moments that I live and the people with whom I share it. Beauty and aesthetics draws my attention and I admire them a lot. The search for perfection motivates me, even though I know that the search is more important than perfection.
+            My main source of inspiration are the moments that I live and the
+            people with whom I share it. Beauty and aesthetics draws my
+            attention and I admire them a lot. The search for perfection
+            motivates me, even though I know that the search is more important
+            than perfection.
           </p>
         </app-reveal-scroll>
       </div>
@@ -52,36 +52,30 @@
     <div class="row">
       <div class="col-12">
         <app-reveal-scroll>
-          <h2 class="About__subtitle mg-b-3">
-            Clients I’ve Worked With
-          </h2>
+          <h2 class="About__subtitle mg-b-3">Clients I’ve Worked With</h2>
         </app-reveal-scroll>
       </div>
     </div>
   </div>
   <app-reveal-scroll>
     <div class="LogoPainel">
-      <app-carousel [images]="logo_list">        
-      </app-carousel>
+      <app-carousel [images]="logo_list"> </app-carousel>
     </div>
-  </app-reveal-scroll>   
+  </app-reveal-scroll>
   <app-reveal-scroll>
-    <app-carousel [images]="logo_list" reverse="true">        
-    </app-carousel>
+    <app-carousel [images]="logo_list" reverse="true"> </app-carousel>
   </app-reveal-scroll>
   <div class="container space">
     <div class="row align-items-center">
       <div class="col-12 col-md-6">
         <app-reveal-scroll>
           <h2 class="About__subtitle mb-3">
-            <a href="mailto:felipetimochenko@gmail.com">
-              Get in touch
-            </a>
+            <a href="mailto:felipetimochenko@gmail.com"> Get in touch </a>
           </h2>
         </app-reveal-scroll>
         <app-reveal-scroll delay="0.2s">
           <h3 class="About__smalltitle">
-            <span class="regular">Felipetimochenko@gmail.com</span><br>
+            <span class="regular">Felipetimochenko@gmail.com</span><br />
             <span class="regular">+55 11 97441 4440</span>
           </h3>
         </app-reveal-scroll>
@@ -93,28 +87,43 @@
       <div class="col-6 offset-6 offset-md-0 order-2 order-md-1">
         <app-reveal-scroll>
           <div class="rotate_animate">
-            <img src="./assets/images/about/timo_names.svg" alt="Mark Timochenko">
+            <img
+              src="./assets/images/about/timo_names.svg"
+              alt="Mark Timochenko"
+            />
           </div>
         </app-reveal-scroll>
       </div>
       <div class="col-12 col-md-6">
         <app-reveal-scroll delay="0.2s">
           <h2 class="About__subtitle mb-3">
-            You can also<br>
-            Follow me. Xd<br>
+            You can also<br />
+            Follow me. Xd<br />
           </h2>
           <h3 class="About__smalltitle">
-            <a href="https://dribbble.com/Timochenko1" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://dribbble.com/Timochenko1"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               Dribble
             </a>
           </h3>
           <h3 class="About__smalltitle">
-            <a href="https://www.behance.net/felipetimochenko" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://www.behance.net/felipetimochenko"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               Behance
             </a>
           </h3>
           <h3 class="About__smalltitle mb-3">
-            <a href="https://www.linkedin.com/in/felipetimochenko" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/felipetimochenko"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               Linkedin
             </a>
           </h3>
@@ -126,12 +135,39 @@
     <div class="row align-items-center">
       <div class="col-12 text-right">
         <app-reveal-scroll delay="0.2s">
-          <h4 class="About__text--light">Special Thanks to <a class="strong" href="https://www.behance.net/eliassuzumura" rel="noopener noreferrer" target="_blank">Elias Suzumura</a></h4>
-          <br>
-          <h4 class="About__text--light">Developed by <a class="strong" href="https://www.behance.net/luismtns" rel="noopener noreferrer" target="_blank">Luís Otávio Bovo</a></h4>
-          <br>
-          <h4 class="About__text--light">Some texts by <a class="strong" href="https://medium.com/@mmrnmr" rel="noopener noreferrer" target="_blank">Mariana Moro</a></h4>
-          <br>
+          <h4 class="About__text--light">
+            Special Thanks to
+            <a
+              class="strong"
+              href="https://www.behance.net/eliassuzumura"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Elias Suzumura</a
+            >
+          </h4>
+          <br />
+          <h4 class="About__text--light">
+            Developed by
+            <a
+              class="strong"
+              href="https://www.behance.net/luismtns"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Luís Otávio Bovo</a
+            >
+          </h4>
+          <br />
+          <h4 class="About__text--light">
+            Some texts by
+            <a
+              class="strong"
+              href="https://medium.com/@mmrnmr"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Mariana Moro</a
+            >
+          </h4>
+          <br />
         </app-reveal-scroll>
       </div>
     </div>
