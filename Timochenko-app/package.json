@@ -35,7 +35,7 @@
     "rxjs": "~6.5.4",
     "scrollreveal": "^4.0.6",
     "slick-carousel": "^1.8.1",
-    "swiper": "^5.4.5",
+    "swiper": "^6.5.1",
     "tslib": "^1.10.0",
     "vanilla-tilt": "^1.7.0",
     "zone.js": "~0.10.2"
