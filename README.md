@@ -1,4 +1,4 @@
-#Timochenko - Portfolio pessoal
+# Timochenko - Portfolio pessoal
 
 Portfólio pessoal desenvolvido para [Felipe Timochenko](https://www.linkedin.com/in/felipetimochenko/) com intúito de apresentar e divulgar os projetos de UI/UX desenvolvidos por ele.
 
