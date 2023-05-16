@@ -7,3 +7,7 @@ O projeto é feito em Angular (9.0.2) e as informações dos projetos são edita
 ## Demonstração
 
 #### [Confira a demo online](https://timochenko-portfolio.vercel.app/)
+
+## Screenshots
+
+![App Screenshot](https://i.imgur.com/cZ54Bfo.gif)
